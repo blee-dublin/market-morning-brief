@@ -40,7 +40,7 @@ Manual runs (**Actions → Daily market brief → Run workflow**) default to `fo
 | KOSPI, KOSDAQ, S&P 500, Nasdaq, Dow | Yahoo Finance via `yfinance` |
 | Market signals: VIX, futures, metals, EEM, US 10Y, USD/KRW, EUR/KRW | Same source; edit `MARKET_SIGNALS` |
 | Watchlist: US tech + Samsung, SK Hynix | Same source; edit `STOCKS` |
-| Session date + `intraday` badge + 5-day sparkline | Inline SVG from last 5 closes |
+| Session date + `intraday` badge + 5-day sparkline | Inline SVG with one marker per session |
 | Headlines | Reuters / Yahoo Finance / 연합뉴스 RSS |
 
 Edit tickers or feeds in `generate_brief.py` (`INDICES`, `MARKET_SIGNALS`, `STOCKS`, `NEWS_FEEDS`).

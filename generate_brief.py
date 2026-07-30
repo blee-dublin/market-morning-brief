@@ -76,27 +76,34 @@ def _last_close_before(closes, cutoff_date):
     return float(prior.iloc[-1])
 
 
-def sparkline_svg(values: list[float], width: int = 72, height: int = 28, pad: float = 2.0) -> str:
-    """Build a tiny inline SVG of the last few closes."""
+def sparkline_svg(values: list[float], width: int = 72, height: int = 28, pad: float = 3.0) -> str:
+    """Build a tiny inline SVG with one marker per trading session."""
     if len(values) < 2:
         return ""
 
     lo, hi = min(values), max(values)
     span = hi - lo or 1.0
     n = len(values)
-    points: list[str] = []
+    coords: list[tuple[float, float]] = []
     for i, value in enumerate(values):
         x = pad + (width - 2 * pad) * i / (n - 1)
         y = pad + (height - 2 * pad) * (1.0 - (value - lo) / span)
-        points.append(f"{x:.1f},{y:.1f}")
+        coords.append((x, y))
 
     color = "#3dd68c" if values[-1] >= values[0] else "#f07178"
-    pts = " ".join(points)
+    points = " ".join(f"{x:.1f},{y:.1f}" for x, y in coords)
+    markers = "".join(
+        f'<circle cx="{x:.1f}" cy="{y:.1f}" r="2.0" '
+        f'fill="{color if i == n - 1 else "#1a2332"}" '
+        f'stroke="{color}" stroke-width="1.3"/>'
+        for i, (x, y) in enumerate(coords)
+    )
     return (
         f'<svg class="spark" viewBox="0 0 {width} {height}" '
         f'width="{width}" height="{height}" aria-hidden="true">'
         f'<polyline fill="none" stroke="{color}" stroke-width="1.6" '
-        f'stroke-linecap="round" stroke-linejoin="round" points="{pts}"/>'
+        f'stroke-linecap="round" stroke-linejoin="round" points="{points}"/>'
+        f"{markers}"
         f"</svg>"
     )
 
