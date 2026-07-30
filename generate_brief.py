@@ -26,18 +26,20 @@ INDICES = [
     ("Dow Jones", "^DJI", "America/New_York", time(16, 0)),
 ]
 
-# Volatility, futures, ETF, and FX indicators shown below the indices.
+# Volatility, futures, rates, ETF, and FX shown below the indices.
 # Futures and FX trade beyond the US cash session; 17:00 ET marks the daily
 # session boundary used to decide whether Yahoo's latest daily bar is intraday.
 MARKET_SIGNALS = [
-    ("^VIX", "^VIX", "America/New_York", time(16, 15)),
-    ("ES=F", "ES=F", "America/New_York", time(17, 0)),
-    ("NQ=F", "NQ=F", "America/New_York", time(17, 0)),
-    ("YM=F", "YM=F", "America/New_York", time(17, 0)),
-    ("GC=F", "GC=F", "America/New_York", time(17, 0)),
-    ("SI=F", "SI=F", "America/New_York", time(17, 0)),
+    ("VIX", "^VIX", "America/New_York", time(16, 15)),
+    ("S&P futures (ES)", "ES=F", "America/New_York", time(17, 0)),
+    ("Nasdaq futures (NQ)", "NQ=F", "America/New_York", time(17, 0)),
+    ("Dow futures (YM)", "YM=F", "America/New_York", time(17, 0)),
+    ("Gold (GC)", "GC=F", "America/New_York", time(17, 0)),
+    ("Silver (SI)", "SI=F", "America/New_York", time(17, 0)),
     ("EEM", "EEM", "America/New_York", time(16, 0)),
-    ("EURKRW=X", "EURKRW=X", "America/New_York", time(17, 0)),
+    ("US 10Y yield", "^TNX", "America/New_York", time(16, 0)),
+    ("USD/KRW", "USDKRW=X", "America/New_York", time(17, 0)),
+    ("EUR/KRW", "EURKRW=X", "America/New_York", time(17, 0)),
 ]
 
 # Watchlist: label shown, Yahoo ticker, exchange timezone, regular session close.
@@ -48,6 +50,8 @@ STOCKS = [
     ("AAPL", "AAPL", "America/New_York", time(16, 0)),
     ("NFLX", "NFLX", "America/New_York", time(16, 0)),
     ("MSFT", "MSFT", "America/New_York", time(16, 0)),
+    ("Samsung (005930)", "005930.KS", "Asia/Seoul", time(15, 30)),
+    ("SK Hynix (000660)", "000660.KS", "Asia/Seoul", time(15, 30)),
 ]
 
 # Free RSS sources (no API key)
