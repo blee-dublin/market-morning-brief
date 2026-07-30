@@ -43,3 +43,5 @@ Manual runs (**Actions → Daily market brief → Run workflow**) default to `fo
 | Headlines | Reuters / Yahoo Finance / 연합뉴스 RSS |
 
 Edit tickers or feeds in `generate_brief.py` (`INDICES`, `STOCKS`, `NEWS_FEEDS`).
+
+**Returns:** Day = vs previous session close. MTD / YTD = vs last close of the prior month / year.

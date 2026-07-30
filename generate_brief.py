@@ -44,10 +44,25 @@ NEWS_FEEDS = [
 ]
 
 
+def _pct(last: float, base: float | None) -> float | None:
+    if base is None or base == 0:
+        return None
+    return round((last / base - 1.0) * 100, 2)
+
+
+def _last_close_before(closes, cutoff_date):
+    """Return the last close strictly before cutoff_date, or None."""
+    prior = closes[closes.index.date < cutoff_date]
+    if prior.empty:
+        return None
+    return float(prior.iloc[-1])
+
+
 def fetch_index(label: str, ticker: str, tz_name: str, close_time: time) -> dict:
-    """Fetch the last two daily bars and compute the change between them."""
+    """Fetch daily / MTD / YTD moves from Yahoo daily bars."""
     try:
-        hist = yf.Ticker(ticker).history(period="10d")
+        # Need prior-year December close for a true YTD baseline.
+        hist = yf.Ticker(ticker).history(period="2y", auto_adjust=True)
         if hist.empty or len(hist) < 2:
             return {"label": label, "ticker": ticker, "error": "no data"}
 
@@ -55,11 +70,21 @@ def fetch_index(label: str, ticker: str, tz_name: str, close_time: time) -> dict
         if len(closes) < 2:
             return {"label": label, "ticker": ticker, "error": "insufficient closes"}
 
-        prev, last = float(closes.iloc[-2]), float(closes.iloc[-1])
-        change = last - prev
-        pct = (change / prev) * 100 if prev else 0.0
+        # Normalize timezone-aware timestamps to calendar dates for comparisons.
+        if closes.index.tz is not None:
+            closes.index = closes.index.tz_convert(None)
 
+        prev, last = float(closes.iloc[-2]), float(closes.iloc[-1])
         bar_date = closes.index[-1].date()
+        month_start = bar_date.replace(day=1)
+        year_start = bar_date.replace(month=1, day=1)
+
+        mtd_base = _last_close_before(closes, month_start)
+        ytd_base = _last_close_before(closes, year_start)
+        pct = _pct(last, prev)
+        mtd = _pct(last, mtd_base)
+        ytd = _pct(last, ytd_base)
+
         exchange_now = datetime.now(ZoneInfo(tz_name))
         intraday = bar_date == exchange_now.date() and exchange_now.time() < close_time
 
@@ -68,11 +93,13 @@ def fetch_index(label: str, ticker: str, tz_name: str, close_time: time) -> dict
             "ticker": ticker,
             "last": round(last, 2),
             "prev": round(prev, 2),
-            "change": round(change, 2),
-            "pct": round(pct, 2),
+            "change": round(last - prev, 2),
+            "pct": pct,
+            "mtd": mtd,
+            "ytd": ytd,
             "as_of": bar_date.isoformat(),
             "intraday": intraday,
-            "up": pct >= 0,
+            "up": (pct or 0) >= 0,
         }
     except Exception as exc:  # noqa: BLE001 — keep brief generation resilient
         return {"label": label, "ticker": ticker, "error": str(exc)}
@@ -143,7 +170,7 @@ def render_html(
       line-height: 1.5;
       min-height: 100vh;
     }
-    main { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    main { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
     .eyebrow { color: var(--muted); font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; }
@@ -153,13 +180,22 @@ def render_html(
     .grid { display: grid; gap: 0.65rem; }
     .row {
       display: grid;
-      grid-template-columns: 1fr auto auto;
-      gap: 0.75rem;
+      grid-template-columns: minmax(0, 1.4fr) auto repeat(3, minmax(3.6rem, auto));
+      gap: 0.55rem;
       align-items: baseline;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 10px;
       padding: 0.85rem 1rem;
+    }
+    .row.header {
+      background: transparent;
+      border: none;
+      padding: 0 1rem 0.15rem;
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
     .label { font-weight: 500; }
     .asof { display: block; font-size: 0.75rem; color: var(--muted); font-weight: 400; margin-top: 0.15rem; }
@@ -173,10 +209,12 @@ def render_html(
       font-size: 0.7rem;
       letter-spacing: 0.02em;
     }
-    .price { font-variant-numeric: tabular-nums; color: var(--muted); }
-    .pct { font-variant-numeric: tabular-nums; font-weight: 600; min-width: 4.5rem; text-align: right; }
+    .price { font-variant-numeric: tabular-nums; color: var(--muted); text-align: right; }
+    .pct { font-variant-numeric: tabular-nums; font-weight: 600; text-align: right; }
+    .rets { display: contents; }
     .up { color: var(--up); }
     .down { color: var(--down); }
+    .na { color: var(--muted); font-weight: 500; }
     .err { color: var(--down); font-size: 0.9rem; }
     ul.news { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.65rem; }
     ul.news li {
@@ -187,16 +225,51 @@ def render_html(
     }
     .source { display: block; font-size: 0.75rem; color: var(--muted); margin-bottom: 0.25rem; }
     footer { margin-top: 2.5rem; color: var(--muted); font-size: 0.8rem; }
+    @media (max-width: 560px) {
+      .row {
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+          "name price"
+          "rets rets";
+      }
+      .row.header { display: none; }
+      .label { grid-area: name; }
+      .price { grid-area: price; align-self: start; }
+      .rets {
+        grid-area: rets;
+        display: flex;
+        justify-content: space-between;
+        gap: 0.75rem;
+        margin-top: 0.35rem;
+        font-size: 0.85rem;
+      }
+      .rets .pct::before {
+        content: attr(data-label) " ";
+        color: var(--muted);
+        font-weight: 500;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+      }
+    }
   </style>
 </head>
 <body>
   <main>
     <p class="eyebrow">Market Morning Brief</p>
     <h1>{{ report_date }}</h1>
-    <p class="meta">Generated {{ generated_at }} · each line shows its own latest session, marked <em>intraday</em> while that session is still open</p>
+    <p class="meta">Generated {{ generated_at }} · Day / MTD / YTD vs prior close · <em>intraday</em> while that session is still open</p>
+
+    {% macro fmt_pct(value) -%}
+      {%- if value is none -%}<span class="pct na">—</span>
+      {%- else -%}<span class="pct {{ 'up' if value >= 0 else 'down' }}">{{ "%+.2f"|format(value) }}%</span>
+      {%- endif -%}
+    {%- endmacro %}
 
     {% macro quote_rows(items) -%}
     <div class="grid">
+      <div class="row header">
+        <span></span><span></span><span class="pct">Day</span><span class="pct">MTD</span><span class="pct">YTD</span>
+      </div>
       {% for m in items %}
         {% if m.error %}
           <div class="row"><span class="label">{{ m.label }}</span><span class="err" style="grid-column: 2 / -1">{{ m.error }}</span></div>
@@ -204,10 +277,14 @@ def render_html(
           <div class="row">
             <span class="label">
               {{ m.label }}{% if m.intraday %}<span class="badge">intraday</span>{% endif %}
-              <span class="asof">{{ m.as_of }}{% if not m.intraday %} close{% endif %} vs previous</span>
+              <span class="asof">{{ m.as_of }}{% if not m.intraday %} close{% endif %}</span>
             </span>
             <span class="price">{{ "{:,.2f}".format(m.last) }}</span>
-            <span class="pct {{ 'up' if m.up else 'down' }}">{{ "%+.2f"|format(m.pct) }}%</span>
+            <span class="rets">
+              <span data-label="Day">{{ fmt_pct(m.pct) }}</span>
+              <span data-label="MTD">{{ fmt_pct(m.mtd) }}</span>
+              <span data-label="YTD">{{ fmt_pct(m.ytd) }}</span>
+            </span>
           </div>
         {% endif %}
       {% endfor %}
@@ -236,6 +313,7 @@ def render_html(
 
     <footer>
       Data: Yahoo Finance (yfinance) · News: public RSS ·
+      MTD / YTD vs last close of prior month / year ·
       <a href="../index.html">Archive</a>
     </footer>
   </main>
