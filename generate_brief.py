@@ -26,6 +26,16 @@ INDICES = [
     ("Dow Jones", "^DJI", "America/New_York", time(16, 0)),
 ]
 
+# Watchlist: label shown, Yahoo ticker, exchange timezone, regular session close.
+STOCKS = [
+    ("WDAY", "WDAY", "America/New_York", time(16, 0)),
+    ("NVDA", "NVDA", "America/New_York", time(16, 0)),
+    ("PLTR", "PLTR", "America/New_York", time(16, 0)),
+    ("AAPL", "AAPL", "America/New_York", time(16, 0)),
+    ("NFLX", "NFLX", "America/New_York", time(16, 0)),
+    ("MSFT", "MSFT", "America/New_York", time(16, 0)),
+]
+
 # Free RSS sources (no API key)
 NEWS_FEEDS = [
     ("Reuters Business", "https://feeds.reuters.com/reuters/businessNews"),
@@ -99,7 +109,13 @@ def fetch_news(limit_per_feed: int = 5, total_limit: int = 12) -> list[dict]:
     return items
 
 
-def render_html(report_date: str, generated_at: str, markets: list[dict], news: list[dict]) -> str:
+def render_html(
+    report_date: str,
+    generated_at: str,
+    markets: list[dict],
+    stocks: list[dict],
+    news: list[dict],
+) -> str:
     template = Template(
         """<!DOCTYPE html>
 <html lang="ko">
@@ -177,11 +193,11 @@ def render_html(report_date: str, generated_at: str, markets: list[dict], news: 
   <main>
     <p class="eyebrow">Market Morning Brief</p>
     <h1>{{ report_date }}</h1>
-    <p class="meta">Generated {{ generated_at }} · each index shows its own latest session, marked <em>intraday</em> while that session is still open</p>
+    <p class="meta">Generated {{ generated_at }} · each line shows its own latest session, marked <em>intraday</em> while that session is still open</p>
 
-    <h2>Indices</h2>
+    {% macro quote_rows(items) -%}
     <div class="grid">
-      {% for m in markets %}
+      {% for m in items %}
         {% if m.error %}
           <div class="row"><span class="label">{{ m.label }}</span><span class="err" style="grid-column: 2 / -1">{{ m.error }}</span></div>
         {% else %}
@@ -196,6 +212,13 @@ def render_html(report_date: str, generated_at: str, markets: list[dict], news: 
         {% endif %}
       {% endfor %}
     </div>
+    {%- endmacro %}
+
+    <h2>Indices</h2>
+    {{ quote_rows(markets) }}
+
+    <h2>Watchlist</h2>
+    {{ quote_rows(stocks) }}
 
     <h2>Headlines</h2>
     {% if news %}
@@ -224,6 +247,7 @@ def render_html(report_date: str, generated_at: str, markets: list[dict], news: 
         report_date=report_date,
         generated_at=generated_at,
         markets=markets,
+        stocks=stocks,
         news=news,
     )
 
@@ -306,6 +330,7 @@ def main() -> None:
     generated_at = now.strftime("%Y-%m-%d %H:%M %Z")
 
     markets = [fetch_index(*spec) for spec in INDICES]
+    stocks = [fetch_index(*spec) for spec in STOCKS]
     news = fetch_news()
 
     DOCS.mkdir(parents=True, exist_ok=True)
@@ -313,7 +338,7 @@ def main() -> None:
     day_dir.mkdir(parents=True, exist_ok=True)
     out_file = day_dir / "index.html"
     out_file.write_text(
-        render_html(report_date, generated_at, markets, news),
+        render_html(report_date, generated_at, markets, stocks, news),
         encoding="utf-8",
     )
 
@@ -324,6 +349,7 @@ def main() -> None:
                 "date": report_date,
                 "generated_at": generated_at,
                 "markets": markets,
+                "stocks": stocks,
                 "news": news,
             },
             ensure_ascii=False,
@@ -339,7 +365,10 @@ def main() -> None:
             archive.append({"date": date_name, "path": f"{date_name}/index.html"})
 
     rebuild_index(archive)
-    print(f"Wrote {out_file} ({len(markets)} indices, {len(news)} headlines)")
+    print(
+        f"Wrote {out_file} "
+        f"({len(markets)} indices, {len(stocks)} stocks, {len(news)} headlines)"
+    )
 
 
 if __name__ == "__main__":
