@@ -76,6 +76,31 @@ def _last_close_before(closes, cutoff_date):
     return float(prior.iloc[-1])
 
 
+def sparkline_svg(values: list[float], width: int = 72, height: int = 28, pad: float = 2.0) -> str:
+    """Build a tiny inline SVG of the last few closes."""
+    if len(values) < 2:
+        return ""
+
+    lo, hi = min(values), max(values)
+    span = hi - lo or 1.0
+    n = len(values)
+    points: list[str] = []
+    for i, value in enumerate(values):
+        x = pad + (width - 2 * pad) * i / (n - 1)
+        y = pad + (height - 2 * pad) * (1.0 - (value - lo) / span)
+        points.append(f"{x:.1f},{y:.1f}")
+
+    color = "#3dd68c" if values[-1] >= values[0] else "#f07178"
+    pts = " ".join(points)
+    return (
+        f'<svg class="spark" viewBox="0 0 {width} {height}" '
+        f'width="{width}" height="{height}" aria-hidden="true">'
+        f'<polyline fill="none" stroke="{color}" stroke-width="1.6" '
+        f'stroke-linecap="round" stroke-linejoin="round" points="{pts}"/>'
+        f"</svg>"
+    )
+
+
 def fetch_index(label: str, ticker: str, tz_name: str, close_time: time) -> dict:
     """Fetch daily / MTD / YTD moves from Yahoo daily bars."""
     try:
@@ -103,6 +128,7 @@ def fetch_index(label: str, ticker: str, tz_name: str, close_time: time) -> dict
         mtd = _pct(last, mtd_base)
         ytd = _pct(last, ytd_base)
 
+        spark_vals = [round(float(v), 4) for v in closes.iloc[-5:].tolist()]
         exchange_now = datetime.now(ZoneInfo(tz_name))
         intraday = bar_date == exchange_now.date() and exchange_now.time() < close_time
 
@@ -118,6 +144,8 @@ def fetch_index(label: str, ticker: str, tz_name: str, close_time: time) -> dict
             "as_of": bar_date.isoformat(),
             "intraday": intraday,
             "up": (pct or 0) >= 0,
+            "spark": spark_vals,
+            "spark_svg": sparkline_svg(spark_vals),
         }
     except Exception as exc:  # noqa: BLE001 — keep brief generation resilient
         return {"label": label, "ticker": ticker, "error": str(exc)}
@@ -189,7 +217,7 @@ def render_html(
       line-height: 1.5;
       min-height: 100vh;
     }
-    main { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    main { max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
     .eyebrow { color: var(--muted); font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; }
@@ -199,9 +227,9 @@ def render_html(
     .grid { display: grid; gap: 0.65rem; }
     .row {
       display: grid;
-      grid-template-columns: minmax(0, 1.4fr) auto repeat(3, minmax(3.6rem, auto));
+      grid-template-columns: minmax(0, 1.5fr) auto repeat(3, minmax(3.6rem, auto)) 72px;
       gap: 0.55rem;
-      align-items: baseline;
+      align-items: center;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 10px;
@@ -231,6 +259,8 @@ def render_html(
     .price { font-variant-numeric: tabular-nums; color: var(--muted); text-align: right; }
     .pct { font-variant-numeric: tabular-nums; font-weight: 600; text-align: right; }
     .rets { display: contents; }
+    .spark-wrap { display: flex; justify-content: flex-end; align-items: center; }
+    .spark { display: block; }
     .up { color: var(--up); }
     .down { color: var(--down); }
     .na { color: var(--muted); font-weight: 500; }
@@ -244,12 +274,12 @@ def render_html(
     }
     .source { display: block; font-size: 0.75rem; color: var(--muted); margin-bottom: 0.25rem; }
     footer { margin-top: 2.5rem; color: var(--muted); font-size: 0.8rem; }
-    @media (max-width: 560px) {
+    @media (max-width: 640px) {
       .row {
         grid-template-columns: 1fr auto;
         grid-template-areas:
           "name price"
-          "rets rets";
+          "rets spark";
       }
       .row.header { display: none; }
       .label { grid-area: name; }
@@ -262,6 +292,7 @@ def render_html(
         margin-top: 0.35rem;
         font-size: 0.85rem;
       }
+      .spark-wrap { grid-area: spark; justify-content: flex-end; }
       .rets .pct::before {
         content: attr(data-label) " ";
         color: var(--muted);
@@ -276,7 +307,7 @@ def render_html(
   <main>
     <p class="eyebrow">Market Morning Brief</p>
     <h1>{{ report_date }}</h1>
-    <p class="meta">Generated {{ generated_at }} · Day / MTD / YTD vs prior close · <em>intraday</em> while that session is still open</p>
+    <p class="meta">Generated {{ generated_at }} · Day / MTD / YTD vs prior close · sparkline = last 5 sessions</p>
 
     {% macro fmt_pct(value) -%}
       {%- if value is none -%}<span class="pct na">—</span>
@@ -287,7 +318,7 @@ def render_html(
     {% macro quote_rows(items) -%}
     <div class="grid">
       <div class="row header">
-        <span></span><span></span><span class="pct">Day</span><span class="pct">MTD</span><span class="pct">YTD</span>
+        <span></span><span></span><span class="pct">Day</span><span class="pct">MTD</span><span class="pct">YTD</span><span class="pct">5D</span>
       </div>
       {% for m in items %}
         {% if m.error %}
@@ -304,6 +335,7 @@ def render_html(
               <span data-label="MTD">{{ fmt_pct(m.mtd) }}</span>
               <span data-label="YTD">{{ fmt_pct(m.ytd) }}</span>
             </span>
+            <span class="spark-wrap">{% if m.spark_svg %}{{ m.spark_svg|safe }}{% endif %}</span>
           </div>
         {% endif %}
       {% endfor %}
@@ -351,6 +383,11 @@ def render_html(
         stocks=stocks,
         news=news,
     )
+
+
+def _for_json(rows: list[dict]) -> list[dict]:
+    """Drop rendered SVG from the machine-readable dump."""
+    return [{k: v for k, v in row.items() if k != "spark_svg"} for row in rows]
 
 
 def rebuild_index(archive: list[dict]) -> None:
@@ -450,9 +487,9 @@ def main() -> None:
             {
                 "date": report_date,
                 "generated_at": generated_at,
-                "markets": markets,
-                "signals": signals,
-                "stocks": stocks,
+                "markets": _for_json(markets),
+                "signals": _for_json(signals),
+                "stocks": _for_json(stocks),
                 "news": news,
             },
             ensure_ascii=False,
