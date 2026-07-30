@@ -31,6 +31,8 @@ GitHub `cron` is UTC-only. The workflow fires at **08:30 and 09:30 UTC** on week
 
 The script publishes only inside the **09:00–10:59 Europe/Dublin** window, and skips when a report for today already exists. The wide window absorbs GitHub's scheduling delays; the existence check keeps the second cron from double-publishing.
 
+Manual runs (**Actions → Daily market brief → Run workflow**) default to `force`, so they publish at any hour and overwrite today's report.
+
 ## What you get
 
 | Section | Source |
