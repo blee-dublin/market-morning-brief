@@ -1,6 +1,6 @@
 {
   "date": "2026-07-30",
-  "generated_at": "2026-07-30 17:49 IST",
+  "generated_at": "2026-07-30 17:55 IST",
   "markets": [
     {
       "label": "KOSPI",
@@ -45,12 +45,12 @@
     {
       "label": "S&P 500",
       "ticker": "^GSPC",
-      "last": 7408.57,
+      "last": 7414.16,
       "prev": 7316.15,
-      "change": 92.42,
-      "pct": 1.26,
-      "mtd": -1.21,
-      "ytd": 8.23,
+      "change": 98.01,
+      "pct": 1.34,
+      "mtd": -1.14,
+      "ytd": 8.31,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": true,
@@ -59,18 +59,18 @@
         7413.1802,
         7428.7798,
         7316.1499,
-        7408.5698
+        7414.1602
       ]
     },
     {
       "label": "Nasdaq",
       "ticker": "^IXIC",
-      "last": 25009.28,
+      "last": 25029.47,
       "prev": 24442.94,
-      "change": 566.34,
-      "pct": 2.32,
-      "mtd": -4.59,
-      "ytd": 7.6,
+      "change": 586.53,
+      "pct": 2.4,
+      "mtd": -4.52,
+      "ytd": 7.69,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": true,
@@ -79,18 +79,18 @@
         24932.0801,
         24876.9102,
         24442.9395,
-        25009.2793
+        25029.4668
       ]
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
-      "last": 52058.52,
+      "last": 52106.75,
       "prev": 51594.14,
-      "change": 464.38,
-      "pct": 0.9,
-      "mtd": -0.5,
-      "ytd": 8.31,
+      "change": 512.61,
+      "pct": 0.99,
+      "mtd": -0.41,
+      "ytd": 8.41,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": true,
@@ -99,7 +99,7 @@
         52210.0781,
         52747.3203,
         51594.1406,
-        52058.5195
+        52106.75
       ]
     }
   ],
@@ -127,12 +127,12 @@
     {
       "label": "S&P futures (ES)",
       "ticker": "ES=F",
-      "last": 7439.5,
+      "last": 7434.75,
       "prev": 7351.25,
-      "change": 88.25,
-      "pct": 1.2,
-      "mtd": -1.44,
-      "ytd": 7.94,
+      "change": 83.5,
+      "pct": 1.14,
+      "mtd": -1.5,
+      "ytd": 7.87,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": true,
@@ -141,18 +141,18 @@
         7448.25,
         7465.25,
         7351.25,
-        7439.5
+        7434.75
       ]
     },
     {
       "label": "Nasdaq futures (NQ)",
       "ticker": "NQ=F",
-      "last": 28124.25,
+      "last": 28074.5,
       "prev": 27342.0,
-      "change": 782.25,
-      "pct": 2.86,
-      "mtd": -7.86,
-      "ytd": 10.48,
+      "change": 732.5,
+      "pct": 2.68,
+      "mtd": -8.02,
+      "ytd": 10.28,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": true,
@@ -161,18 +161,18 @@
         28190.0,
         27922.0,
         27342.0,
-        28124.25
+        28074.5
       ]
     },
     {
       "label": "Dow futures (YM)",
       "ticker": "YM=F",
-      "last": 52180.0,
+      "last": 52183.0,
       "prev": 51765.0,
-      "change": 415.0,
-      "pct": 0.8,
-      "mtd": -0.93,
-      "ytd": 7.95,
+      "change": 418.0,
+      "pct": 0.81,
+      "mtd": -0.92,
+      "ytd": 7.96,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": true,
@@ -181,18 +181,18 @@
         52382.0,
         52944.0,
         51765.0,
-        52180.0
+        52183.0
       ]
     },
     {
       "label": "Gold (GC)",
       "ticker": "GC=F",
-      "last": 4169.5,
+      "last": 4168.0,
       "prev": 4034.7,
-      "change": 134.8,
-      "pct": 3.34,
-      "mtd": 3.64,
-      "ytd": -3.61,
+      "change": 133.3,
+      "pct": 3.3,
+      "mtd": 3.61,
+      "ytd": -3.64,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": true,
@@ -201,18 +201,18 @@
         4074.5,
         4036.3,
         4034.7,
-        4169.5
+        4168.0
       ]
     },
     {
       "label": "Silver (SI)",
       "ticker": "SI=F",
-      "last": 58.96,
+      "last": 58.88,
       "prev": 57.86,
-      "change": 1.1,
-      "pct": 1.9,
-      "mtd": -0.87,
-      "ytd": -15.93,
+      "change": 1.02,
+      "pct": 1.76,
+      "mtd": -1.0,
+      "ytd": -16.05,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": true,
@@ -221,18 +221,18 @@
         58.472,
         57.296,
         57.863,
-        58.96
+        58.88
       ]
     },
     {
       "label": "EEM",
       "ticker": "EEM",
-      "last": 63.3,
+      "last": 63.31,
       "prev": 61.07,
-      "change": 2.23,
-      "pct": 3.65,
-      "mtd": -7.47,
-      "ytd": 16.3,
+      "change": 2.24,
+      "pct": 3.67,
+      "mtd": -7.46,
+      "ytd": 16.32,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": true,
@@ -241,7 +241,7 @@
         63.62,
         62.36,
         61.07,
-        63.3
+        63.31
       ]
     },
     {
@@ -267,12 +267,12 @@
     {
       "label": "USD/KRW",
       "ticker": "USDKRW=X",
-      "last": 1423.28,
+      "last": 1424.45,
       "prev": 1453.16,
-      "change": -29.88,
-      "pct": -2.06,
-      "mtd": -7.68,
-      "ytd": -1.02,
+      "change": -28.71,
+      "pct": -1.98,
+      "mtd": -7.61,
+      "ytd": -0.94,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": false,
@@ -281,7 +281,7 @@
         1458.01,
         1464.4399,
         1453.16,
-        1423.28
+        1424.45
       ]
     },
     {
@@ -309,12 +309,12 @@
     {
       "label": "WDAY",
       "ticker": "WDAY",
-      "last": 154.7,
+      "last": 155.15,
       "prev": 168.01,
-      "change": -13.31,
-      "pct": -7.92,
-      "mtd": 26.37,
-      "ytd": -27.97,
+      "change": -12.86,
+      "pct": -7.66,
+      "mtd": 26.73,
+      "ytd": -27.77,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": false,
@@ -323,7 +323,7 @@
         147.54,
         159.69,
         168.01,
-        154.7
+        155.145
       ]
     },
     {
@@ -349,12 +349,12 @@
     {
       "label": "PLTR",
       "ticker": "PLTR",
-      "last": 121.6,
+      "last": 121.77,
       "prev": 123.0,
-      "change": -1.4,
-      "pct": -1.14,
-      "mtd": 4.23,
-      "ytd": -31.59,
+      "change": -1.23,
+      "pct": -1.0,
+      "mtd": 4.37,
+      "ytd": -31.49,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": false,
@@ -363,18 +363,18 @@
         131.53,
         123.53,
         123.0,
-        121.6
+        121.77
       ]
     },
     {
       "label": "AAPL",
       "ticker": "AAPL",
-      "last": 332.07,
+      "last": 331.94,
       "prev": 338.19,
-      "change": -6.12,
-      "pct": -1.81,
-      "mtd": 14.76,
-      "ytd": 22.37,
+      "change": -6.25,
+      "pct": -1.85,
+      "mtd": 14.72,
+      "ytd": 22.33,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": false,
@@ -383,18 +383,18 @@
         336.91,
         340.08,
         338.19,
-        332.07
+        331.94
       ]
     },
     {
       "label": "NFLX",
       "ticker": "NFLX",
-      "last": 72.76,
+      "last": 72.9,
       "prev": 73.63,
-      "change": -0.87,
-      "pct": -1.18,
-      "mtd": 1.9,
-      "ytd": -22.4,
+      "change": -0.73,
+      "pct": -0.99,
+      "mtd": 2.1,
+      "ytd": -22.25,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": false,
@@ -403,18 +403,18 @@
         70.4,
         72.39,
         73.63,
-        72.76
+        72.9003
       ]
     },
     {
       "label": "MSFT",
       "ticker": "MSFT",
-      "last": 454.34,
+      "last": 454.69,
       "prev": 390.54,
-      "change": 63.8,
-      "pct": 16.34,
-      "mtd": 21.8,
-      "ytd": -5.64,
+      "change": 64.15,
+      "pct": 16.43,
+      "mtd": 21.89,
+      "ytd": -5.56,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": true,
@@ -423,7 +423,7 @@
         389.1,
         393.35,
         390.54,
-        454.34
+        454.69
       ]
     },
     {
@@ -476,27 +476,27 @@
     },
     {
       "source": "Yahoo Finance",
+      "title": "Stock market today: Nasdaq soars, Dow and S&P 500 rebound as Microsoft leads tech gains, bond yields rise",
+      "link": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-july-30-dow-sp-500-nasdaq-treasury-yields-microsoft-082255995.html",
+      "published": "2026-07-30T08:22:55Z"
+    },
+    {
+      "source": "Yahoo Finance",
+      "title": "A meat snacks baron and his son turned a failing Wisconsin business into a $1.6 billion-a-year empire. Here's how",
+      "link": "https://finance.yahoo.com/small-business/articles/meat-snacks-baron-son-turned-163500199.html",
+      "published": "2026-07-30T16:35:00Z"
+    },
+    {
+      "source": "Yahoo Finance",
       "title": "AMD Fell 8% as China Unveils New Technology — the Real Risk Is the Multiple, Not the Lithography",
       "link": "https://finance.yahoo.com/markets/stocks/articles/amd-fell-8-china-unveils-163317303.html",
       "published": "2026-07-30T16:33:17Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Dress Your Portfolio for Success with Reformation IPO",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/dress-portfolio-success-reformation-ipo-162243096.html",
-      "published": "2026-07-30T16:22:43Z"
-    },
-    {
-      "source": "Yahoo Finance",
-      "title": "The Market Thinks Texas Instruments (TXN) Is a Boring Analog Chipmaker; AI Data Centers Disagree",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/market-thinks-texas-instruments-txn-161524238.html",
-      "published": "2026-07-30T16:15:24Z"
-    },
-    {
-      "source": "Yahoo Finance",
-      "title": "Tesla Looks To Snap Losing Streak As It Hits 10 Million EV Milestone",
-      "link": "https://www.investors.com/news/tesla-stock-electric-vehicle-ev-model-y-elon-musk-optimus-robotaxi/?src=A00220&yptr=yahoo",
-      "published": "2026-07-30T16:10:10Z"
+      "title": "Saia’s Q3 margin guidance disappoints investors",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/saia-q3-margin-guidance-disappoints-163232017.html",
+      "published": "2026-07-30T16:32:32Z"
     },
     {
       "source": "연합뉴스 경제",
