@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
-from datetime import datetime
+from datetime import datetime, time
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -16,13 +16,14 @@ from jinja2 import Template
 DUBLIN = ZoneInfo("Europe/Dublin")
 DOCS = Path(__file__).resolve().parent / "docs"
 
-# Indices: label, Yahoo ticker
+# Label, Yahoo ticker, exchange timezone, regular session close.
+# The close time is what tells an in-progress session apart from a settled one.
 INDICES = [
-    ("KOSPI", "^KS11"),
-    ("KOSDAQ", "^KQ11"),
-    ("S&P 500", "^GSPC"),
-    ("Nasdaq", "^IXIC"),
-    ("Dow Jones", "^DJI"),
+    ("KOSPI", "^KS11", "Asia/Seoul", time(15, 30)),
+    ("KOSDAQ", "^KQ11", "Asia/Seoul", time(15, 30)),
+    ("S&P 500", "^GSPC", "America/New_York", time(16, 0)),
+    ("Nasdaq", "^IXIC", "America/New_York", time(16, 0)),
+    ("Dow Jones", "^DJI", "America/New_York", time(16, 0)),
 ]
 
 # Free RSS sources (no API key)
@@ -33,8 +34,8 @@ NEWS_FEEDS = [
 ]
 
 
-def fetch_index(label: str, ticker: str) -> dict:
-    """Fetch last two daily closes and compute change."""
+def fetch_index(label: str, ticker: str, tz_name: str, close_time: time) -> dict:
+    """Fetch the last two daily bars and compute the change between them."""
     try:
         hist = yf.Ticker(ticker).history(period="10d")
         if hist.empty or len(hist) < 2:
@@ -47,7 +48,11 @@ def fetch_index(label: str, ticker: str) -> dict:
         prev, last = float(closes.iloc[-2]), float(closes.iloc[-1])
         change = last - prev
         pct = (change / prev) * 100 if prev else 0.0
-        as_of = closes.index[-1].date().isoformat()
+
+        bar_date = closes.index[-1].date()
+        exchange_now = datetime.now(ZoneInfo(tz_name))
+        intraday = bar_date == exchange_now.date() and exchange_now.time() < close_time
+
         return {
             "label": label,
             "ticker": ticker,
@@ -55,7 +60,8 @@ def fetch_index(label: str, ticker: str) -> dict:
             "prev": round(prev, 2),
             "change": round(change, 2),
             "pct": round(pct, 2),
-            "as_of": as_of,
+            "as_of": bar_date.isoformat(),
+            "intraday": intraday,
             "up": pct >= 0,
         }
     except Exception as exc:  # noqa: BLE001 — keep brief generation resilient
@@ -140,6 +146,17 @@ def render_html(report_date: str, generated_at: str, markets: list[dict], news: 
       padding: 0.85rem 1rem;
     }
     .label { font-weight: 500; }
+    .asof { display: block; font-size: 0.75rem; color: var(--muted); font-weight: 400; margin-top: 0.15rem; }
+    .badge {
+      display: inline-block;
+      margin-left: 0.4rem;
+      padding: 0.05rem 0.4rem;
+      border-radius: 4px;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.7rem;
+      letter-spacing: 0.02em;
+    }
     .price { font-variant-numeric: tabular-nums; color: var(--muted); }
     .pct { font-variant-numeric: tabular-nums; font-weight: 600; min-width: 4.5rem; text-align: right; }
     .up { color: var(--up); }
@@ -160,7 +177,7 @@ def render_html(report_date: str, generated_at: str, markets: list[dict], news: 
   <main>
     <p class="eyebrow">Market Morning Brief</p>
     <h1>{{ report_date }}</h1>
-    <p class="meta">Dublin time · generated {{ generated_at }} · previous session closes</p>
+    <p class="meta">Generated {{ generated_at }} · each index shows its own latest session, marked <em>intraday</em> while that session is still open</p>
 
     <h2>Indices</h2>
     <div class="grid">
@@ -169,7 +186,10 @@ def render_html(report_date: str, generated_at: str, markets: list[dict], news: 
           <div class="row"><span class="label">{{ m.label }}</span><span class="err" style="grid-column: 2 / -1">{{ m.error }}</span></div>
         {% else %}
           <div class="row">
-            <span class="label">{{ m.label }}</span>
+            <span class="label">
+              {{ m.label }}{% if m.intraday %}<span class="badge">intraday</span>{% endif %}
+              <span class="asof">{{ m.as_of }}{% if not m.intraday %} close{% endif %} vs previous</span>
+            </span>
             <span class="price">{{ "{:,.2f}".format(m.last) }}</span>
             <span class="pct {{ 'up' if m.up else 'down' }}">{{ "%+.2f"|format(m.pct) }}%</span>
           </div>
@@ -285,7 +305,7 @@ def main() -> None:
     report_date = now.date().isoformat()
     generated_at = now.strftime("%Y-%m-%d %H:%M %Z")
 
-    markets = [fetch_index(label, ticker) for label, ticker in INDICES]
+    markets = [fetch_index(*spec) for spec in INDICES]
     news = fetch_news()
 
     DOCS.mkdir(parents=True, exist_ok=True)

@@ -38,6 +38,7 @@ Manual runs (**Actions → Daily market brief → Run workflow**) default to `fo
 | Section | Source |
 |--------|--------|
 | KOSPI, KOSDAQ, S&P 500, Nasdaq, Dow | Yahoo Finance via `yfinance` |
+| Session date per index, `intraday` badge | Bar date compared against the exchange's own clock and close time |
 | Headlines | Reuters / Yahoo Finance / 연합뉴스 RSS |
 
 Edit tickers or feeds in `generate_brief.py` (`INDICES`, `NEWS_FEEDS`).
