@@ -26,6 +26,20 @@ INDICES = [
     ("Dow Jones", "^DJI", "America/New_York", time(16, 0)),
 ]
 
+# Volatility, futures, ETF, and FX indicators shown below the indices.
+# Futures and FX trade beyond the US cash session; 17:00 ET marks the daily
+# session boundary used to decide whether Yahoo's latest daily bar is intraday.
+MARKET_SIGNALS = [
+    ("^VIX", "^VIX", "America/New_York", time(16, 15)),
+    ("ES=F", "ES=F", "America/New_York", time(17, 0)),
+    ("NQ=F", "NQ=F", "America/New_York", time(17, 0)),
+    ("YM=F", "YM=F", "America/New_York", time(17, 0)),
+    ("GC=F", "GC=F", "America/New_York", time(17, 0)),
+    ("SI=F", "SI=F", "America/New_York", time(17, 0)),
+    ("EEM", "EEM", "America/New_York", time(16, 0)),
+    ("EURKRW=X", "EURKRW=X", "America/New_York", time(17, 0)),
+]
+
 # Watchlist: label shown, Yahoo ticker, exchange timezone, regular session close.
 STOCKS = [
     ("WDAY", "WDAY", "America/New_York", time(16, 0)),
@@ -70,9 +84,9 @@ def fetch_index(label: str, ticker: str, tz_name: str, close_time: time) -> dict
         if len(closes) < 2:
             return {"label": label, "ticker": ticker, "error": "insufficient closes"}
 
-        # Normalize timezone-aware timestamps to calendar dates for comparisons.
+        # Drop timezone metadata without shifting the exchange-local calendar date.
         if closes.index.tz is not None:
-            closes.index = closes.index.tz_convert(None)
+            closes.index = closes.index.tz_localize(None)
 
         prev, last = float(closes.iloc[-2]), float(closes.iloc[-1])
         bar_date = closes.index[-1].date()
@@ -140,6 +154,7 @@ def render_html(
     report_date: str,
     generated_at: str,
     markets: list[dict],
+    signals: list[dict],
     stocks: list[dict],
     news: list[dict],
 ) -> str:
@@ -294,6 +309,9 @@ def render_html(
     <h2>Indices</h2>
     {{ quote_rows(markets) }}
 
+    <h2>Market Signals</h2>
+    {{ quote_rows(signals) }}
+
     <h2>Watchlist</h2>
     {{ quote_rows(stocks) }}
 
@@ -325,6 +343,7 @@ def render_html(
         report_date=report_date,
         generated_at=generated_at,
         markets=markets,
+        signals=signals,
         stocks=stocks,
         news=news,
     )
@@ -408,6 +427,7 @@ def main() -> None:
     generated_at = now.strftime("%Y-%m-%d %H:%M %Z")
 
     markets = [fetch_index(*spec) for spec in INDICES]
+    signals = [fetch_index(*spec) for spec in MARKET_SIGNALS]
     stocks = [fetch_index(*spec) for spec in STOCKS]
     news = fetch_news()
 
@@ -416,7 +436,7 @@ def main() -> None:
     day_dir.mkdir(parents=True, exist_ok=True)
     out_file = day_dir / "index.html"
     out_file.write_text(
-        render_html(report_date, generated_at, markets, stocks, news),
+        render_html(report_date, generated_at, markets, signals, stocks, news),
         encoding="utf-8",
     )
 
@@ -427,6 +447,7 @@ def main() -> None:
                 "date": report_date,
                 "generated_at": generated_at,
                 "markets": markets,
+                "signals": signals,
                 "stocks": stocks,
                 "news": news,
             },
@@ -445,7 +466,8 @@ def main() -> None:
     rebuild_index(archive)
     print(
         f"Wrote {out_file} "
-        f"({len(markets)} indices, {len(stocks)} stocks, {len(news)} headlines)"
+        f"({len(markets)} indices, {len(signals)} signals, "
+        f"{len(stocks)} stocks, {len(news)} headlines)"
     )
 
 

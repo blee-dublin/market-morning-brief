@@ -38,10 +38,11 @@ Manual runs (**Actions → Daily market brief → Run workflow**) default to `fo
 | Section | Source |
 |--------|--------|
 | KOSPI, KOSDAQ, S&P 500, Nasdaq, Dow | Yahoo Finance via `yfinance` |
+| Market signals: VIX, US index futures, metals, EEM, EUR/KRW | Same source; edit `MARKET_SIGNALS` in `generate_brief.py` |
 | Watchlist: WDAY, NVDA, PLTR, AAPL, NFLX, MSFT | Same source; edit `STOCKS` in `generate_brief.py` |
 | Session date + `intraday` badge | Bar date vs exchange clock / close time |
 | Headlines | Reuters / Yahoo Finance / 연합뉴스 RSS |
 
-Edit tickers or feeds in `generate_brief.py` (`INDICES`, `STOCKS`, `NEWS_FEEDS`).
+Edit tickers or feeds in `generate_brief.py` (`INDICES`, `MARKET_SIGNALS`, `STOCKS`, `NEWS_FEEDS`).
 
 **Returns:** Day = vs previous session close. MTD / YTD = vs last close of the prior month / year.
