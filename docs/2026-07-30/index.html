@@ -24,7 +24,7 @@
       line-height: 1.5;
       min-height: 100vh;
     }
-    main { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    main { max-width: 760px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
     .eyebrow { color: var(--muted); font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; }
@@ -34,13 +34,22 @@
     .grid { display: grid; gap: 0.65rem; }
     .row {
       display: grid;
-      grid-template-columns: 1fr auto auto;
-      gap: 0.75rem;
+      grid-template-columns: minmax(0, 1.4fr) auto repeat(3, minmax(3.6rem, auto));
+      gap: 0.55rem;
       align-items: baseline;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 10px;
       padding: 0.85rem 1rem;
+    }
+    .row.header {
+      background: transparent;
+      border: none;
+      padding: 0 1rem 0.15rem;
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
     .label { font-weight: 500; }
     .asof { display: block; font-size: 0.75rem; color: var(--muted); font-weight: 400; margin-top: 0.15rem; }
@@ -54,10 +63,12 @@
       font-size: 0.7rem;
       letter-spacing: 0.02em;
     }
-    .price { font-variant-numeric: tabular-nums; color: var(--muted); }
-    .pct { font-variant-numeric: tabular-nums; font-weight: 600; min-width: 4.5rem; text-align: right; }
+    .price { font-variant-numeric: tabular-nums; color: var(--muted); text-align: right; }
+    .pct { font-variant-numeric: tabular-nums; font-weight: 600; text-align: right; }
+    .rets { display: contents; }
     .up { color: var(--up); }
     .down { color: var(--down); }
+    .na { color: var(--muted); font-weight: 500; }
     .err { color: var(--down); font-size: 0.9rem; }
     ul.news { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.65rem; }
     ul.news li {
@@ -68,27 +79,62 @@
     }
     .source { display: block; font-size: 0.75rem; color: var(--muted); margin-bottom: 0.25rem; }
     footer { margin-top: 2.5rem; color: var(--muted); font-size: 0.8rem; }
+    @media (max-width: 560px) {
+      .row {
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+          "name price"
+          "rets rets";
+      }
+      .row.header { display: none; }
+      .label { grid-area: name; }
+      .price { grid-area: price; align-self: start; }
+      .rets {
+        grid-area: rets;
+        display: flex;
+        justify-content: space-between;
+        gap: 0.75rem;
+        margin-top: 0.35rem;
+        font-size: 0.85rem;
+      }
+      .rets .pct::before {
+        content: attr(data-label) " ";
+        color: var(--muted);
+        font-weight: 500;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+      }
+    }
   </style>
 </head>
 <body>
   <main>
     <p class="eyebrow">Market Morning Brief</p>
     <h1>2026-07-30</h1>
-    <p class="meta">Generated 2026-07-30 16:24 IST · each line shows its own latest session, marked <em>intraday</em> while that session is still open</p>
+    <p class="meta">Generated 2026-07-30 16:30 IST · Day / MTD / YTD vs prior close · <em>intraday</em> while that session is still open</p>
+
+    
 
     
 
     <h2>Indices</h2>
     <div class="grid">
+      <div class="row header">
+        <span></span><span></span><span class="pct">Day</span><span class="pct">MTD</span><span class="pct">YTD</span>
+      </div>
       
         
           <div class="row">
             <span class="label">
               KOSPI
-              <span class="asof">2026-07-29 close vs previous</span>
+              <span class="asof">2026-07-28 close</span>
             </span>
             <span class="price">5,663.24</span>
-            <span class="pct down">-5.98%</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-5.98%</span></span>
+              <span data-label="MTD"><span class="pct down">-31.80%</span></span>
+              <span data-label="YTD"><span class="pct up">+34.39%</span></span>
+            </span>
           </div>
         
       
@@ -96,10 +142,14 @@
           <div class="row">
             <span class="label">
               KOSDAQ
-              <span class="asof">2026-07-29 close vs previous</span>
+              <span class="asof">2026-07-28 close</span>
             </span>
             <span class="price">662.68</span>
-            <span class="pct down">-6.12%</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-6.12%</span></span>
+              <span data-label="MTD"><span class="pct down">-28.69%</span></span>
+              <span data-label="YTD"><span class="pct down">-28.40%</span></span>
+            </span>
           </div>
         
       
@@ -107,10 +157,14 @@
           <div class="row">
             <span class="label">
               S&P 500<span class="badge">intraday</span>
-              <span class="asof">2026-07-30 vs previous</span>
+              <span class="asof">2026-07-30</span>
             </span>
-            <span class="price">7,379.29</span>
-            <span class="pct up">+0.86%</span>
+            <span class="price">7,373.16</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.78%</span></span>
+              <span data-label="MTD"><span class="pct down">-1.68%</span></span>
+              <span data-label="YTD"><span class="pct up">+7.71%</span></span>
+            </span>
           </div>
         
       
@@ -118,10 +172,14 @@
           <div class="row">
             <span class="label">
               Nasdaq<span class="badge">intraday</span>
-              <span class="asof">2026-07-30 vs previous</span>
+              <span class="asof">2026-07-30</span>
             </span>
-            <span class="price">24,956.88</span>
-            <span class="pct up">+2.10%</span>
+            <span class="price">24,919.96</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+1.95%</span></span>
+              <span data-label="MTD"><span class="pct down">-4.94%</span></span>
+              <span data-label="YTD"><span class="pct up">+7.22%</span></span>
+            </span>
           </div>
         
       
@@ -129,10 +187,14 @@
           <div class="row">
             <span class="label">
               Dow Jones<span class="badge">intraday</span>
-              <span class="asof">2026-07-30 vs previous</span>
+              <span class="asof">2026-07-30</span>
             </span>
-            <span class="price">51,730.18</span>
-            <span class="pct up">+0.26%</span>
+            <span class="price">51,724.30</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.25%</span></span>
+              <span data-label="MTD"><span class="pct down">-1.14%</span></span>
+              <span data-label="YTD"><span class="pct up">+7.62%</span></span>
+            </span>
           </div>
         
       
@@ -140,15 +202,22 @@
 
     <h2>Watchlist</h2>
     <div class="grid">
+      <div class="row header">
+        <span></span><span></span><span class="pct">Day</span><span class="pct">MTD</span><span class="pct">YTD</span>
+      </div>
       
         
           <div class="row">
             <span class="label">
               WDAY<span class="badge">intraday</span>
-              <span class="asof">2026-07-30 vs previous</span>
+              <span class="asof">2026-07-30</span>
             </span>
-            <span class="price">153.63</span>
-            <span class="pct down">-8.56%</span>
+            <span class="price">153.55</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-8.61%</span></span>
+              <span data-label="MTD"><span class="pct up">+25.43%</span></span>
+              <span data-label="YTD"><span class="pct down">-28.51%</span></span>
+            </span>
           </div>
         
       
@@ -156,10 +225,14 @@
           <div class="row">
             <span class="label">
               NVDA<span class="badge">intraday</span>
-              <span class="asof">2026-07-30 vs previous</span>
+              <span class="asof">2026-07-30</span>
             </span>
-            <span class="price">193.78</span>
-            <span class="pct up">+1.98%</span>
+            <span class="price">193.39</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+1.78%</span></span>
+              <span data-label="MTD"><span class="pct down">-3.35%</span></span>
+              <span data-label="YTD"><span class="pct up">+3.82%</span></span>
+            </span>
           </div>
         
       
@@ -167,10 +240,14 @@
           <div class="row">
             <span class="label">
               PLTR<span class="badge">intraday</span>
-              <span class="asof">2026-07-30 vs previous</span>
+              <span class="asof">2026-07-30</span>
             </span>
-            <span class="price">120.92</span>
-            <span class="pct down">-1.69%</span>
+            <span class="price">120.79</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-1.80%</span></span>
+              <span data-label="MTD"><span class="pct up">+3.53%</span></span>
+              <span data-label="YTD"><span class="pct down">-32.05%</span></span>
+            </span>
           </div>
         
       
@@ -178,10 +255,14 @@
           <div class="row">
             <span class="label">
               AAPL<span class="badge">intraday</span>
-              <span class="asof">2026-07-30 vs previous</span>
+              <span class="asof">2026-07-30</span>
             </span>
-            <span class="price">331.18</span>
-            <span class="pct down">-2.07%</span>
+            <span class="price">331.23</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-2.06%</span></span>
+              <span data-label="MTD"><span class="pct up">+14.47%</span></span>
+              <span data-label="YTD"><span class="pct up">+22.06%</span></span>
+            </span>
           </div>
         
       
@@ -189,10 +270,14 @@
           <div class="row">
             <span class="label">
               NFLX<span class="badge">intraday</span>
-              <span class="asof">2026-07-30 vs previous</span>
+              <span class="asof">2026-07-30</span>
             </span>
-            <span class="price">71.54</span>
-            <span class="pct down">-2.85%</span>
+            <span class="price">71.46</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-2.95%</span></span>
+              <span data-label="MTD"><span class="pct up">+0.08%</span></span>
+              <span data-label="YTD"><span class="pct down">-23.79%</span></span>
+            </span>
           </div>
         
       
@@ -200,10 +285,14 @@
           <div class="row">
             <span class="label">
               MSFT<span class="badge">intraday</span>
-              <span class="asof">2026-07-30 vs previous</span>
+              <span class="asof">2026-07-30</span>
             </span>
-            <span class="price">445.72</span>
-            <span class="pct up">+14.13%</span>
+            <span class="price">444.55</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+13.83%</span></span>
+              <span data-label="MTD"><span class="pct up">+19.18%</span></span>
+              <span data-label="YTD"><span class="pct down">-7.67%</span></span>
+            </span>
           </div>
         
       
@@ -268,6 +357,7 @@
 
     <footer>
       Data: Yahoo Finance (yfinance) · News: public RSS ·
+      MTD / YTD vs last close of prior month / year ·
       <a href="../index.html">Archive</a>
     </footer>
   </main>

@@ -1,6 +1,6 @@
 {
   "date": "2026-07-30",
-  "generated_at": "2026-07-30 16:24 IST",
+  "generated_at": "2026-07-30 16:30 IST",
   "markets": [
     {
       "label": "KOSPI",
@@ -9,7 +9,9 @@
       "prev": 6023.66,
       "change": -360.42,
       "pct": -5.98,
-      "as_of": "2026-07-29",
+      "mtd": -31.8,
+      "ytd": 34.39,
+      "as_of": "2026-07-28",
       "intraday": false,
       "up": false
     },
@@ -20,17 +22,21 @@
       "prev": 705.85,
       "change": -43.17,
       "pct": -6.12,
-      "as_of": "2026-07-29",
+      "mtd": -28.69,
+      "ytd": -28.4,
+      "as_of": "2026-07-28",
       "intraday": false,
       "up": false
     },
     {
       "label": "S&P 500",
       "ticker": "^GSPC",
-      "last": 7379.29,
+      "last": 7373.16,
       "prev": 7316.15,
-      "change": 63.14,
-      "pct": 0.86,
+      "change": 57.01,
+      "pct": 0.78,
+      "mtd": -1.68,
+      "ytd": 7.71,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": true
@@ -38,10 +44,12 @@
     {
       "label": "Nasdaq",
       "ticker": "^IXIC",
-      "last": 24956.88,
+      "last": 24919.96,
       "prev": 24442.94,
-      "change": 513.94,
-      "pct": 2.1,
+      "change": 477.02,
+      "pct": 1.95,
+      "mtd": -4.94,
+      "ytd": 7.22,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": true
@@ -49,10 +57,12 @@
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
-      "last": 51730.18,
+      "last": 51724.3,
       "prev": 51594.14,
-      "change": 136.04,
-      "pct": 0.26,
+      "change": 130.16,
+      "pct": 0.25,
+      "mtd": -1.14,
+      "ytd": 7.62,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": true
@@ -62,10 +72,12 @@
     {
       "label": "WDAY",
       "ticker": "WDAY",
-      "last": 153.63,
+      "last": 153.55,
       "prev": 168.01,
-      "change": -14.38,
-      "pct": -8.56,
+      "change": -14.46,
+      "pct": -8.61,
+      "mtd": 25.43,
+      "ytd": -28.51,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": false
@@ -73,10 +85,12 @@
     {
       "label": "NVDA",
       "ticker": "NVDA",
-      "last": 193.78,
+      "last": 193.39,
       "prev": 190.01,
-      "change": 3.77,
-      "pct": 1.98,
+      "change": 3.38,
+      "pct": 1.78,
+      "mtd": -3.35,
+      "ytd": 3.82,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": true
@@ -84,10 +98,12 @@
     {
       "label": "PLTR",
       "ticker": "PLTR",
-      "last": 120.92,
+      "last": 120.79,
       "prev": 123.0,
-      "change": -2.08,
-      "pct": -1.69,
+      "change": -2.21,
+      "pct": -1.8,
+      "mtd": 3.53,
+      "ytd": -32.05,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": false
@@ -95,10 +111,12 @@
     {
       "label": "AAPL",
       "ticker": "AAPL",
-      "last": 331.18,
+      "last": 331.23,
       "prev": 338.19,
-      "change": -7.01,
-      "pct": -2.07,
+      "change": -6.96,
+      "pct": -2.06,
+      "mtd": 14.47,
+      "ytd": 22.06,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": false
@@ -106,10 +124,12 @@
     {
       "label": "NFLX",
       "ticker": "NFLX",
-      "last": 71.54,
+      "last": 71.46,
       "prev": 73.63,
-      "change": -2.09,
-      "pct": -2.85,
+      "change": -2.17,
+      "pct": -2.95,
+      "mtd": 0.08,
+      "ytd": -23.79,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": false
@@ -117,10 +137,12 @@
     {
       "label": "MSFT",
       "ticker": "MSFT",
-      "last": 445.72,
+      "last": 444.55,
       "prev": 390.54,
-      "change": 55.18,
-      "pct": 14.13,
+      "change": 54.01,
+      "pct": 13.83,
+      "mtd": 19.18,
+      "ytd": -7.67,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": true
