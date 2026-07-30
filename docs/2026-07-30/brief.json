@@ -1,0 +1,118 @@
+{
+  "date": "2026-07-30",
+  "generated_at": "2026-07-30 16:09 IST",
+  "markets": [
+    {
+      "label": "KOSPI",
+      "ticker": "^KS11",
+      "last": 5663.24,
+      "prev": 6023.66,
+      "change": -360.42,
+      "pct": -5.98,
+      "as_of": "2026-07-29",
+      "up": false
+    },
+    {
+      "label": "KOSDAQ",
+      "ticker": "^KQ11",
+      "last": 662.68,
+      "prev": 705.85,
+      "change": -43.17,
+      "pct": -6.12,
+      "as_of": "2026-07-29",
+      "up": false
+    },
+    {
+      "label": "S&P 500",
+      "ticker": "^GSPC",
+      "last": 7392.17,
+      "prev": 7316.15,
+      "change": 76.02,
+      "pct": 1.04,
+      "as_of": "2026-07-30",
+      "up": true
+    },
+    {
+      "label": "Nasdaq",
+      "ticker": "^IXIC",
+      "last": 25021.21,
+      "prev": 24442.94,
+      "change": 578.27,
+      "pct": 2.37,
+      "as_of": "2026-07-30",
+      "up": true
+    },
+    {
+      "label": "Dow Jones",
+      "ticker": "^DJI",
+      "last": 51762.08,
+      "prev": 51594.14,
+      "change": 167.94,
+      "pct": 0.33,
+      "as_of": "2026-07-30",
+      "up": true
+    }
+  ],
+  "news": [
+    {
+      "source": "Yahoo Finance",
+      "title": "Jim Cramer says this post-earnings sell-off is a golden buying opportunity",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-says-post-earnings-221700892.html",
+      "published": "2026-07-29T22:17:00Z"
+    },
+    {
+      "source": "Yahoo Finance",
+      "title": "Hedge Funds Favor Union Pacific Corporation (UNP) Over Canadian Pacific (CP): UNP Beat Earnings and Just Got a Major Win",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/hedge-funds-favor-union-pacific-145855454.html",
+      "published": "2026-07-30T14:58:55Z"
+    },
+    {
+      "source": "Yahoo Finance",
+      "title": "Stock market today: Dow, S&P 500, Nasdaq rebound after Fed decision, as Microsoft leads tech gains",
+      "link": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-july-30-dow-sp-500-nasdaq-082255995.html",
+      "published": "2026-07-30T08:22:55Z"
+    },
+    {
+      "source": "Yahoo Finance",
+      "title": "Fed meeting live: Fed Chairman Warsh gets the 'good family fight' he asked for as 3 officials dissent",
+      "link": "https://finance.yahoo.com/economy/live/fed-meeting-live-federal-reserve-july-interest-rate-decision-141813444.html",
+      "published": "2026-07-28T14:18:13Z"
+    },
+    {
+      "source": "Yahoo Finance",
+      "title": "Strong Demand for Custom Silicon Chips Boosts Teradyne’s (TER) Market Outlook",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/strong-demand-custom-silicon-chips-144115715.html",
+      "published": "2026-07-30T14:41:15Z"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "재경부, 8월 국고채 1조 증가한 17조 발행…재정증권 발행 안 해",
+      "link": "https://www.yna.co.kr/view/AKR20260730179200002",
+      "published": "Thu, 30 Jul 2026 19:26:35 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "'온습도 제어장비 제조업' 멜콘 등 3사, 코스닥 상장예심 통과",
+      "link": "https://www.yna.co.kr/view/AKR20260730181300008",
+      "published": "Thu, 30 Jul 2026 18:47:52 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "'32억 전세사기' 해외 도피 검찰수사관 구속 송치",
+      "link": "https://www.yna.co.kr/view/AKR20260730180400061",
+      "published": "Thu, 30 Jul 2026 18:37:21 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "한주에이알티, 20억원 유상증자…아르테미스2호조합에 제3자배정",
+      "link": "https://www.yna.co.kr/view/AKR20260730177800008",
+      "published": "Thu, 30 Jul 2026 18:12:04 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "한은, 예금토큰 지급 시스템 '프로젝트 아고라' 실거래 테스트",
+      "link": "https://www.yna.co.kr/view/AKR20260730149200002",
+      "published": "Thu, 30 Jul 2026 18:00:01 +0900"
+    }
+  ]
+}
