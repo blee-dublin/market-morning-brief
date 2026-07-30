@@ -1,6 +1,6 @@
 {
   "date": "2026-07-30",
-  "generated_at": "2026-07-30 16:17 IST",
+  "generated_at": "2026-07-30 16:24 IST",
   "markets": [
     {
       "label": "KOSPI",
@@ -27,10 +27,10 @@
     {
       "label": "S&P 500",
       "ticker": "^GSPC",
-      "last": 7375.38,
+      "last": 7379.29,
       "prev": 7316.15,
-      "change": 59.23,
-      "pct": 0.81,
+      "change": 63.14,
+      "pct": 0.86,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": true
@@ -38,10 +38,10 @@
     {
       "label": "Nasdaq",
       "ticker": "^IXIC",
-      "last": 24942.35,
+      "last": 24956.88,
       "prev": 24442.94,
-      "change": 499.41,
-      "pct": 2.04,
+      "change": 513.94,
+      "pct": 2.1,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": true
@@ -49,10 +49,78 @@
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
-      "last": 51704.9,
+      "last": 51730.18,
       "prev": 51594.14,
-      "change": 110.76,
-      "pct": 0.21,
+      "change": 136.04,
+      "pct": 0.26,
+      "as_of": "2026-07-30",
+      "intraday": true,
+      "up": true
+    }
+  ],
+  "stocks": [
+    {
+      "label": "WDAY",
+      "ticker": "WDAY",
+      "last": 153.63,
+      "prev": 168.01,
+      "change": -14.38,
+      "pct": -8.56,
+      "as_of": "2026-07-30",
+      "intraday": true,
+      "up": false
+    },
+    {
+      "label": "NVDA",
+      "ticker": "NVDA",
+      "last": 193.78,
+      "prev": 190.01,
+      "change": 3.77,
+      "pct": 1.98,
+      "as_of": "2026-07-30",
+      "intraday": true,
+      "up": true
+    },
+    {
+      "label": "PLTR",
+      "ticker": "PLTR",
+      "last": 120.92,
+      "prev": 123.0,
+      "change": -2.08,
+      "pct": -1.69,
+      "as_of": "2026-07-30",
+      "intraday": true,
+      "up": false
+    },
+    {
+      "label": "AAPL",
+      "ticker": "AAPL",
+      "last": 331.18,
+      "prev": 338.19,
+      "change": -7.01,
+      "pct": -2.07,
+      "as_of": "2026-07-30",
+      "intraday": true,
+      "up": false
+    },
+    {
+      "label": "NFLX",
+      "ticker": "NFLX",
+      "last": 71.54,
+      "prev": 73.63,
+      "change": -2.09,
+      "pct": -2.85,
+      "as_of": "2026-07-30",
+      "intraday": true,
+      "up": false
+    },
+    {
+      "label": "MSFT",
+      "ticker": "MSFT",
+      "last": 445.72,
+      "prev": 390.54,
+      "change": 55.18,
+      "pct": 14.13,
       "as_of": "2026-07-30",
       "intraday": true,
       "up": true
@@ -67,9 +135,9 @@
     },
     {
       "source": "Yahoo Finance",
-      "title": "Hedge Funds Favor Union Pacific Corporation (UNP) Over Canadian Pacific (CP): UNP Beat Earnings and Just Got a Major Win",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/hedge-funds-favor-union-pacific-145855454.html",
-      "published": "2026-07-30T14:58:55Z"
+      "title": "Equifax's $2.2 million credit reporting settlement: Who qualifies",
+      "link": "https://finance.yahoo.com/personal-finance/banking/article/equifaxs-22-million-credit-reporting-settlement-who-qualifies-130000338.html",
+      "published": "2026-07-30T13:00:00Z"
     },
     {
       "source": "Yahoo Finance",
@@ -79,15 +147,15 @@
     },
     {
       "source": "Yahoo Finance",
-      "title": "Fed meeting live: Fed Chairman Warsh gets the 'good family fight' he asked for as 3 officials dissent",
-      "link": "https://finance.yahoo.com/economy/live/fed-meeting-live-federal-reserve-july-interest-rate-decision-141813444.html",
-      "published": "2026-07-28T14:18:13Z"
+      "title": "US economic growth slows in second quarter, but domestic demand robust",
+      "link": "https://finance.yahoo.com/economy/articles/us-economic-growth-slows-second-123802232.html",
+      "published": "2026-07-30T15:08:10Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Strong Demand for Custom Silicon Chips Boosts Teradyne’s (TER) Market Outlook",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/strong-demand-custom-silicon-chips-144115715.html",
-      "published": "2026-07-30T14:41:15Z"
+      "title": "Microsoft's $41 billion AI bet just cleared a major test: Chart of the Day",
+      "link": "https://finance.yahoo.com/markets/article/microsofts-41-billion-ai-bet-just-cleared-a-major-test-chart-of-the-day-100000116.html",
+      "published": "2026-07-30T10:00:00Z"
     },
     {
       "source": "연합뉴스 경제",
