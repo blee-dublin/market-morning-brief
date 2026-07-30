@@ -43,6 +43,17 @@
       padding: 0.85rem 1rem;
     }
     .label { font-weight: 500; }
+    .asof { display: block; font-size: 0.75rem; color: var(--muted); font-weight: 400; margin-top: 0.15rem; }
+    .badge {
+      display: inline-block;
+      margin-left: 0.4rem;
+      padding: 0.05rem 0.4rem;
+      border-radius: 4px;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.7rem;
+      letter-spacing: 0.02em;
+    }
     .price { font-variant-numeric: tabular-nums; color: var(--muted); }
     .pct { font-variant-numeric: tabular-nums; font-weight: 600; min-width: 4.5rem; text-align: right; }
     .up { color: var(--up); }
@@ -63,14 +74,17 @@
   <main>
     <p class="eyebrow">Market Morning Brief</p>
     <h1>2026-07-30</h1>
-    <p class="meta">Dublin time · generated 2026-07-30 16:09 IST · previous session closes</p>
+    <p class="meta">Generated 2026-07-30 16:17 IST · each index shows its own latest session, marked <em>intraday</em> while that session is still open</p>
 
     <h2>Indices</h2>
     <div class="grid">
       
         
           <div class="row">
-            <span class="label">KOSPI</span>
+            <span class="label">
+              KOSPI
+              <span class="asof">2026-07-29 close vs previous</span>
+            </span>
             <span class="price">5,663.24</span>
             <span class="pct down">-5.98%</span>
           </div>
@@ -78,7 +92,10 @@
       
         
           <div class="row">
-            <span class="label">KOSDAQ</span>
+            <span class="label">
+              KOSDAQ
+              <span class="asof">2026-07-29 close vs previous</span>
+            </span>
             <span class="price">662.68</span>
             <span class="pct down">-6.12%</span>
           </div>
@@ -86,25 +103,34 @@
       
         
           <div class="row">
-            <span class="label">S&P 500</span>
-            <span class="price">7,392.17</span>
-            <span class="pct up">+1.04%</span>
+            <span class="label">
+              S&P 500<span class="badge">intraday</span>
+              <span class="asof">2026-07-30 vs previous</span>
+            </span>
+            <span class="price">7,375.38</span>
+            <span class="pct up">+0.81%</span>
           </div>
         
       
         
           <div class="row">
-            <span class="label">Nasdaq</span>
-            <span class="price">25,021.21</span>
-            <span class="pct up">+2.37%</span>
+            <span class="label">
+              Nasdaq<span class="badge">intraday</span>
+              <span class="asof">2026-07-30 vs previous</span>
+            </span>
+            <span class="price">24,942.35</span>
+            <span class="pct up">+2.04%</span>
           </div>
         
       
         
           <div class="row">
-            <span class="label">Dow Jones</span>
-            <span class="price">51,762.08</span>
-            <span class="pct up">+0.33%</span>
+            <span class="label">
+              Dow Jones<span class="badge">intraday</span>
+              <span class="asof">2026-07-30 vs previous</span>
+            </span>
+            <span class="price">51,704.90</span>
+            <span class="pct up">+0.21%</span>
           </div>
         
       
@@ -140,6 +166,11 @@
           </li>
         
           <li>
+            <span class="source">연합뉴스 경제 · Fri, 31 Jul 2026 00:10:51 +0900</span>
+            <a href="https://www.yna.co.kr/view/AKR20260730195600072" rel="noopener noreferrer">원/달러 환율 야간장서 한때 1,420원 밑 급락…엔화값 급등 동조</a>
+          </li>
+        
+          <li>
             <span class="source">연합뉴스 경제 · Thu, 30 Jul 2026 19:26:35 +0900</span>
             <a href="https://www.yna.co.kr/view/AKR20260730179200002" rel="noopener noreferrer">재경부, 8월 국고채 1조 증가한 17조 발행…재정증권 발행 안 해</a>
           </li>
@@ -157,11 +188,6 @@
           <li>
             <span class="source">연합뉴스 경제 · Thu, 30 Jul 2026 18:12:04 +0900</span>
             <a href="https://www.yna.co.kr/view/AKR20260730177800008" rel="noopener noreferrer">한주에이알티, 20억원 유상증자…아르테미스2호조합에 제3자배정</a>
-          </li>
-        
-          <li>
-            <span class="source">연합뉴스 경제 · Thu, 30 Jul 2026 18:00:01 +0900</span>
-            <a href="https://www.yna.co.kr/view/AKR20260730149200002" rel="noopener noreferrer">한은, 예금토큰 지급 시스템 '프로젝트 아고라' 실거래 테스트</a>
           </li>
         
       </ul>

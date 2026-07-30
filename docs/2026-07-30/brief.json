@@ -1,6 +1,6 @@
 {
   "date": "2026-07-30",
-  "generated_at": "2026-07-30 16:09 IST",
+  "generated_at": "2026-07-30 16:17 IST",
   "markets": [
     {
       "label": "KOSPI",
@@ -10,6 +10,7 @@
       "change": -360.42,
       "pct": -5.98,
       "as_of": "2026-07-29",
+      "intraday": false,
       "up": false
     },
     {
@@ -20,36 +21,40 @@
       "change": -43.17,
       "pct": -6.12,
       "as_of": "2026-07-29",
+      "intraday": false,
       "up": false
     },
     {
       "label": "S&P 500",
       "ticker": "^GSPC",
-      "last": 7392.17,
+      "last": 7375.38,
       "prev": 7316.15,
-      "change": 76.02,
-      "pct": 1.04,
+      "change": 59.23,
+      "pct": 0.81,
       "as_of": "2026-07-30",
+      "intraday": true,
       "up": true
     },
     {
       "label": "Nasdaq",
       "ticker": "^IXIC",
-      "last": 25021.21,
+      "last": 24942.35,
       "prev": 24442.94,
-      "change": 578.27,
-      "pct": 2.37,
+      "change": 499.41,
+      "pct": 2.04,
       "as_of": "2026-07-30",
+      "intraday": true,
       "up": true
     },
     {
       "label": "Dow Jones",
       "ticker": "^DJI",
-      "last": 51762.08,
+      "last": 51704.9,
       "prev": 51594.14,
-      "change": 167.94,
-      "pct": 0.33,
+      "change": 110.76,
+      "pct": 0.21,
       "as_of": "2026-07-30",
+      "intraday": true,
       "up": true
     }
   ],
@@ -86,6 +91,12 @@
     },
     {
       "source": "연합뉴스 경제",
+      "title": "원/달러 환율 야간장서 한때 1,420원 밑 급락…엔화값 급등 동조",
+      "link": "https://www.yna.co.kr/view/AKR20260730195600072",
+      "published": "Fri, 31 Jul 2026 00:10:51 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
       "title": "재경부, 8월 국고채 1조 증가한 17조 발행…재정증권 발행 안 해",
       "link": "https://www.yna.co.kr/view/AKR20260730179200002",
       "published": "Thu, 30 Jul 2026 19:26:35 +0900"
@@ -107,12 +118,6 @@
       "title": "한주에이알티, 20억원 유상증자…아르테미스2호조합에 제3자배정",
       "link": "https://www.yna.co.kr/view/AKR20260730177800008",
       "published": "Thu, 30 Jul 2026 18:12:04 +0900"
-    },
-    {
-      "source": "연합뉴스 경제",
-      "title": "한은, 예금토큰 지급 시스템 '프로젝트 아고라' 실거래 테스트",
-      "link": "https://www.yna.co.kr/view/AKR20260730149200002",
-      "published": "Thu, 30 Jul 2026 18:00:01 +0900"
     }
   ]
 }
