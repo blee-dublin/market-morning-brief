@@ -1,6 +1,6 @@
 {
   "date": "2026-08-06",
-  "generated_at": "2026-08-06 11:07 IST",
+  "generated_at": "2026-08-06 11:11 IST",
   "markets": [
     {
       "label": "KOSPI",
@@ -107,12 +107,12 @@
     {
       "label": "VIX",
       "ticker": "^VIX",
-      "last": 15.85,
+      "last": 15.92,
       "prev": 15.81,
-      "change": 0.04,
-      "pct": 0.25,
-      "mtd": -0.88,
-      "ytd": 6.02,
+      "change": 0.11,
+      "pct": 0.7,
+      "mtd": -0.44,
+      "ytd": 6.49,
       "as_of": "2026-08-06",
       "intraday": true,
       "up": true,
@@ -121,18 +121,18 @@
         15.86,
         16.5,
         15.81,
-        15.85
+        15.92
       ]
     },
     {
       "label": "S&P futures (ES)",
       "ticker": "ES=F",
-      "last": 7760.0,
+      "last": 7765.5,
       "prev": 7749.5,
-      "change": 10.5,
-      "pct": 0.14,
-      "mtd": 3.2,
-      "ytd": 12.59,
+      "change": 16.0,
+      "pct": 0.21,
+      "mtd": 3.27,
+      "ytd": 12.67,
       "as_of": "2026-08-06",
       "intraday": true,
       "up": true,
@@ -141,18 +141,18 @@
         7628.25,
         7765.5,
         7749.5,
-        7760.0
+        7765.5
       ]
     },
     {
       "label": "Nasdaq futures (NQ)",
       "ticker": "NQ=F",
-      "last": 29537.25,
+      "last": 29520.0,
       "prev": 29615.0,
-      "change": -77.75,
-      "pct": -0.26,
-      "mtd": 3.99,
-      "ytd": 16.03,
+      "change": -95.0,
+      "pct": -0.32,
+      "mtd": 3.93,
+      "ytd": 15.96,
       "as_of": "2026-08-06",
       "intraday": true,
       "up": false,
@@ -161,18 +161,18 @@
         28891.75,
         29863.5,
         29615.0,
-        29537.25
+        29520.0
       ]
     },
     {
       "label": "Dow futures (YM)",
       "ticker": "YM=F",
-      "last": 54624.0,
+      "last": 54655.0,
       "prev": 54494.0,
-      "change": 130.0,
-      "pct": 0.24,
-      "mtd": 3.78,
-      "ytd": 13.01,
+      "change": 161.0,
+      "pct": 0.3,
+      "mtd": 3.84,
+      "ytd": 13.07,
       "as_of": "2026-08-06",
       "intraday": true,
       "up": true,
@@ -181,18 +181,18 @@
         53334.0,
         54268.0,
         54494.0,
-        54624.0
+        54655.0
       ]
     },
     {
       "label": "Gold (GC)",
       "ticker": "GC=F",
-      "last": 4320.7,
+      "last": 4331.1,
       "prev": 4245.8,
-      "change": 74.9,
-      "pct": 1.76,
-      "mtd": 6.71,
-      "ytd": -0.11,
+      "change": 85.3,
+      "pct": 2.01,
+      "mtd": 6.96,
+      "ytd": 0.13,
       "as_of": "2026-08-06",
       "intraday": true,
       "up": true,
@@ -201,27 +201,27 @@
         4033.7,
         4095.3999,
         4245.7998,
-        4320.7002
+        4331.1001
       ]
     },
     {
       "label": "Silver (SI)",
       "ticker": "SI=F",
-      "last": 62.1,
+      "last": 62.08,
       "prev": 62.1,
-      "change": 0.0,
-      "pct": 0.0,
-      "mtd": 7.83,
-      "ytd": -11.46,
+      "change": -0.01,
+      "pct": -0.02,
+      "mtd": 7.8,
+      "ytd": -11.48,
       "as_of": "2026-08-06",
       "intraday": true,
-      "up": true,
+      "up": false,
       "spark": [
         57.591,
         57.667,
         60.056,
         62.099,
-        62.1
+        62.085
       ]
     },
     {
@@ -267,12 +267,12 @@
     {
       "label": "USD/KRW",
       "ticker": "USDKRW=X",
-      "last": 1428.31,
+      "last": 1424.2,
       "prev": 1428.43,
-      "change": -0.12,
-      "pct": -0.01,
-      "mtd": 0.54,
-      "ytd": -0.67,
+      "change": -4.23,
+      "pct": -0.3,
+      "mtd": 0.25,
+      "ytd": -0.95,
       "as_of": "2026-08-06",
       "intraday": true,
       "up": false,
@@ -281,27 +281,27 @@
         1435.7,
         1428.5,
         1428.4301,
-        1428.3101
+        1424.2
       ]
     },
     {
       "label": "EUR/KRW",
       "ticker": "EURKRW=X",
-      "last": 1648.0,
+      "last": 1642.8,
       "prev": 1647.17,
-      "change": 0.83,
-      "pct": 0.05,
-      "mtd": 0.69,
-      "ytd": -2.43,
+      "change": -4.37,
+      "pct": -0.27,
+      "mtd": 0.37,
+      "ytd": -2.73,
       "as_of": "2026-08-06",
       "intraday": true,
-      "up": true,
+      "up": false,
       "spark": [
         1636.6801,
         1663.51,
         1643.36,
         1647.17,
-        1648.0
+        1642.8
       ]
     }
   ],
@@ -467,5 +467,66 @@
       ]
     }
   ],
-  "news": []
+  "news": [
+    {
+      "source": "Yahoo Finance",
+      "title": "What is whole life insurance? How it works.",
+      "link": "https://finance.yahoo.com/personal-finance/insurance/article/what-is-whole-life-insurance-213448917.html",
+      "published": "2023-12-15T22:11:25Z"
+    },
+    {
+      "source": "Yahoo Finance",
+      "title": "Is it better to lease or finance a car? What drivers should know.",
+      "link": "https://finance.yahoo.com/personal-finance/insurance/article/lease-vs-finance-car-203958250.html",
+      "published": "2024-07-23T20:39:58Z"
+    },
+    {
+      "source": "Yahoo Finance",
+      "title": "Sweep accounts explained: An easy way to put idle cash to work",
+      "link": "https://finance.yahoo.com/personal-finance/banking/article/what-is-a-sweep-account-215353293.html",
+      "published": "2026-08-04T21:53:53Z"
+    },
+    {
+      "source": "Yahoo Finance",
+      "title": "SpaceX stock keeps sliding. What to do if you own shares.",
+      "link": "https://finance.yahoo.com/personal-finance/investing/article/spacex-stock-keeps-sliding-what-to-do-if-you-own-shares-141704338.html",
+      "published": "2026-06-17T14:17:04Z"
+    },
+    {
+      "source": "Yahoo Finance",
+      "title": "Antitrust Trial Over Paramount-Warner Merger Set for March",
+      "link": "https://www.wsj.com/business/media/antitrust-trial-over-paramount-warner-merger-set-for-march-b17fedcb?siteid=yhoof2&yptr=yahoo",
+      "published": "2026-08-04T22:08:00Z"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "노동硏, 취업자 증가폭 전망치 절반으로 하향…\"성장 반도체 편중\"",
+      "link": "https://www.yna.co.kr/view/AKR20260806102000530",
+      "published": "Thu, 6 Aug 2026 19:00:01 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "산업장관 \"주52시간 손봐야…일하려는 의지 막아선 안돼\"(종합)",
+      "link": "https://www.yna.co.kr/view/AKR20260806095351003",
+      "published": "Thu, 6 Aug 2026 18:31:00 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "큐로홀딩스, 34억원 유상증자…케이파트너스 등에 3자 배정",
+      "link": "https://www.yna.co.kr/view/AKR20260806145000008",
+      "published": "Thu, 6 Aug 2026 18:26:30 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "[연합뉴스 이 시각 헤드라인] - 18:00",
+      "link": "https://www.yna.co.kr/view/AKR20260806141000011",
+      "published": "Thu, 6 Aug 2026 18:00:01 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "신용한 지사 \"창업특별도 조성으로 충북 경제 대전환 이끌 것\"",
+      "link": "https://www.yna.co.kr/view/AKR20260806142800064",
+      "published": "Thu, 6 Aug 2026 17:55:47 +0900"
+    }
+  ]
 }
