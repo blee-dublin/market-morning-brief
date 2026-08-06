@@ -1,6 +1,6 @@
 {
   "date": "2026-08-06",
-  "generated_at": "2026-08-06 10:38 IST",
+  "generated_at": "2026-08-06 11:10 IST",
   "markets": [
     {
       "label": "KOSPI",
@@ -127,12 +127,12 @@
     {
       "label": "S&P futures (ES)",
       "ticker": "ES=F",
-      "last": 7760.0,
+      "last": 7765.5,
       "prev": 7749.5,
-      "change": 10.5,
-      "pct": 0.14,
-      "mtd": 3.2,
-      "ytd": 12.59,
+      "change": 16.0,
+      "pct": 0.21,
+      "mtd": 3.27,
+      "ytd": 12.67,
       "as_of": "2026-08-06",
       "intraday": true,
       "up": true,
@@ -141,18 +141,18 @@
         7628.25,
         7765.5,
         7749.5,
-        7760.0
+        7765.5
       ]
     },
     {
       "label": "Nasdaq futures (NQ)",
       "ticker": "NQ=F",
-      "last": 29484.5,
+      "last": 29515.0,
       "prev": 29615.0,
-      "change": -130.5,
-      "pct": -0.44,
-      "mtd": 3.8,
-      "ytd": 15.82,
+      "change": -100.0,
+      "pct": -0.34,
+      "mtd": 3.91,
+      "ytd": 15.94,
       "as_of": "2026-08-06",
       "intraday": true,
       "up": false,
@@ -161,18 +161,18 @@
         28891.75,
         29863.5,
         29615.0,
-        29484.5
+        29515.0
       ]
     },
     {
       "label": "Dow futures (YM)",
       "ticker": "YM=F",
-      "last": 54652.0,
+      "last": 54667.0,
       "prev": 54494.0,
-      "change": 158.0,
-      "pct": 0.29,
-      "mtd": 3.83,
-      "ytd": 13.07,
+      "change": 173.0,
+      "pct": 0.32,
+      "mtd": 3.86,
+      "ytd": 13.1,
       "as_of": "2026-08-06",
       "intraday": true,
       "up": true,
@@ -181,18 +181,18 @@
         53334.0,
         54268.0,
         54494.0,
-        54652.0
+        54667.0
       ]
     },
     {
       "label": "Gold (GC)",
       "ticker": "GC=F",
-      "last": 4340.3,
+      "last": 4332.2,
       "prev": 4245.8,
-      "change": 94.5,
-      "pct": 2.23,
-      "mtd": 7.19,
-      "ytd": 0.34,
+      "change": 86.4,
+      "pct": 2.03,
+      "mtd": 6.99,
+      "ytd": 0.15,
       "as_of": "2026-08-06",
       "intraday": true,
       "up": true,
@@ -201,18 +201,18 @@
         4033.7,
         4095.3999,
         4245.7998,
-        4340.2998
+        4332.2002
       ]
     },
     {
       "label": "Silver (SI)",
       "ticker": "SI=F",
-      "last": 62.24,
+      "last": 62.13,
       "prev": 62.1,
-      "change": 0.14,
-      "pct": 0.23,
-      "mtd": 8.07,
-      "ytd": -11.26,
+      "change": 0.04,
+      "pct": 0.06,
+      "mtd": 7.89,
+      "ytd": -11.41,
       "as_of": "2026-08-06",
       "intraday": true,
       "up": true,
@@ -221,7 +221,7 @@
         57.667,
         60.056,
         62.099,
-        62.24
+        62.135
       ]
     },
     {
@@ -267,12 +267,12 @@
     {
       "label": "USD/KRW",
       "ticker": "USDKRW=X",
-      "last": 1424.53,
+      "last": 1424.24,
       "prev": 1428.43,
-      "change": -3.9,
-      "pct": -0.27,
-      "mtd": 0.28,
-      "ytd": -0.93,
+      "change": -4.19,
+      "pct": -0.29,
+      "mtd": 0.26,
+      "ytd": -0.95,
       "as_of": "2026-08-06",
       "intraday": true,
       "up": false,
@@ -281,17 +281,17 @@
         1435.7,
         1428.5,
         1428.4301,
-        1424.53
+        1424.24
       ]
     },
     {
       "label": "EUR/KRW",
       "ticker": "EURKRW=X",
-      "last": 1642.9,
+      "last": 1642.8,
       "prev": 1647.17,
-      "change": -4.27,
-      "pct": -0.26,
-      "mtd": 0.38,
+      "change": -4.37,
+      "pct": -0.27,
+      "mtd": 0.37,
       "ytd": -2.73,
       "as_of": "2026-08-06",
       "intraday": true,
@@ -301,7 +301,7 @@
         1663.51,
         1643.36,
         1647.17,
-        1642.9
+        1642.8
       ]
     }
   ],
@@ -470,21 +470,9 @@
   "news": [
     {
       "source": "Yahoo Finance",
-      "title": "What is term life insurance? How it works.",
-      "link": "https://finance.yahoo.com/personal-finance/insurance/article/what-is-term-life-insurance-170452904.html",
-      "published": "2023-12-15T22:09:24Z"
-    },
-    {
-      "source": "Yahoo Finance",
       "title": "What is whole life insurance? How it works.",
       "link": "https://finance.yahoo.com/personal-finance/insurance/article/what-is-whole-life-insurance-213448917.html",
       "published": "2023-12-15T22:11:25Z"
-    },
-    {
-      "source": "Yahoo Finance",
-      "title": "What is life insurance? How it works.",
-      "link": "https://finance.yahoo.com/personal-finance/insurance/article/what-is-life-insurance-200844307.html",
-      "published": "2023-12-15T22:07:32Z"
     },
     {
       "source": "Yahoo Finance",
@@ -494,9 +482,27 @@
     },
     {
       "source": "Yahoo Finance",
-      "title": "Novo Nordisk Stock Stumbles On A Key Miss As Its Battle With Eli Lilly Heats Up",
-      "link": "https://www.investors.com/news/technology/novo-nordisk-stock-novo-nordisk-earnings-q2-2026/?src=A00220&yptr=yahoo",
-      "published": "2026-08-04T21:27:14Z"
+      "title": "What is term life insurance? How it works.",
+      "link": "https://finance.yahoo.com/personal-finance/insurance/article/what-is-term-life-insurance-170452904.html",
+      "published": "2023-12-15T22:09:24Z"
+    },
+    {
+      "source": "Yahoo Finance",
+      "title": "What is life insurance? How it works.",
+      "link": "https://finance.yahoo.com/personal-finance/insurance/article/what-is-life-insurance-200844307.html",
+      "published": "2023-12-15T22:07:32Z"
+    },
+    {
+      "source": "Yahoo Finance",
+      "title": "What is the actual cash value of my car?",
+      "link": "https://finance.yahoo.com/personal-finance/insurance/article/actual-cash-value-of-my-car-204252991.html",
+      "published": "2024-07-29T20:42:52Z"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "노동硏, 취업자 증가폭 전망치 절반으로 하향…\"성장 반도체 편중\"",
+      "link": "https://www.yna.co.kr/view/AKR20260806102000530",
+      "published": "Thu, 6 Aug 2026 19:00:01 +0900"
     },
     {
       "source": "연합뉴스 경제",
@@ -521,12 +527,6 @@
       "title": "신용한 지사 \"창업특별도 조성으로 충북 경제 대전환 이끌 것\"",
       "link": "https://www.yna.co.kr/view/AKR20260806142800064",
       "published": "Thu, 6 Aug 2026 17:55:47 +0900"
-    },
-    {
-      "source": "연합뉴스 경제",
-      "title": "LGU+ 역대 분기 최다 영업익…AIDC에 2조원 투자(종합2보)",
-      "link": "https://www.yna.co.kr/view/AKR20260806048201017",
-      "published": "Thu, 6 Aug 2026 17:09:26 +0900"
     }
   ]
 }
