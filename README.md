@@ -29,7 +29,7 @@ Opens as `docs/YYYY-MM-DD/index.html`.
 
 GitHub `cron` is UTC-only. The workflow fires at **08:30 and 09:30 UTC** on weekdays so that one of the two lands at 09:30 Dublin in either GMT or IST.
 
-The script publishes only inside the **09:00–10:59 Europe/Dublin** window, and skips when a report for today already exists. The wide window absorbs GitHub's scheduling delays; the existence check keeps the second cron from double-publishing.
+Those are *earliest* times. GitHub queues scheduled runs and regularly starts them one to three hours late, so the script does not enforce a narrow window — it publishes on any trigger from **08:00 Europe/Dublin** onward and skips when a report for today already exists. The first trigger to arrive publishes; later ones no-op. The workflow also runs under a single `concurrency` group so the two crons cannot overlap.
 
 Manual runs (**Actions → Daily market brief → Run workflow**) default to `force`, so they publish at any hour and overwrite today's report.
 

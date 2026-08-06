@@ -228,6 +228,8 @@ def render_html(
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
     .eyebrow { color: var(--muted); font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .eyebrow a { color: inherit; }
+    .eyebrow a:hover { color: var(--accent); }
     h1 { font-size: 1.75rem; font-weight: 600; margin: 0.35rem 0 0.5rem; }
     .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 2rem; }
     h2 { font-size: 1.05rem; margin: 2rem 0 0.85rem; color: var(--muted); font-weight: 500; }
@@ -312,7 +314,7 @@ def render_html(
 </head>
 <body>
   <main>
-    <p class="eyebrow">Market Morning Brief</p>
+    <p class="eyebrow"><a href="../index.html">&larr; Market Morning Brief</a></p>
     <h1>{{ report_date }}</h1>
     <p class="meta">Generated {{ generated_at }} · Day / MTD / YTD vs prior close · sparkline = last 5 sessions</p>
 
@@ -436,19 +438,28 @@ def rebuild_index(archive: list[dict]) -> None:
     (DOCS / "index.html").write_text(html, encoding="utf-8")
 
 
-def should_run(force: bool) -> tuple[bool, str]:
-    """Gate the run so the UTC-only cron lands once per morning in Dublin.
+# Earliest Dublin hour a scheduled run may publish. Deliberately no upper
+# bound: GitHub delays cron by hours, and a late brief beats no brief at all.
+EARLIEST_PUBLISH_HOUR = 8
 
-    Two cron entries cover GMT and IST; only one should produce a report. The
-    window extends past 09:xx because GitHub can delay scheduled runs, and an
-    existing report for today makes a late second trigger a no-op.
+
+def should_run(force: bool) -> tuple[bool, str]:
+    """Gate the run so the UTC-only cron publishes once per day.
+
+    Two cron entries cover GMT and IST, and GitHub can fire either of them
+    hours behind schedule. Idempotency rather than a narrow time window is what
+    keeps the day to a single report: whichever trigger arrives first publishes,
+    and the rest become no-ops.
     """
     if force:
         return True, ""
 
     now = datetime.now(DUBLIN)
-    if now.hour not in (9, 10):
-        return False, f"Dublin time is {now:%H:%M %Z}; morning window is 09:00-10:59."
+    if now.hour < EARLIEST_PUBLISH_HOUR:
+        return False, (
+            f"Dublin time is {now:%H:%M %Z}; "
+            f"publishing starts at {EARLIEST_PUBLISH_HOUR:02d}:00."
+        )
 
     if (DOCS / now.date().isoformat() / "index.html").exists():
         return False, f"Report for {now.date().isoformat()} already published."

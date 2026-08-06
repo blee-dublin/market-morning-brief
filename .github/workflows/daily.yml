@@ -4,7 +4,8 @@ on:
   schedule:
     # GitHub cron is UTC only. Ireland switches between GMT and IST.
     # 08:30 UTC = 09:30 IST (summer), 09:30 UTC = 09:30 GMT (winter).
-    # The script publishes at most once per day, inside the Dublin morning window.
+    # These are earliest-fire times: GitHub often runs them hours late, so the
+    # script tolerates any arrival time and publishes at most once per day.
     - cron: "30 8 * * 1-5"
     - cron: "30 9 * * 1-5"
   workflow_dispatch:
@@ -16,6 +17,11 @@ on:
 
 permissions:
   contents: write
+
+# Serialize runs so the two crons cannot both build today's report.
+concurrency:
+  group: publish-brief
+  cancel-in-progress: false
 
 jobs:
   publish:
@@ -44,4 +50,5 @@ jobs:
             exit 0
           fi
           git commit -m "Publish market brief $(date -u +%Y-%m-%d)"
+          git pull --rebase --autostash origin "${{ github.ref_name }}"
           git push
