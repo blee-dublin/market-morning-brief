@@ -3,11 +3,14 @@ name: Daily market brief
 on:
   schedule:
     # GitHub cron is UTC only. Ireland switches between GMT and IST.
-    # 08:30 UTC = 09:30 IST (summer), 09:30 UTC = 09:30 GMT (winter).
-    # These are earliest-fire times: GitHub often runs them hours late, so the
-    # script tolerates any arrival time and publishes at most once per day.
+    # Morning (~09:30 Dublin): 08:30 UTC = 09:30 IST, 09:30 UTC = 09:30 GMT.
+    # These are earliest-fire times; GitHub often runs them hours late.
     - cron: "30 8 * * 1-5"
     - cron: "30 9 * * 1-5"
+    # After US cash close (16:00 ET): 20:15 UTC = 16:15 EDT, 21:15 UTC = 16:15 EST.
+    # Evening runs force-overwrite so settled US closes replace the morning draft.
+    - cron: "15 20 * * 1-5"
+    - cron: "15 21 * * 1-5"
   workflow_dispatch:
     inputs:
       force:
@@ -18,7 +21,7 @@ on:
 permissions:
   contents: write
 
-# Serialize runs so the two crons cannot both build today's report.
+# Serialize runs so overlapping crons cannot both push at once.
 concurrency:
   group: publish-brief
   cancel-in-progress: false
@@ -38,17 +41,57 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Generate brief
-        run: python generate_brief.py ${{ inputs.force && '--force' || '' }}
+        run: |
+          FORCE_FLAG=""
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force }}" = "true" ]; then
+            FORCE_FLAG="--force"
+          elif [ "${{ github.event_name }}" = "schedule" ]; then
+            HOUR=$(date -u +%-H)
+            # 16:00 ET is 20:00 UTC (EDT) / 21:00 UTC (EST). Force from 20:00 UTC.
+            if [ "$HOUR" -ge 20 ]; then
+              FORCE_FLAG="--force"
+              echo "Evening / post-US-close run — forcing overwrite"
+            fi
+          fi
+          python generate_brief.py $FORCE_FLAG
 
       - name: Commit and push if changed
+        id: publish
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs
           if git diff --staged --quiet; then
             echo "No changes to publish"
+            echo "published=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
+          REPORT_DATE=$(find docs -mindepth 1 -maxdepth 1 -type d -name '????-??-??' | sort | tail -1 | xargs -r basename)
           git commit -m "Publish market brief $(date -u +%Y-%m-%d)"
           git pull --rebase --autostash origin "${{ github.ref_name }}"
           git push
+          echo "published=true" >> "$GITHUB_OUTPUT"
+          echo "report_date=${REPORT_DATE}" >> "$GITHUB_OUTPUT"
+
+      - name: Notify Telegram
+        if: steps.publish.outputs.published == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          REPORT_DATE: ${{ steps.publish.outputs.report_date }}
+          PAGES_BASE: https://${{ github.repository_owner }}.github.io/market-morning-brief
+        run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ -z "$TELEGRAM_CHAT_ID" ]; then
+            echo "TELEGRAM_BOT_TOKEN / TELEGRAM_CHAT_ID not set; skipping notify"
+            exit 0
+          fi
+          DATE="${REPORT_DATE:-$(date -u +%Y-%m-%d)}"
+          URL="${PAGES_BASE}/${DATE}/"
+          TEXT=$(printf 'Market brief updated: %s\n%s' "$DATE" "$URL")
+          curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+            --data-urlencode "text=${TEXT}" \
+            --data-urlencode "disable_web_page_preview=false" \
+            -o /tmp/telegram.json -w "http=%{http_code}\n"
+          cat /tmp/telegram.json
+          grep -q '"ok":true' /tmp/telegram.json

@@ -1,8 +1,10 @@
 # Market Morning Brief
 
-Every weekday ~**09:30 Europe/Dublin**, a GitHub Action fetches US/Korea index moves (`yfinance`) and public RSS headlines, then publishes static HTML under `docs/` for **GitHub Pages**.
+Every weekday ~**09:30 Europe/Dublin**, and again after the **US cash close (~16:15 ET)**, a GitHub Action fetches US/Korea index moves (`yfinance`) and public RSS headlines, then publishes static HTML under `docs/` for **GitHub Pages**. The evening run overwrites the morning page with settled US closes.
 
-No Gmail / SMTP. Browse the archive at:
+Optional Telegram notify fires when a page is actually created or updated.
+
+Browse the archive at:
 
 `https://<your-username>.github.io/market-morning-brief/`
 
@@ -27,11 +29,30 @@ Opens as `docs/YYYY-MM-DD/index.html`.
 
 ## Schedule notes
 
-GitHub `cron` is UTC-only. The workflow fires at **08:30 and 09:30 UTC** on weekdays so that one of the two lands at 09:30 Dublin in either GMT or IST.
+GitHub `cron` is UTC-only. Weekday triggers:
 
-Those are *earliest* times. GitHub queues scheduled runs and regularly starts them one to three hours late, so the script does not enforce a narrow window — it publishes on any trigger from **08:00 Europe/Dublin** onward and skips when a report for today already exists. The first trigger to arrive publishes; later ones no-op. The workflow also runs under a single `concurrency` group so the two crons cannot overlap.
+| Slot | Cron (UTC) | Intent |
+|------|------------|--------|
+| Morning | `30 8` / `30 9` | ~09:30 Dublin (IST / GMT) |
+| Post–US close | `15 20` / `15 21` | ~16:15 ET (EDT / EST) |
 
-Manual runs (**Actions → Daily market brief → Run workflow**) default to `force`, so they publish at any hour and overwrite today's report.
+Those are *earliest* times. GitHub queues scheduled runs and regularly starts them late. Morning publishes once from **08:00 Europe/Dublin** onward and skips if today's report already exists. Evening / post-close runs pass `--force` so settled US closes replace the morning draft. A single `concurrency` group keeps overlapping crons from racing.
+
+Manual runs (**Actions → Daily market brief → Run workflow**) default to `force`.
+
+## Telegram notify
+
+When a run actually commits a new/updated page, the workflow sends a Telegram message with the Pages URL.
+
+1. Talk to [@BotFather](https://t.me/BotFather) → `/newbot` → copy the **bot token**.
+2. Message your bot once, then open  
+   `https://api.telegram.org/bot<TOKEN>/getUpdates`  
+   and copy your numeric `chat.id` (or use a group id).
+3. Add repo secrets (**Settings → Secrets and variables → Actions**):
+   - `TELEGRAM_BOT_TOKEN`
+   - `TELEGRAM_CHAT_ID`
+
+Without those secrets, publish still works; the notify step is skipped.
 
 ## What you get
 

@@ -444,12 +444,13 @@ EARLIEST_PUBLISH_HOUR = 8
 
 
 def should_run(force: bool) -> tuple[bool, str]:
-    """Gate the run so the UTC-only cron publishes once per day.
+    """Gate unforced runs so the morning cron publishes once.
 
-    Two cron entries cover GMT and IST, and GitHub can fire either of them
-    hours behind schedule. Idempotency rather than a narrow time window is what
-    keeps the day to a single report: whichever trigger arrives first publishes,
-    and the rest become no-ops.
+    Morning crons may arrive hours late, so there is no upper hour bound —
+    whichever morning trigger arrives first publishes, and later ones no-op
+    when today's report already exists. The workflow passes --force for
+    post–US-close runs (and manual dispatch) so the evening brief can replace
+    the morning draft with settled closes.
     """
     if force:
         return True, ""
