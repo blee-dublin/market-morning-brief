@@ -1,6 +1,6 @@
 {
   "date": "2026-08-07",
-  "generated_at": "2026-08-07 21:55 IST",
+  "generated_at": "2026-08-07 22:53 IST",
   "markets": [
     {
       "label": "KOSPI",
@@ -127,101 +127,101 @@
     {
       "label": "S&P futures (ES)",
       "ticker": "ES=F",
-      "last": 7776.25,
+      "last": 7777.25,
       "prev": 7734.75,
-      "change": 41.5,
-      "pct": 0.54,
-      "mtd": 3.42,
-      "ytd": 12.82,
+      "change": 42.5,
+      "pct": 0.55,
+      "mtd": 3.43,
+      "ytd": 12.84,
       "as_of": "2026-08-07",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         7628.25,
         7765.5,
         7749.5,
         7734.75,
-        7776.25
+        7777.25
       ]
     },
     {
       "label": "Nasdaq futures (NQ)",
       "ticker": "NQ=F",
-      "last": 29816.0,
+      "last": 29839.5,
       "prev": 29488.25,
-      "change": 327.75,
-      "pct": 1.11,
-      "mtd": 4.97,
-      "ytd": 17.12,
+      "change": 351.25,
+      "pct": 1.19,
+      "mtd": 5.05,
+      "ytd": 17.22,
       "as_of": "2026-08-07",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         28891.75,
         29863.5,
         29615.0,
         29488.25,
-        29816.0
+        29839.5
       ]
     },
     {
       "label": "Dow futures (YM)",
       "ticker": "YM=F",
-      "last": 54123.0,
+      "last": 54132.0,
       "prev": 54013.0,
-      "change": 110.0,
-      "pct": 0.2,
-      "mtd": 2.83,
-      "ytd": 11.97,
+      "change": 119.0,
+      "pct": 0.22,
+      "mtd": 2.84,
+      "ytd": 11.99,
       "as_of": "2026-08-07",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         53334.0,
         54268.0,
         54494.0,
         54013.0,
-        54123.0
+        54132.0
       ]
     },
     {
       "label": "Gold (GC)",
       "ticker": "GC=F",
-      "last": 4400.0,
+      "last": 4401.3,
       "prev": 4242.0,
-      "change": 158.0,
-      "pct": 3.72,
-      "mtd": 8.67,
-      "ytd": 1.72,
+      "change": 159.3,
+      "pct": 3.76,
+      "mtd": 8.7,
+      "ytd": 1.75,
       "as_of": "2026-08-07",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         4033.7,
         4095.3999,
         4245.7998,
         4242.0,
-        4400.0
+        4401.2998
       ]
     },
     {
       "label": "Silver (SI)",
       "ticker": "SI=F",
-      "last": 63.68,
+      "last": 63.8,
       "prev": 61.44,
-      "change": 2.24,
-      "pct": 3.65,
-      "mtd": 10.57,
-      "ytd": -9.2,
+      "change": 2.36,
+      "pct": 3.84,
+      "mtd": 10.78,
+      "ytd": -9.03,
       "as_of": "2026-08-07",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         57.667,
         60.056,
         62.099,
         61.439,
-        63.68
+        63.8
       ]
     },
     {
@@ -267,41 +267,41 @@
     {
       "label": "USD/KRW",
       "ticker": "USDKRW=X",
-      "last": 1406.93,
+      "last": 1407.45,
       "prev": 1421.16,
-      "change": -14.23,
-      "pct": -1.0,
-      "mtd": -0.96,
-      "ytd": -2.15,
+      "change": -13.71,
+      "pct": -0.96,
+      "mtd": -0.93,
+      "ytd": -2.12,
       "as_of": "2026-08-07",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         1435.7,
         1428.5,
         1428.4301,
         1421.16,
-        1406.9301
+        1407.45
       ]
     },
     {
       "label": "EUR/KRW",
       "ticker": "EURKRW=X",
-      "last": 1625.4,
+      "last": 1626.1,
       "prev": 1642.01,
-      "change": -16.61,
-      "pct": -1.01,
-      "mtd": -0.69,
-      "ytd": -3.76,
+      "change": -15.91,
+      "pct": -0.97,
+      "mtd": -0.65,
+      "ytd": -3.72,
       "as_of": "2026-08-07",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         1663.51,
         1643.36,
         1647.17,
         1642.01,
-        1625.4
+        1626.1
       ]
     }
   ],
@@ -429,41 +429,41 @@
     {
       "label": "Samsung (005930)",
       "ticker": "005930.KS",
-      "last": 230500.0,
-      "prev": 246000.0,
-      "change": -15500.0,
-      "pct": -6.3,
-      "mtd": -12.19,
-      "ytd": 92.85,
-      "as_of": "2026-08-06",
+      "last": 231000.0,
+      "prev": 230500.0,
+      "change": 500.0,
+      "pct": 0.22,
+      "mtd": -12.0,
+      "ytd": 93.27,
+      "as_of": "2026-08-07",
       "intraday": false,
-      "up": false,
+      "up": true,
       "spark": [
-        262500.0,
         239500.0,
         240000.0,
         246000.0,
-        230500.0
+        230500.0,
+        231000.0
       ]
     },
     {
       "label": "SK Hynix (000660)",
       "ticker": "000660.KS",
-      "last": 1495000.0,
-      "prev": 1668000.0,
-      "change": -173000.0,
-      "pct": -10.37,
-      "mtd": -12.98,
-      "ytd": 130.11,
-      "as_of": "2026-08-06",
+      "last": 1422000.0,
+      "prev": 1495000.0,
+      "change": -73000.0,
+      "pct": -4.88,
+      "mtd": -17.23,
+      "ytd": 118.87,
+      "as_of": "2026-08-07",
       "intraday": false,
       "up": false,
       "spark": [
-        1718000.0,
         1567000.0,
         1577000.0,
         1668000.0,
-        1495000.0
+        1495000.0,
+        1422000.0
       ]
     }
   ],
@@ -476,27 +476,33 @@
     },
     {
       "source": "Yahoo Finance",
-      "title": "DoorDash (DASH) Takes To The Skies As Uber (UBER) Eyes Drones Too",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/doordash-dash-takes-skies-uber-110101273.html",
-      "published": "2026-08-06T11:01:01Z"
+      "title": "How to read and analyze an options chain",
+      "link": "https://finance.yahoo.com/personal-finance/investing/article/how-to-read-an-options-chain-142208065.html",
+      "published": "2026-08-06T14:22:08Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Do Wall Street Analysts Like Citizens Financial Stock?",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-citizens-financial-110413881.html",
-      "published": "2026-08-06T11:04:13Z"
+      "title": "WPP Gets a Turnaround Bounce, Not a Victory Lap",
+      "link": "https://finance.yahoo.com/media-advertising/articles/wpp-gets-turnaround-bounce-not-142804087.html",
+      "published": "2026-08-06T14:28:04Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Dr. Oz says 'many' seniors will see lower premiums next year — but only about a quarter are projected to",
-      "link": "https://finance.yahoo.com/healthcare/articles/dr-oz-says-many-seniors-110500732.html",
-      "published": "2026-08-06T11:05:00Z"
+      "title": "Software Stocks Fall As Datadog, HubSpot Earnings Raise Questions Over AI Pricing",
+      "link": "https://www.investors.com/news/technology/software-stocks-fall-as-datadog-hubspot-earnings-raise-questions-over-ai-pricing/?src=A00220&yptr=yahoo",
+      "published": "2026-08-06T14:20:08Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Walmart Earnings: Bull Put Spread Trade",
-      "link": "https://finance.yahoo.com/markets/options/articles/walmart-earnings-bull-put-spread-110002553.html",
-      "published": "2026-08-06T11:00:02Z"
+      "title": "LS Power Acquiring 606-MW Texas Gas-Fired Plant From Constellation",
+      "link": "https://finance.yahoo.com/energy/articles/ls-power-acquiring-606-mw-141703562.html",
+      "published": "2026-08-06T14:17:03Z"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "美증시, 금리인상 기대론 후퇴에 상승…S&P500 사상최고치 마감(종합)",
+      "link": "https://www.yna.co.kr/view/AKR20260808005151072",
+      "published": "Sat, 8 Aug 2026 06:12:23 +0900"
     },
     {
       "source": "연합뉴스 경제",
@@ -521,12 +527,6 @@
       "title": "농협, 폭염·가뭄 지원 확대…재해자금 3천억 긴급 지원",
       "link": "https://www.yna.co.kr/view/AKR20260807142100030",
       "published": "Fri, 7 Aug 2026 19:04:05 +0900"
-    },
-    {
-      "source": "연합뉴스 경제",
-      "title": "구윤철 '대출 완화' 주장에 \"핀셋 지원 고민 중…조만간 대책\"(종합)",
-      "link": "https://www.yna.co.kr/view/AKR20260807032751002",
-      "published": "Fri, 7 Aug 2026 19:01:24 +0900"
     }
   ]
 }
