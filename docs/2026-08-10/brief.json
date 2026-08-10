@@ -1,6 +1,6 @@
 {
   "date": "2026-08-10",
-  "generated_at": "2026-08-10 21:58 IST",
+  "generated_at": "2026-08-10 22:56 IST",
   "markets": [
     {
       "label": "KOSPI",
@@ -127,101 +127,101 @@
     {
       "label": "S&P futures (ES)",
       "ticker": "ES=F",
-      "last": 7777.0,
+      "last": 7777.25,
       "prev": 7779.75,
-      "change": -2.75,
-      "pct": -0.04,
+      "change": -2.5,
+      "pct": -0.03,
       "mtd": 3.43,
-      "ytd": 12.83,
+      "ytd": 12.84,
       "as_of": "2026-08-10",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         7765.5,
         7749.5,
         7734.75,
         7779.75,
-        7777.0
+        7777.25
       ]
     },
     {
       "label": "Nasdaq futures (NQ)",
       "ticker": "NQ=F",
-      "last": 29761.25,
+      "last": 29764.25,
       "prev": 29834.75,
-      "change": -73.5,
-      "pct": -0.25,
-      "mtd": 4.78,
-      "ytd": 16.91,
+      "change": -70.5,
+      "pct": -0.24,
+      "mtd": 4.79,
+      "ytd": 16.92,
       "as_of": "2026-08-10",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         29863.5,
         29615.0,
         29488.25,
         29834.75,
-        29761.25
+        29764.25
       ]
     },
     {
       "label": "Dow futures (YM)",
       "ticker": "YM=F",
-      "last": 54053.0,
+      "last": 54061.0,
       "prev": 54152.0,
-      "change": -99.0,
-      "pct": -0.18,
-      "mtd": 2.69,
-      "ytd": 11.83,
+      "change": -91.0,
+      "pct": -0.17,
+      "mtd": 2.71,
+      "ytd": 11.84,
       "as_of": "2026-08-10",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         54268.0,
         54494.0,
         54013.0,
         54152.0,
-        54053.0
+        54061.0
       ]
     },
     {
       "label": "Gold (GC)",
       "ticker": "GC=F",
-      "last": 4448.3,
+      "last": 4448.6,
       "prev": 4340.7,
-      "change": 107.6,
-      "pct": 2.48,
-      "mtd": 9.86,
+      "change": 107.9,
+      "pct": 2.49,
+      "mtd": 9.87,
       "ytd": 2.84,
       "as_of": "2026-08-10",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         4095.3999,
         4245.7998,
         4242.0,
         4340.7002,
-        4448.2998
+        4448.6001
       ]
     },
     {
       "label": "Silver (SI)",
       "ticker": "SI=F",
-      "last": 65.92,
+      "last": 65.88,
       "prev": 63.33,
-      "change": 2.59,
-      "pct": 4.09,
-      "mtd": 14.46,
-      "ytd": -6.01,
+      "change": 2.55,
+      "pct": 4.02,
+      "mtd": 14.39,
+      "ytd": -6.07,
       "as_of": "2026-08-10",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         60.056,
         62.099,
         61.439,
         63.332,
-        65.92
+        65.88
       ]
     },
     {
@@ -267,21 +267,21 @@
     {
       "label": "USD/KRW",
       "ticker": "USDKRW=X",
-      "last": 1417.75,
+      "last": 1417.72,
       "prev": 1422.3,
-      "change": -4.55,
+      "change": -4.58,
       "pct": -0.32,
       "mtd": -0.2,
       "ytd": -1.4,
       "as_of": "2026-08-10",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         1428.5,
         1428.4301,
         1421.16,
         1422.3,
-        1417.75
+        1417.72
       ]
     },
     {
@@ -294,7 +294,7 @@
       "mtd": -0.05,
       "ytd": -3.15,
       "as_of": "2026-08-10",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         1643.36,
@@ -429,104 +429,104 @@
     {
       "label": "Samsung (005930)",
       "ticker": "005930.KS",
-      "last": 231000.0,
-      "prev": 230500.0,
-      "change": 500.0,
-      "pct": 0.22,
-      "mtd": -12.0,
-      "ytd": 93.27,
-      "as_of": "2026-08-07",
+      "last": 230000.0,
+      "prev": 231000.0,
+      "change": -1000.0,
+      "pct": -0.43,
+      "mtd": -12.38,
+      "ytd": 92.44,
+      "as_of": "2026-08-10",
       "intraday": false,
-      "up": true,
+      "up": false,
       "spark": [
-        239500.0,
         240000.0,
         246000.0,
         230500.0,
-        231000.0
+        231000.0,
+        230000.0
       ]
     },
     {
       "label": "SK Hynix (000660)",
       "ticker": "000660.KS",
-      "last": 1422000.0,
-      "prev": 1495000.0,
-      "change": -73000.0,
-      "pct": -4.88,
-      "mtd": -17.23,
-      "ytd": 118.87,
-      "as_of": "2026-08-07",
+      "last": 1420000.0,
+      "prev": 1422000.0,
+      "change": -2000.0,
+      "pct": -0.14,
+      "mtd": -17.35,
+      "ytd": 118.56,
+      "as_of": "2026-08-10",
       "intraday": false,
       "up": false,
       "spark": [
-        1567000.0,
         1577000.0,
         1668000.0,
         1495000.0,
-        1422000.0
+        1422000.0,
+        1420000.0
       ]
     }
   ],
   "news": [
     {
       "source": "Yahoo Finance",
-      "title": "The Stock Market Is Sending a Chilling Warning, and History Isn't Reassuring",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/stock-market-sending-chilling-warning-115000649.html",
-      "published": "2026-08-09T11:50:00Z"
+      "title": "Jeff Bezos breaks his own Amazon record",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/jeff-bezos-breaks-own-amazon-140700871.html",
+      "published": "2026-08-09T14:07:00Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Far more Americans are filing for bankruptcy — but maybe not enough, as people don't get 'how good of a deal' it can be",
-      "link": "https://finance.yahoo.com/small-business/articles/far-more-americans-filing-bankruptcy-115500738.html",
-      "published": "2026-08-09T11:55:00Z"
+      "title": "You saved $1.5M in your 401(k) — now the IRS wants $56,603 a year, and that's just the start",
+      "link": "https://finance.yahoo.com/markets/options/articles/saved-1-5m-401-k-130000096.html",
+      "published": "2026-08-09T13:00:00Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "New cars just hit $52K and Social Security faces a 24% cut — 5 things to buy before you retire",
-      "link": "https://finance.yahoo.com/economy/policy/articles/cars-just-hit-52k-social-114500144.html",
-      "published": "2026-08-09T11:45:00Z"
+      "title": "Dear Baidu Stock Fans, Mark Your Calendars for August 18",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/dear-baidu-stock-fans-mark-130002368.html",
+      "published": "2026-08-09T13:00:02Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Apple tests China's CXMT memory chips for iPhones and MacBooks, WSJ reports",
-      "link": "https://finance.yahoo.com/technology/articles/apple-tests-chinas-cxmt-memory-120655649.html",
-      "published": "2026-08-09T12:06:55Z"
+      "title": "Dear Intuitive Machines Stock Fans, Mark Your Calendars for August 13",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/dear-intuitive-machines-stock-fans-130002352.html",
+      "published": "2026-08-09T13:00:02Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "'Very little to like': Wall Street assesses surprise July jobs report as stocks jump",
-      "link": "https://finance.yahoo.com/markets/article/very-little-to-like-wall-street-assesses-surprise-july-jobs-report-as-stocks-jump-113529334.html",
-      "published": "2026-08-09T11:35:29Z"
+      "title": "Dear Palo Alto Stock Fans, Mark Your Calendars for September 1",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/dear-palo-alto-stock-fans-130002528.html",
+      "published": "2026-08-09T13:00:02Z"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "급등장에 SK하이닉스 담보대출 1년새 438%↑…40대 이하서 쑥",
-      "link": "https://www.yna.co.kr/view/AKR20260810142600002",
-      "published": "Tue, 11 Aug 2026 05:51:00 +0900"
+      "title": "[반려동물] 폭염에 '펫캉스' 인기…펫요가·훈련사 토크콘서트도",
+      "link": "https://www.yna.co.kr/view/AKR20260810103800030",
+      "published": "Tue, 11 Aug 2026 06:30:02 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "국제유가, 호르무즈 협상 교착에 5%↑…WTI 다시 80달러대",
-      "link": "https://www.yna.co.kr/view/AKR20260811004600072",
-      "published": "Tue, 11 Aug 2026 04:45:49 +0900"
+      "title": "울산시, '일자리 창출 강소기업' 신청 접수…10개사 선정 예정",
+      "link": "https://www.yna.co.kr/view/AKR20260810149300057",
+      "published": "Tue, 11 Aug 2026 06:07:00 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "트럼프, 휘발윳값 부담에 존스법 또 유예…중간선거 뒤로 연장",
-      "link": "https://www.yna.co.kr/view/AKR20260811004100071",
-      "published": "Tue, 11 Aug 2026 04:08:28 +0900"
+      "title": "임금근로자 8명 중 1명은 '최저임금 미만'…임시직은 39%",
+      "link": "https://www.yna.co.kr/view/AKR20260810104900530",
+      "published": "Tue, 11 Aug 2026 06:01:02 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "\"속도전 넘어 전격전\"…3대 메가 프로젝트 초스피드 가동",
-      "link": "https://www.yna.co.kr/view/AKR20260810148700003",
-      "published": "Mon, 10 Aug 2026 20:45:56 +0900"
+      "title": "킨텍스, 벤처기업부 '민관협력 개방 혁신 지원 사업' 3개 선정",
+      "link": "https://www.yna.co.kr/view/AKR20260810126600060",
+      "published": "Tue, 11 Aug 2026 06:00:06 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "운동화 아식스 OEM 업체 비즈코, 강남 '브이플렉스' 인수",
-      "link": "https://www.yna.co.kr/view/AKR20260810145100008",
-      "published": "Mon, 10 Aug 2026 19:47:55 +0900"
+      "title": "대전중수청, 세종시 내 대체 임시청사 확보…입지 논란 '종지부'",
+      "link": "https://www.yna.co.kr/view/AKR20260810131000063",
+      "published": "Tue, 11 Aug 2026 06:00:03 +0900"
     }
   ]
 }
