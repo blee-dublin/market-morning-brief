@@ -1,6 +1,6 @@
 {
   "date": "2026-08-11",
-  "generated_at": "2026-08-11 22:01 IST",
+  "generated_at": "2026-08-11 23:01 IST",
   "markets": [
     {
       "label": "KOSPI",
@@ -127,11 +127,11 @@
     {
       "label": "S&P futures (ES)",
       "ticker": "ES=F",
-      "last": 7753.5,
+      "last": 7753.25,
       "prev": 7776.75,
-      "change": -23.25,
+      "change": -23.5,
       "pct": -0.3,
-      "mtd": 3.12,
+      "mtd": 3.11,
       "ytd": 12.49,
       "as_of": "2026-08-11",
       "intraday": false,
@@ -141,18 +141,18 @@
         7734.75,
         7779.75,
         7776.75,
-        7753.5
+        7753.25
       ]
     },
     {
       "label": "Nasdaq futures (NQ)",
       "ticker": "NQ=F",
-      "last": 29658.75,
+      "last": 29646.75,
       "prev": 29737.0,
-      "change": -78.25,
-      "pct": -0.26,
-      "mtd": 4.42,
-      "ytd": 16.51,
+      "change": -90.25,
+      "pct": -0.3,
+      "mtd": 4.37,
+      "ytd": 16.46,
       "as_of": "2026-08-11",
       "intraday": false,
       "up": false,
@@ -161,18 +161,18 @@
         29488.25,
         29834.75,
         29737.0,
-        29658.75
+        29646.75
       ]
     },
     {
       "label": "Dow futures (YM)",
       "ticker": "YM=F",
-      "last": 53898.0,
+      "last": 53904.0,
       "prev": 54063.0,
-      "change": -165.0,
-      "pct": -0.31,
-      "mtd": 2.4,
-      "ytd": 11.51,
+      "change": -159.0,
+      "pct": -0.29,
+      "mtd": 2.41,
+      "ytd": 11.52,
       "as_of": "2026-08-11",
       "intraday": false,
       "up": false,
@@ -181,18 +181,18 @@
         54013.0,
         54152.0,
         54063.0,
-        53898.0
+        53904.0
       ]
     },
     {
       "label": "Gold (GC)",
       "ticker": "GC=F",
-      "last": 4426.6,
+      "last": 4427.8,
       "prev": 4361.8,
-      "change": 64.8,
-      "pct": 1.49,
-      "mtd": 9.32,
-      "ytd": 2.33,
+      "change": 66.0,
+      "pct": 1.51,
+      "mtd": 9.35,
+      "ytd": 2.36,
       "as_of": "2026-08-11",
       "intraday": false,
       "up": true,
@@ -201,18 +201,18 @@
         4242.0,
         4340.7002,
         4361.7998,
-        4426.6001
+        4427.7998
       ]
     },
     {
       "label": "Silver (SI)",
       "ticker": "SI=F",
-      "last": 64.83,
+      "last": 64.86,
       "prev": 65.11,
-      "change": -0.27,
-      "pct": -0.42,
-      "mtd": 12.58,
-      "ytd": -7.56,
+      "change": -0.25,
+      "pct": -0.38,
+      "mtd": 12.62,
+      "ytd": -7.52,
       "as_of": "2026-08-11",
       "intraday": false,
       "up": false,
@@ -221,7 +221,7 @@
         61.439,
         63.332,
         65.106,
-        64.835
+        64.86
       ]
     },
     {
@@ -267,12 +267,12 @@
     {
       "label": "USD/KRW",
       "ticker": "USDKRW=X",
-      "last": 1411.25,
+      "last": 1412.33,
       "prev": 1407.0,
-      "change": 4.25,
-      "pct": 0.3,
-      "mtd": -0.66,
-      "ytd": -1.85,
+      "change": 5.33,
+      "pct": 0.38,
+      "mtd": -0.58,
+      "ytd": -1.78,
       "as_of": "2026-08-11",
       "intraday": false,
       "up": true,
@@ -281,18 +281,18 @@
         1421.16,
         1422.3,
         1407.0,
-        1411.25
+        1412.33
       ]
     },
     {
       "label": "EUR/KRW",
       "ticker": "EURKRW=X",
-      "last": 1628.0,
+      "last": 1629.7,
       "prev": 1635.36,
-      "change": -7.36,
-      "pct": -0.45,
-      "mtd": -0.53,
-      "ytd": -3.61,
+      "change": -5.66,
+      "pct": -0.35,
+      "mtd": -0.43,
+      "ytd": -3.51,
       "as_of": "2026-08-12",
       "intraday": false,
       "up": false,
@@ -301,7 +301,7 @@
         1638.8199,
         1618.62,
         1635.36,
-        1628.0
+        1629.7
       ]
     }
   ],
@@ -429,41 +429,41 @@
     {
       "label": "Samsung (005930)",
       "ticker": "005930.KS",
-      "last": 230000.0,
-      "prev": 231000.0,
-      "change": -1000.0,
-      "pct": -0.43,
-      "mtd": -12.38,
-      "ytd": 92.44,
-      "as_of": "2026-08-10",
+      "last": 239500.0,
+      "prev": 230000.0,
+      "change": 9500.0,
+      "pct": 4.13,
+      "mtd": -8.76,
+      "ytd": 100.38,
+      "as_of": "2026-08-11",
       "intraday": false,
-      "up": false,
+      "up": true,
       "spark": [
-        240000.0,
         246000.0,
         230500.0,
         231000.0,
-        230000.0
+        230000.0,
+        239500.0
       ]
     },
     {
       "label": "SK Hynix (000660)",
       "ticker": "000660.KS",
-      "last": 1420000.0,
-      "prev": 1422000.0,
-      "change": -2000.0,
-      "pct": -0.14,
-      "mtd": -17.35,
-      "ytd": 118.56,
-      "as_of": "2026-08-10",
+      "last": 1425000.0,
+      "prev": 1420000.0,
+      "change": 5000.0,
+      "pct": 0.35,
+      "mtd": -17.05,
+      "ytd": 119.33,
+      "as_of": "2026-08-11",
       "intraday": false,
-      "up": false,
+      "up": true,
       "spark": [
-        1577000.0,
         1668000.0,
         1495000.0,
         1422000.0,
-        1420000.0
+        1420000.0,
+        1425000.0
       ]
     }
   ],
@@ -476,57 +476,57 @@
     },
     {
       "source": "Yahoo Finance",
-      "title": "Soybeans Pushing Higher to Begin the Week",
-      "link": "https://finance.yahoo.com/markets/commodities/articles/soybeans-pushing-higher-begin-week-122503103.html",
-      "published": "2026-08-10T12:25:03Z"
+      "title": "Are Wall Street Analysts Bullish on Corteva Stock?",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-bullish-corteva-133419231.html",
+      "published": "2026-08-10T13:34:19Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Why JPMorgan sees more big gains ahead for the S&P 500",
-      "link": "https://finance.yahoo.com/markets/article/why-jpmorgan-sees-more-big-gains-ahead-for-the-sp-500-120624177.html",
-      "published": "2026-08-10T12:06:24Z"
+      "title": "American Airlines (AAL) Posted Record Revenue, but is the Stock too Risky Amid Rising Fuel Costs?",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/american-airlines-aal-posted-record-132805801.html",
+      "published": "2026-08-10T13:28:05Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Wheat Posting Monday Morning Strength",
-      "link": "https://finance.yahoo.com/markets/commodities/articles/wheat-posting-monday-morning-strength-122503108.html",
-      "published": "2026-08-10T12:25:03Z"
+      "title": "Retail Stocks Forecasts – Walmart, Target, and Costco Consolidate Ahead of Earnings",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/retail-stocks-forecasts-walmart-target-132539232.html",
+      "published": "2026-08-10T13:25:39Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Corn Ticking Higher on Monday Morning",
-      "link": "https://finance.yahoo.com/markets/commodities/articles/corn-ticking-higher-monday-morning-122503479.html",
-      "published": "2026-08-10T12:25:03Z"
+      "title": "Jobs report will offer fresh test of Fed Chairman Warsh's less-guidance stance",
+      "link": "https://finance.yahoo.com/economy/policy/articles/analysis-jobs-report-offer-fresh-050406143.html",
+      "published": "2026-08-10T13:25:51Z"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "반도체 특별연장근로 6개월 신청 4건뿐…규제완화 요구와 온도차",
+      "link": "https://www.yna.co.kr/view/AKR20260811154200530",
+      "published": "Wed, 12 Aug 2026 06:01:01 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "서울시, 주민세 개인분 386만건 고지…세대당 6천원 납부",
+      "link": "https://www.yna.co.kr/view/AKR20260811129200004",
+      "published": "Wed, 12 Aug 2026 06:00:06 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "서울시 'G3 서울플랜' 균형발전분과, 서울아레나 등 현장 점검",
+      "link": "https://www.yna.co.kr/view/AKR20260811151800004",
+      "published": "Wed, 12 Aug 2026 06:00:02 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "[게시판] 금융위, 하반기 'D-테스트베드' 모집…내달 8일까지",
+      "link": "https://www.yna.co.kr/view/AKR20260811140100002",
+      "published": "Wed, 12 Aug 2026 06:00:02 +0900"
     },
     {
       "source": "연합뉴스 경제",
       "title": "한국은행, 상반기 직원 150명에 주택자금대출 60억원",
       "link": "https://www.yna.co.kr/view/AKR20260811149400002",
       "published": "Wed, 12 Aug 2026 05:55:00 +0900"
-    },
-    {
-      "source": "연합뉴스 경제",
-      "title": "부동산 팔고 연금 납입 시 양도세 감면 혜택, 내년 말 종료",
-      "link": "https://www.yna.co.kr/view/AKR20260811158800002",
-      "published": "Wed, 12 Aug 2026 05:53:01 +0900"
-    },
-    {
-      "source": "연합뉴스 경제",
-      "title": "'깡통대출' 비율 코로나19 이후 최고…고금리에 부실 확산",
-      "link": "https://www.yna.co.kr/view/AKR20260811151100002",
-      "published": "Wed, 12 Aug 2026 05:51:00 +0900"
-    },
-    {
-      "source": "연합뉴스 경제",
-      "title": "브렌트 1.4% 상승…중재국發 '미·이란 합의근접' 소식에도 상승",
-      "link": "https://www.yna.co.kr/view/AKR20260812004000072",
-      "published": "Wed, 12 Aug 2026 04:31:04 +0900"
-    },
-    {
-      "source": "연합뉴스 경제",
-      "title": "미 7월 주택거래 감소…대출금리 상승 영향",
-      "link": "https://www.yna.co.kr/view/AKR20260812000300072",
-      "published": "Wed, 12 Aug 2026 00:46:00 +0900"
     }
   ]
 }
