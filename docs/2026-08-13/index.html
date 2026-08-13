@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Market Brief — 2026-08-13</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --card: #1a2332;
+      --text: #e7ecf3;
+      --muted: #8b9bb4;
+      --up: #3dd68c;
+      --down: #f07178;
+      --accent: #5b9fd4;
+      --border: #2a3548;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans", "Noto Sans KR", system-ui, sans-serif;
+      background: radial-gradient(ellipse at top, #1a2740 0%, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+    main { max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .eyebrow { color: var(--muted); font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .eyebrow a { color: inherit; }
+    .eyebrow a:hover { color: var(--accent); }
+    h1 { font-size: 1.75rem; font-weight: 600; margin: 0.35rem 0 0.5rem; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 2rem; }
+    h2 { font-size: 1.05rem; margin: 2rem 0 0.85rem; color: var(--muted); font-weight: 500; }
+    .grid { display: grid; gap: 0.65rem; }
+    .row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) auto repeat(3, minmax(3.6rem, auto)) 72px;
+      gap: 0.55rem;
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+    }
+    .row.header {
+      background: transparent;
+      border: none;
+      padding: 0 1rem 0.15rem;
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .label { font-weight: 500; }
+    .asof { display: block; font-size: 0.75rem; color: var(--muted); font-weight: 400; margin-top: 0.15rem; }
+    .badge {
+      display: inline-block;
+      margin-left: 0.4rem;
+      padding: 0.05rem 0.4rem;
+      border-radius: 4px;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.7rem;
+      letter-spacing: 0.02em;
+    }
+    .price { font-variant-numeric: tabular-nums; color: var(--muted); text-align: right; }
+    .pct { font-variant-numeric: tabular-nums; font-weight: 600; text-align: right; }
+    .rets { display: contents; }
+    .spark-wrap { display: flex; justify-content: flex-end; align-items: center; }
+    .spark { display: block; }
+    .up { color: var(--up); }
+    .down { color: var(--down); }
+    .na { color: var(--muted); font-weight: 500; }
+    .err { color: var(--down); font-size: 0.9rem; }
+    ul.news { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.65rem; }
+    ul.news li {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+    }
+    .source { display: block; font-size: 0.75rem; color: var(--muted); margin-bottom: 0.25rem; }
+    footer { margin-top: 2.5rem; color: var(--muted); font-size: 0.8rem; }
+    @media (max-width: 640px) {
+      .row {
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+          "name price"
+          "rets spark";
+      }
+      .row.header { display: none; }
+      .label { grid-area: name; }
+      .price { grid-area: price; align-self: start; }
+      .rets {
+        grid-area: rets;
+        display: flex;
+        justify-content: space-between;
+        gap: 0.75rem;
+        margin-top: 0.35rem;
+        font-size: 0.85rem;
+      }
+      .spark-wrap { grid-area: spark; justify-content: flex-end; }
+      .rets .pct::before {
+        content: attr(data-label) " ";
+        color: var(--muted);
+        font-weight: 500;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow"><a href="../index.html">&larr; Market Morning Brief</a></p>
+    <h1>2026-08-13</h1>
+    <p class="meta">Generated 2026-08-13 10:42 IST · Day / MTD / YTD vs prior close · sparkline = last 5 sessions</p>
+
+    
+
+    
+
+    <h2>Indices</h2>
+    <div class="grid">
+      <div class="row header">
+        <span></span><span></span><span class="pct">Day</span><span class="pct">MTD</span><span class="pct">YTD</span><span class="pct">5D</span>
+      </div>
+      
+        
+          <div class="row">
+            <span class="label">
+              KOSPI
+              <span class="asof">2026-08-13 close</span>
+            </span>
+            <span class="price">6,813.34</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+3.56%</span></span>
+              <span data-label="MTD"><span class="pct up">+21.81%</span></span>
+              <span data-label="YTD"><span class="pct up">+61.68%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,25.0 19.5,23.4 36.0,21.6 52.5,12.3 69.0,3.0"/><circle cx="3.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="23.4" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="21.6" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="12.3" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              KOSDAQ
+              <span class="asof">2026-08-13 close</span>
+            </span>
+            <span class="price">861.37</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.29%</span></span>
+              <span data-label="MTD"><span class="pct up">+19.67%</span></span>
+              <span data-label="YTD"><span class="pct down">-6.93%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,25.0 19.5,5.4 36.0,4.2 52.5,3.9 69.0,3.0"/><circle cx="3.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="5.4" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="4.2" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="3.9" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              S&P 500
+              <span class="asof">2026-08-12 close</span>
+            </span>
+            <span class="price">7,748.50</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.26%</span></span>
+              <span data-label="MTD"><span class="pct up">+3.46%</span></span>
+              <span data-label="YTD"><span class="pct up">+13.19%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,25.0 19.5,3.0 36.0,5.1 52.5,16.6 69.0,7.2"/><circle cx="3.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="3.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="5.1" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="16.6" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="7.2" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              Nasdaq
+              <span class="asof">2026-08-12 close</span>
+            </span>
+            <span class="price">26,588.49</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.54%</span></span>
+              <span data-label="MTD"><span class="pct up">+4.79%</span></span>
+              <span data-label="YTD"><span class="pct up">+14.40%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,25.0 19.5,3.0 36.0,8.5 52.5,18.8 69.0,9.6"/><circle cx="3.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="3.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="8.5" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="18.8" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="9.6" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              Dow Jones
+              <span class="asof">2026-08-12 close</span>
+            </span>
+            <span class="price">53,770.27</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-0.04%</span></span>
+              <span data-label="MTD"><span class="pct up">+2.45%</span></span>
+              <span data-label="YTD"><span class="pct up">+11.87%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#f07178" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,15.5 19.5,3.0 36.0,8.0 52.5,23.2 69.0,25.0"/><circle cx="3.0" cy="15.5" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="19.5" cy="3.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="36.0" cy="8.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="52.5" cy="23.2" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="69.0" cy="25.0" r="2.0" fill="#f07178" stroke="#f07178" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+    </div>
+
+    <h2>Market Signals</h2>
+    <div class="grid">
+      <div class="row header">
+        <span></span><span></span><span class="pct">Day</span><span class="pct">MTD</span><span class="pct">YTD</span><span class="pct">5D</span>
+      </div>
+      
+        
+          <div class="row">
+            <span class="label">
+              VIX<span class="badge">intraday</span>
+              <span class="asof">2026-08-13</span>
+            </span>
+            <span class="price">14.65</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.69%</span></span>
+              <span data-label="MTD"><span class="pct down">-8.38%</span></span>
+              <span data-label="YTD"><span class="pct down">-2.01%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#f07178" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,16.5 19.5,3.0 36.0,7.4 52.5,25.0 69.0,22.6"/><circle cx="3.0" cy="16.5" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="19.5" cy="3.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="36.0" cy="7.4" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="52.5" cy="25.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="69.0" cy="22.6" r="2.0" fill="#f07178" stroke="#f07178" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              S&P futures (ES)<span class="badge">intraday</span>
+              <span class="asof">2026-08-13</span>
+            </span>
+            <span class="price">7,781.00</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.14%</span></span>
+              <span data-label="MTD"><span class="pct up">+3.48%</span></span>
+              <span data-label="YTD"><span class="pct up">+12.89%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,3.8 19.5,5.8 36.0,25.0 52.5,9.9 69.0,3.0"/><circle cx="3.0" cy="3.8" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="5.8" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="9.9" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              Nasdaq futures (NQ)<span class="badge">intraday</span>
+              <span class="asof">2026-08-13</span>
+            </span>
+            <span class="price">29,843.75</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-0.03%</span></span>
+              <span data-label="MTD"><span class="pct up">+5.07%</span></span>
+              <span data-label="YTD"><span class="pct up">+17.23%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,4.8 19.5,14.3 36.0,25.0 52.5,3.0 69.0,3.9"/><circle cx="3.0" cy="4.8" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="14.3" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="3.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.9" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              Dow futures (YM)<span class="badge">intraday</span>
+              <span class="asof">2026-08-13</span>
+            </span>
+            <span class="price">54,000.00</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.24%</span></span>
+              <span data-label="MTD"><span class="pct up">+2.59%</span></span>
+              <span data-label="YTD"><span class="pct up">+11.72%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#f07178" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,3.0 19.5,10.0 36.0,24.3 52.5,25.0 69.0,14.9"/><circle cx="3.0" cy="3.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="19.5" cy="10.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="36.0" cy="24.3" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="52.5" cy="25.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="69.0" cy="14.9" r="2.0" fill="#f07178" stroke="#f07178" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              Gold (GC)<span class="badge">intraday</span>
+              <span class="asof">2026-08-13</span>
+            </span>
+            <span class="price">4,436.80</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.63%</span></span>
+              <span data-label="MTD"><span class="pct up">+9.57%</span></span>
+              <span data-label="YTD"><span class="pct up">+2.57%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,25.0 19.5,20.2 36.0,15.3 52.5,9.4 69.0,3.0"/><circle cx="3.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="20.2" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="15.3" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="9.4" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              Silver (SI)<span class="badge">intraday</span>
+              <span class="asof">2026-08-13</span>
+            </span>
+            <span class="price">64.76</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-1.21%</span></span>
+              <span data-label="MTD"><span class="pct up">+12.46%</span></span>
+              <span data-label="YTD"><span class="pct down">-7.66%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,25.0 19.5,7.4 36.0,10.8 52.5,3.0 69.0,10.8"/><circle cx="3.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="7.4" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="10.8" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="3.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="10.8" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              EEM
+              <span class="asof">2026-08-12 close</span>
+            </span>
+            <span class="price">66.46</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+1.57%</span></span>
+              <span data-label="MTD"><span class="pct up">+3.70%</span></span>
+              <span data-label="YTD"><span class="pct up">+22.11%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,25.0 19.5,15.5 36.0,22.7 52.5,18.7 69.0,3.0"/><circle cx="3.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="15.5" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="22.7" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="18.7" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              US 10Y yield
+              <span class="asof">2026-08-12 close</span>
+            </span>
+            <span class="price">4.68</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-0.04%</span></span>
+              <span data-label="MTD"><span class="pct down">-1.33%</span></span>
+              <span data-label="YTD"><span class="pct up">+12.47%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,19.4 19.5,25.0 36.0,3.0 52.5,11.5 69.0,12.6"/><circle cx="3.0" cy="19.4" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="3.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="11.5" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="12.6" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              USD/KRW<span class="badge">intraday</span>
+              <span class="asof">2026-08-13</span>
+            </span>
+            <span class="price">1,421.47</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.66%</span></span>
+              <span data-label="MTD"><span class="pct up">+0.06%</span></span>
+              <span data-label="YTD"><span class="pct down">-1.14%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#f07178" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,3.0 19.5,25.0 36.0,10.2 52.5,17.6 69.0,4.2"/><circle cx="3.0" cy="3.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="19.5" cy="25.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="36.0" cy="10.2" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="52.5" cy="17.6" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="69.0" cy="4.2" r="2.0" fill="#f07178" stroke="#f07178" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              EUR/KRW<span class="badge">intraday</span>
+              <span class="asof">2026-08-13</span>
+            </span>
+            <span class="price">1,638.50</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.61%</span></span>
+              <span data-label="MTD"><span class="pct up">+0.11%</span></span>
+              <span data-label="YTD"><span class="pct down">-2.99%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#f07178" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,3.0 19.5,25.0 36.0,6.8 52.5,14.1 69.0,3.3"/><circle cx="3.0" cy="3.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="19.5" cy="25.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="36.0" cy="6.8" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="52.5" cy="14.1" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="69.0" cy="3.3" r="2.0" fill="#f07178" stroke="#f07178" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+    </div>
+
+    <h2>Watchlist</h2>
+    <div class="grid">
+      <div class="row header">
+        <span></span><span></span><span class="pct">Day</span><span class="pct">MTD</span><span class="pct">YTD</span><span class="pct">5D</span>
+      </div>
+      
+        
+          <div class="row">
+            <span class="label">
+              WDAY
+              <span class="asof">2026-08-12 close</span>
+            </span>
+            <span class="price">175.29</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-3.30%</span></span>
+              <span data-label="MTD"><span class="pct up">+9.32%</span></span>
+              <span data-label="YTD"><span class="pct down">-18.39%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,25.0 19.5,10.2 36.0,3.0 52.5,7.6 69.0,17.0"/><circle cx="3.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="10.2" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="3.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="7.6" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="17.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              NVDA
+              <span class="asof">2026-08-12 close</span>
+            </span>
+            <span class="price">224.09</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+3.03%</span></span>
+              <span data-label="MTD"><span class="pct up">+11.63%</span></span>
+              <span data-label="YTD"><span class="pct up">+20.30%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,20.0 19.5,3.4 36.0,24.8 52.5,25.0 69.0,3.0"/><circle cx="3.0" cy="20.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="3.4" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="24.8" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              PLTR
+              <span class="asof">2026-08-12 close</span>
+            </span>
+            <span class="price">171.04</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-2.23%</span></span>
+              <span data-label="MTD"><span class="pct up">+38.99%</span></span>
+              <span data-label="YTD"><span class="pct down">-3.77%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,25.0 19.5,6.7 36.0,3.0 52.5,3.3 69.0,7.8"/><circle cx="3.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="6.7" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="3.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="3.3" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="7.8" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              AAPL
+              <span class="asof">2026-08-12 close</span>
+            </span>
+            <span class="price">302.25</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-0.87%</span></span>
+              <span data-label="MTD"><span class="pct down">-2.07%</span></span>
+              <span data-label="YTD"><span class="pct up">+11.48%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#f07178" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,4.9 19.5,3.0 36.0,12.8 52.5,19.6 69.0,25.0"/><circle cx="3.0" cy="4.9" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="19.5" cy="3.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="36.0" cy="12.8" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="52.5" cy="19.6" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="69.0" cy="25.0" r="2.0" fill="#f07178" stroke="#f07178" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              NFLX
+              <span class="asof">2026-08-12 close</span>
+            </span>
+            <span class="price">74.21</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-0.78%</span></span>
+              <span data-label="MTD"><span class="pct up">+3.49%</span></span>
+              <span data-label="YTD"><span class="pct down">-20.85%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,25.0 19.5,21.2 36.0,3.0 52.5,15.7 69.0,20.6"/><circle cx="3.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="21.2" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="3.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="15.7" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="20.6" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              MSFT
+              <span class="asof">2026-08-12 close</span>
+            </span>
+            <span class="price">492.43</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-2.26%</span></span>
+              <span data-label="MTD"><span class="pct up">+5.96%</span></span>
+              <span data-label="YTD"><span class="pct up">+2.28%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#f07178" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,13.0 19.5,12.8 36.0,3.0 52.5,6.6 69.0,25.0"/><circle cx="3.0" cy="13.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="19.5" cy="12.8" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="36.0" cy="3.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="52.5" cy="6.6" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="69.0" cy="25.0" r="2.0" fill="#f07178" stroke="#f07178" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              Samsung (005930)
+              <span class="asof">2026-08-13 close</span>
+            </span>
+            <span class="price">268,000.00</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+4.89%</span></span>
+              <span data-label="MTD"><span class="pct up">+2.10%</span></span>
+              <span data-label="YTD"><span class="pct up">+124.23%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,24.4 19.5,25.0 36.0,19.5 52.5,10.2 69.0,3.0"/><circle cx="3.0" cy="24.4" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="19.5" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="10.2" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              SK Hynix (000660)
+              <span class="asof">2026-08-13 close</span>
+            </span>
+            <span class="price">1,593,000.00</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+5.92%</span></span>
+              <span data-label="MTD"><span class="pct down">-7.28%</span></span>
+              <span data-label="YTD"><span class="pct up">+145.19%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,24.7 19.5,25.0 36.0,24.4 52.5,14.3 69.0,3.0"/><circle cx="3.0" cy="24.7" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="24.4" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="14.3" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+    </div>
+
+    <h2>Headlines</h2>
+    
+      <ul class="news">
+        
+          <li>
+            <span class="source">Yahoo Finance · 2026-08-12T17:47:00Z</span>
+            <a href="https://finance.yahoo.com/markets/stocks/articles/bank-america-sends-blunt-message-174700491.html" rel="noopener noreferrer">Bank of America sends blunt message to Nvidia stock investors</a>
+          </li>
+        
+          <li>
+            <span class="source">Yahoo Finance · 2026-08-11T15:32:26Z</span>
+            <a href="https://finance.yahoo.com/personal-finance/investing/article/is-options-trading-risky-153226519.html" rel="noopener noreferrer">Is options trading risky? 8 risks every investor should know.</a>
+          </li>
+        
+          <li>
+            <span class="source">Yahoo Finance · 2026-08-11T17:07:41Z</span>
+            <a href="https://finance.yahoo.com/personal-finance/investing/article/options-trading-vs-stock-trading-170741990.html" rel="noopener noreferrer">Options trading vs. stock trading: Key differences explained</a>
+          </li>
+        
+          <li>
+            <span class="source">Yahoo Finance · 2026-06-09T18:26:44Z</span>
+            <a href="https://finance.yahoo.com/personal-finance/credit-cards/article/limited-time-offer-earn-a-bigger-cash-bonus-on-everyday-spending-with-these-capital-one-credit-cards-182644810.html" rel="noopener noreferrer">Limited-time offer: Earn a bigger cash bonus on everyday spending with these Capital One credit cards</a>
+          </li>
+        
+          <li>
+            <span class="source">Yahoo Finance · 2026-08-11T18:46:39Z</span>
+            <a href="https://finance.yahoo.com/personal-finance/investing/article/are-you-saving-enough-for-retirement-heres-how-to-tell-184639709.html" rel="noopener noreferrer">Are you saving enough for retirement? Here's how to tell.</a>
+          </li>
+        
+          <li>
+            <span class="source">연합뉴스 경제 · Thu, 13 Aug 2026 18:25:55 +0900</span>
+            <a href="https://www.yna.co.kr/view/AKR20260813156700001" rel="noopener noreferrer">"이대로 가면 폭망"…與 의총서 정부 세제개편안 비판 봇물</a>
+          </li>
+        
+          <li>
+            <span class="source">연합뉴스 경제 · Thu, 13 Aug 2026 18:24:10 +0900</span>
+            <a href="https://www.yna.co.kr/view/AKR20260813159700061" rel="noopener noreferrer">과천시, 정부 '경마공원 이전·방첩사 2029년 착공'에 반발</a>
+          </li>
+        
+          <li>
+            <span class="source">연합뉴스 경제 · Thu, 13 Aug 2026 18:17:21 +0900</span>
+            <a href="https://www.yna.co.kr/view/AKR20260813161400008" rel="noopener noreferrer">모아데이타, 20억원 제3자배정 유상증자</a>
+          </li>
+        
+          <li>
+            <span class="source">연합뉴스 경제 · Thu, 13 Aug 2026 18:15:25 +0900</span>
+            <a href="https://www.yna.co.kr/view/AKR20260813160200017" rel="noopener noreferrer">식약처, 신고없이 수입한 중국산 양배추칼 회수</a>
+          </li>
+        
+          <li>
+            <span class="source">연합뉴스 경제 · Thu, 13 Aug 2026 18:13:09 +0900</span>
+            <a href="https://www.yna.co.kr/view/AKR20260813161200008" rel="noopener noreferrer">솔루엠 "미국 자회사 주식 425억원어치 추가취득…지분율 100%"</a>
+          </li>
+        
+      </ul>
+    
+
+    <footer>
+      Data: Yahoo Finance (yfinance) · News: public RSS ·
+      MTD / YTD vs last close of prior month / year ·
+      <a href="../index.html">Archive</a>
+    </footer>
+  </main>
+</body>
+</html>
