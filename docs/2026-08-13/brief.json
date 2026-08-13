@@ -1,6 +1,6 @@
 {
   "date": "2026-08-13",
-  "generated_at": "2026-08-13 21:59 IST",
+  "generated_at": "2026-08-13 23:00 IST",
   "markets": [
     {
       "label": "KOSPI",
@@ -127,81 +127,81 @@
     {
       "label": "S&P futures (ES)",
       "ticker": "ES=F",
-      "last": 7824.25,
+      "last": 7825.25,
       "prev": 7770.5,
-      "change": 53.75,
-      "pct": 0.69,
-      "mtd": 4.06,
-      "ytd": 13.52,
+      "change": 54.75,
+      "pct": 0.7,
+      "mtd": 4.07,
+      "ytd": 13.53,
       "as_of": "2026-08-13",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         7779.75,
         7776.75,
         7747.5,
         7770.5,
-        7824.25
+        7825.25
       ]
     },
     {
       "label": "Nasdaq futures (NQ)",
       "ticker": "NQ=F",
-      "last": 30210.0,
+      "last": 30214.25,
       "prev": 29853.25,
-      "change": 356.75,
-      "pct": 1.2,
-      "mtd": 6.36,
-      "ytd": 18.67,
+      "change": 361.0,
+      "pct": 1.21,
+      "mtd": 6.37,
+      "ytd": 18.69,
       "as_of": "2026-08-13",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         29834.75,
         29737.0,
         29626.0,
         29853.25,
-        30210.0
+        30214.25
       ]
     },
     {
       "label": "Dow futures (YM)",
       "ticker": "YM=F",
-      "last": 53952.0,
+      "last": 53960.0,
       "prev": 53871.0,
-      "change": 81.0,
-      "pct": 0.15,
-      "mtd": 2.5,
-      "ytd": 11.62,
+      "change": 89.0,
+      "pct": 0.17,
+      "mtd": 2.52,
+      "ytd": 11.64,
       "as_of": "2026-08-13",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         54152.0,
         54063.0,
         53880.0,
         53871.0,
-        53952.0
+        53960.0
       ]
     },
     {
       "label": "Gold (GC)",
       "ticker": "GC=F",
-      "last": 4406.2,
+      "last": 4407.1,
       "prev": 4408.9,
-      "change": -2.7,
-      "pct": -0.06,
-      "mtd": 8.82,
-      "ytd": 1.86,
+      "change": -1.8,
+      "pct": -0.04,
+      "mtd": 8.84,
+      "ytd": 1.88,
       "as_of": "2026-08-13",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         4340.7002,
         4361.7998,
         4383.0,
         4408.8999,
-        4406.2002
+        4407.1001
       ]
     },
     {
@@ -214,7 +214,7 @@
       "mtd": 12.14,
       "ytd": -7.91,
       "as_of": "2026-08-13",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         63.332,
@@ -267,21 +267,21 @@
     {
       "label": "USD/KRW",
       "ticker": "USDKRW=X",
-      "last": 1417.95,
+      "last": 1418.17,
       "prev": 1412.18,
-      "change": 5.77,
-      "pct": 0.41,
-      "mtd": -0.19,
-      "ytd": -1.39,
+      "change": 5.99,
+      "pct": 0.42,
+      "mtd": -0.17,
+      "ytd": -1.37,
       "as_of": "2026-08-13",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         1422.3,
         1407.0,
         1417.3101,
         1412.1801,
-        1417.95
+        1418.17
       ]
     },
     {
@@ -294,7 +294,7 @@
       "mtd": -0.15,
       "ytd": -3.24,
       "as_of": "2026-08-13",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         1638.8199,
@@ -429,41 +429,41 @@
     {
       "label": "Samsung (005930)",
       "ticker": "005930.KS",
-      "last": 255500.0,
-      "prev": 239500.0,
-      "change": 16000.0,
-      "pct": 6.68,
-      "mtd": -2.67,
-      "ytd": 113.77,
-      "as_of": "2026-08-12",
+      "last": 268000.0,
+      "prev": 255500.0,
+      "change": 12500.0,
+      "pct": 4.89,
+      "mtd": 2.1,
+      "ytd": 124.23,
+      "as_of": "2026-08-13",
       "intraday": false,
       "up": true,
       "spark": [
-        230500.0,
         231000.0,
         230000.0,
         239500.0,
-        255500.0
+        255500.0,
+        268000.0
       ]
     },
     {
       "label": "SK Hynix (000660)",
       "ticker": "000660.KS",
-      "last": 1504000.0,
-      "prev": 1425000.0,
-      "change": 79000.0,
-      "pct": 5.54,
-      "mtd": -12.46,
-      "ytd": 131.49,
-      "as_of": "2026-08-12",
+      "last": 1593000.0,
+      "prev": 1504000.0,
+      "change": 89000.0,
+      "pct": 5.92,
+      "mtd": -7.28,
+      "ytd": 145.19,
+      "as_of": "2026-08-13",
       "intraday": false,
       "up": true,
       "spark": [
-        1495000.0,
         1422000.0,
         1420000.0,
         1425000.0,
-        1504000.0
+        1504000.0,
+        1593000.0
       ]
     }
   ],
@@ -476,57 +476,57 @@
     },
     {
       "source": "Yahoo Finance",
-      "title": "Corn Popping Higher on Wednesday with Spillover from Wheat",
-      "link": "https://finance.yahoo.com/markets/commodities/articles/corn-popping-higher-wednesday-spillover-123458332.html",
-      "published": "2026-08-12T12:34:58Z"
+      "title": "AARP issues urgent call on Medicare drug costs",
+      "link": "https://finance.yahoo.com/healthcare/articles/aarp-issues-urgent-call-medicare-221700862.html",
+      "published": "2026-08-12T22:17:00Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Wheat Rallying on Black Sea Strikes",
-      "link": "https://finance.yahoo.com/markets/commodities/articles/wheat-rallying-black-sea-strikes-123458998.html",
-      "published": "2026-08-12T12:34:58Z"
+      "title": "Why fast food chains like McDonald's and Starbucks are going all in on energy drinks",
+      "link": "https://finance.yahoo.com/markets/article/why-fast-food-chains-like-mcdonalds-and-starbucks-are-going-all-in-on-energy-drinks-140403330.html",
+      "published": "2026-08-12T14:04:03Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Soybeans Bouncing Ahead of USDA Data",
-      "link": "https://finance.yahoo.com/markets/commodities/articles/soybeans-bouncing-ahead-usda-data-123458008.html",
-      "published": "2026-08-12T12:34:58Z"
+      "title": "Stocks Trading Higher on Favorable CPI Report and Positive AI News",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/stocks-trading-higher-favorable-cpi-140150101.html",
+      "published": "2026-08-12T14:01:50Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "NIO Stock Falls as Blackrock Slashes Stake in EV Maker",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/nio-stock-falls-blackrock-slashes-123002313.html",
-      "published": "2026-08-12T12:30:02Z"
+      "title": "Grab Holdings Limited (GRAB) vs. Sea Limited (SE): Grab Raises Its Outlook as AI and Affordability Pay Off",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/grab-holdings-limited-grab-vs-135035457.html",
+      "published": "2026-08-12T13:50:35Z"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "[삶-특집] \"한국 GDP, 뉴욕주 규모도 안된다…경제력-군사력 더 키워야\"",
+      "link": "https://www.yna.co.kr/view/AKR20260813111400546",
+      "published": "Fri, 14 Aug 2026 06:01:01 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "환율·유가 하락에 7월 수입물가 1.0%↓…두달 연속 하락",
+      "link": "https://www.yna.co.kr/view/AKR20260813149300002",
+      "published": "Fri, 14 Aug 2026 06:00:07 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "부동산서비스업 체감경기 소폭 개선…공인중개업은 악화",
+      "link": "https://www.yna.co.kr/view/AKR20260813151300003",
+      "published": "Fri, 14 Aug 2026 06:00:05 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "7월 서울 아파트 토지거래허가신청 4천681건…석 달째 감소세",
+      "link": "https://www.yna.co.kr/view/AKR20260813152100004",
+      "published": "Fri, 14 Aug 2026 06:00:04 +0900"
     },
     {
       "source": "연합뉴스 경제",
       "title": "靑경제수석 \"임기내 150만호 착공…용산공원 주택공급 논의해야\"",
       "link": "https://www.yna.co.kr/view/AKR20260813168400001",
       "published": "Thu, 13 Aug 2026 22:05:28 +0900"
-    },
-    {
-      "source": "연합뉴스 경제",
-      "title": "\"이대로면 폭망\"\"총선 이후로 유예\"…與의총서 세제안 비판 봇물(종합)",
-      "link": "https://www.yna.co.kr/view/AKR20260813156751001",
-      "published": "Thu, 13 Aug 2026 19:12:05 +0900"
-    },
-    {
-      "source": "연합뉴스 경제",
-      "title": "한국금융지주, KDB생명 매각 우선협상대상자로 선정(종합)",
-      "link": "https://www.yna.co.kr/view/AKR20260813157951002",
-      "published": "Thu, 13 Aug 2026 18:43:44 +0900"
-    },
-    {
-      "source": "연합뉴스 경제",
-      "title": "\"이대로 가면 폭망\"…與 의총서 정부 세제개편안 비판 봇물",
-      "link": "https://www.yna.co.kr/view/AKR20260813156700001",
-      "published": "Thu, 13 Aug 2026 18:25:55 +0900"
-    },
-    {
-      "source": "연합뉴스 경제",
-      "title": "과천시, 정부 '경마공원 이전·방첩사 2029년 착공'에 반발",
-      "link": "https://www.yna.co.kr/view/AKR20260813159700061",
-      "published": "Thu, 13 Aug 2026 18:24:10 +0900"
     }
   ]
 }
