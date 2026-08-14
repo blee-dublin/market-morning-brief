@@ -1,6 +1,6 @@
 {
   "date": "2026-08-14",
-  "generated_at": "2026-08-14 21:42 IST",
+  "generated_at": "2026-08-14 22:37 IST",
   "markets": [
     {
       "label": "KOSPI",
@@ -127,81 +127,81 @@
     {
       "label": "S&P futures (ES)",
       "ticker": "ES=F",
-      "last": 7802.25,
+      "last": 7802.5,
       "prev": 7822.5,
-      "change": -20.25,
+      "change": -20.0,
       "pct": -0.26,
-      "mtd": 3.76,
+      "mtd": 3.77,
       "ytd": 13.2,
       "as_of": "2026-08-14",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         7776.75,
         7747.5,
         7770.5,
         7822.5,
-        7802.25
+        7802.5
       ]
     },
     {
       "label": "Nasdaq futures (NQ)",
       "ticker": "NQ=F",
-      "last": 30137.25,
+      "last": 30154.0,
       "prev": 30188.5,
-      "change": -51.25,
-      "pct": -0.17,
-      "mtd": 6.1,
-      "ytd": 18.39,
+      "change": -34.5,
+      "pct": -0.11,
+      "mtd": 6.16,
+      "ytd": 18.45,
       "as_of": "2026-08-14",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         29737.0,
         29626.0,
         29853.25,
         30188.5,
-        30137.25
+        30154.0
       ]
     },
     {
       "label": "Dow futures (YM)",
       "ticker": "YM=F",
-      "last": 53792.0,
+      "last": 53778.0,
       "prev": 53935.0,
-      "change": -143.0,
-      "pct": -0.27,
-      "mtd": 2.2,
-      "ytd": 11.29,
+      "change": -157.0,
+      "pct": -0.29,
+      "mtd": 2.17,
+      "ytd": 11.26,
       "as_of": "2026-08-14",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         54063.0,
         53880.0,
         53871.0,
         53935.0,
-        53792.0
+        53778.0
       ]
     },
     {
       "label": "Gold (GC)",
       "ticker": "GC=F",
-      "last": 4429.6,
+      "last": 4432.0,
       "prev": 4363.6,
-      "change": 66.0,
-      "pct": 1.51,
-      "mtd": 9.4,
-      "ytd": 2.4,
+      "change": 68.4,
+      "pct": 1.57,
+      "mtd": 9.46,
+      "ytd": 2.46,
       "as_of": "2026-08-14",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         4361.7998,
         4383.0,
         4408.8999,
         4363.6001,
-        4429.6001
+        4432.0
       ]
     },
     {
@@ -210,18 +210,18 @@
       "last": 64.82,
       "prev": 64.87,
       "change": -0.05,
-      "pct": -0.08,
-      "mtd": 12.55,
-      "ytd": -7.58,
+      "pct": -0.07,
+      "mtd": 12.56,
+      "ytd": -7.57,
       "as_of": "2026-08-14",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         65.106,
         64.769,
         65.555,
         64.873,
-        64.82
+        64.825
       ]
     },
     {
@@ -267,41 +267,41 @@
     {
       "label": "USD/KRW",
       "ticker": "USDKRW=X",
-      "last": 1417.49,
+      "last": 1416.48,
       "prev": 1416.46,
-      "change": 1.03,
-      "pct": 0.07,
-      "mtd": -0.22,
-      "ytd": -1.42,
+      "change": 0.02,
+      "pct": 0.0,
+      "mtd": -0.29,
+      "ytd": -1.49,
       "as_of": "2026-08-14",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         1407.0,
         1417.3101,
         1412.1801,
         1416.46,
-        1417.49
+        1416.48
       ]
     },
     {
       "label": "EUR/KRW",
       "ticker": "EURKRW=X",
-      "last": 1638.8,
+      "last": 1638.2,
       "prev": 1632.86,
-      "change": 5.94,
-      "pct": 0.36,
-      "mtd": 0.13,
-      "ytd": -2.97,
+      "change": 5.34,
+      "pct": 0.33,
+      "mtd": 0.09,
+      "ytd": -3.01,
       "as_of": "2026-08-14",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         1618.62,
         1635.36,
         1628.62,
         1632.86,
-        1638.8
+        1638.2
       ]
     }
   ],
@@ -429,41 +429,41 @@
     {
       "label": "Samsung (005930)",
       "ticker": "005930.KS",
-      "last": 268000.0,
-      "prev": 255500.0,
-      "change": 12500.0,
-      "pct": 4.89,
-      "mtd": 2.1,
-      "ytd": 124.23,
-      "as_of": "2026-08-13",
+      "last": 274500.0,
+      "prev": 268000.0,
+      "change": 6500.0,
+      "pct": 2.43,
+      "mtd": 4.57,
+      "ytd": 129.67,
+      "as_of": "2026-08-14",
       "intraday": false,
       "up": true,
       "spark": [
-        231000.0,
         230000.0,
         239500.0,
         255500.0,
-        268000.0
+        268000.0,
+        274500.0
       ]
     },
     {
       "label": "SK Hynix (000660)",
       "ticker": "000660.KS",
-      "last": 1593000.0,
-      "prev": 1504000.0,
-      "change": 89000.0,
-      "pct": 5.92,
-      "mtd": -7.28,
-      "ytd": 145.19,
-      "as_of": "2026-08-13",
+      "last": 1645000.0,
+      "prev": 1593000.0,
+      "change": 52000.0,
+      "pct": 3.26,
+      "mtd": -4.25,
+      "ytd": 153.2,
+      "as_of": "2026-08-14",
       "intraday": false,
       "up": true,
       "spark": [
-        1422000.0,
         1420000.0,
         1425000.0,
         1504000.0,
-        1593000.0
+        1593000.0,
+        1645000.0
       ]
     }
   ],
@@ -476,27 +476,33 @@
     },
     {
       "source": "Yahoo Finance",
-      "title": "On Holding (ONON) Just Had Its Worst Trading Day Ever. Did Investors Overreact?",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/holding-onon-just-had-worst-104756485.html",
-      "published": "2026-08-13T10:47:56Z"
+      "title": "Is Wall Street Bullish or Bearish on United Parcel Service Stock?",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/wall-street-bullish-bearish-united-140535518.html",
+      "published": "2026-08-13T14:05:35Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Morning Bid: Brief relief",
-      "link": "https://finance.yahoo.com/news/morning-bid-brief-relief-104941133.html",
-      "published": "2026-08-13T10:49:41Z"
+      "title": "Patriots and THAAD: Lockheed Martin Corporation (LMT) and Northrop Grumman Corporation (NOC) Bet Big on Missile Defense Surge",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/patriots-thaad-lockheed-martin-corporation-140553456.html",
+      "published": "2026-08-13T14:05:53Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "UK regulator, crypto exchange HTX locked in settlement talks",
-      "link": "https://finance.yahoo.com/markets/crypto/articles/uk-regulator-crypto-exchange-htx-105912138.html",
-      "published": "2026-08-13T10:59:12Z"
+      "title": "Ciena Stock Outlook: Is Wall Street Bullish or Bearish?",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/ciena-stock-outlook-wall-street-140529657.html",
+      "published": "2026-08-13T14:05:29Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "The Calm Before the Storm? Low IV Stocks Worth Watching",
-      "link": "https://finance.yahoo.com/markets/options/articles/calm-storm-low-iv-stocks-110002517.html",
-      "published": "2026-08-13T11:00:02Z"
+      "title": "Molina Healthcare (MOH) Surged on Medicaid Clarity and Robust Results",
+      "link": "https://finance.yahoo.com/healthcare/articles/molina-healthcare-moh-surged-medicaid-140522775.html",
+      "published": "2026-08-13T14:05:22Z"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "[부동산캘린더] 내주 서울 신길동 써밋클라비온 등 3천788가구 분양",
+      "link": "https://www.yna.co.kr/view/AKR20260814142900003",
+      "published": "Sat, 15 Aug 2026 06:05:01 +0900"
     },
     {
       "source": "연합뉴스 경제",
@@ -521,12 +527,6 @@
       "title": "삼성전자, 반도체 호황에 미중 수출 급증…중국 88조원",
       "link": "https://www.yna.co.kr/view/AKR20260814167500003",
       "published": "Fri, 14 Aug 2026 18:34:06 +0900"
-    },
-    {
-      "source": "연합뉴스 경제",
-      "title": "건설협회, 8·13대책 환영…\"건설업 자금조달 부담 완화\"",
-      "link": "https://www.yna.co.kr/view/AKR20260814166700003",
-      "published": "Fri, 14 Aug 2026 18:27:13 +0900"
     }
   ]
 }
