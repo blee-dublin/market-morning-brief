@@ -1,6 +1,6 @@
 {
   "date": "2026-08-17",
-  "generated_at": "2026-08-17 21:40 IST",
+  "generated_at": "2026-08-17 22:37 IST",
   "markets": [
     {
       "label": "KOSPI",
@@ -127,21 +127,21 @@
     {
       "label": "S&P futures (ES)",
       "ticker": "ES=F",
-      "last": 7765.75,
+      "last": 7765.5,
       "prev": 7805.0,
-      "change": -39.25,
-      "pct": -0.5,
-      "mtd": 3.28,
+      "change": -39.5,
+      "pct": -0.51,
+      "mtd": 3.27,
       "ytd": 12.67,
       "as_of": "2026-08-17",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         7747.5,
         7770.5,
         7822.5,
         7805.0,
-        7765.75
+        7765.5
       ]
     },
     {
@@ -154,7 +154,7 @@
       "mtd": 5.89,
       "ytd": 18.15,
       "as_of": "2026-08-17",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         29626.0,
@@ -167,61 +167,61 @@
     {
       "label": "Dow futures (YM)",
       "ticker": "YM=F",
-      "last": 53504.0,
+      "last": 53509.0,
       "prev": 53807.0,
-      "change": -303.0,
-      "pct": -0.56,
-      "mtd": 1.65,
-      "ytd": 10.69,
+      "change": -298.0,
+      "pct": -0.55,
+      "mtd": 1.66,
+      "ytd": 10.7,
       "as_of": "2026-08-17",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         53880.0,
         53871.0,
         53935.0,
         53807.0,
-        53504.0
+        53509.0
       ]
     },
     {
       "label": "Gold (GC)",
       "ticker": "GC=F",
-      "last": 4471.6,
+      "last": 4473.1,
       "prev": 4380.4,
-      "change": 91.2,
-      "pct": 2.08,
-      "mtd": 10.43,
-      "ytd": 3.38,
+      "change": 92.7,
+      "pct": 2.12,
+      "mtd": 10.47,
+      "ytd": 3.41,
       "as_of": "2026-08-17",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         4383.0,
         4408.8999,
         4363.6001,
         4380.3999,
-        4471.6001
+        4473.1001
       ]
     },
     {
       "label": "Silver (SI)",
       "ticker": "SI=F",
-      "last": 65.93,
+      "last": 65.9,
       "prev": 64.99,
-      "change": 0.94,
-      "pct": 1.44,
-      "mtd": 14.47,
-      "ytd": -6.0,
+      "change": 0.92,
+      "pct": 1.41,
+      "mtd": 14.44,
+      "ytd": -6.03,
       "as_of": "2026-08-17",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         64.769,
         65.555,
         64.873,
         64.988,
-        65.925
+        65.905
       ]
     },
     {
@@ -267,41 +267,41 @@
     {
       "label": "USD/KRW",
       "ticker": "USDKRW=X",
-      "last": 1416.2,
+      "last": 1414.82,
       "prev": 1416.85,
-      "change": -0.65,
-      "pct": -0.05,
-      "mtd": -0.31,
-      "ytd": -1.51,
+      "change": -2.03,
+      "pct": -0.14,
+      "mtd": -0.41,
+      "ytd": -1.61,
       "as_of": "2026-08-17",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         1417.3101,
         1412.1801,
         1416.46,
         1416.85,
-        1416.2
+        1414.8199
       ]
     },
     {
       "label": "EUR/KRW",
       "ticker": "EURKRW=X",
-      "last": 1639.0,
+      "last": 1637.6,
       "prev": 1634.19,
-      "change": 4.81,
-      "pct": 0.29,
-      "mtd": 0.14,
-      "ytd": -2.96,
+      "change": 3.41,
+      "pct": 0.21,
+      "mtd": 0.06,
+      "ytd": -3.04,
       "as_of": "2026-08-17",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         1635.36,
         1628.62,
         1632.86,
         1634.1899,
-        1639.0
+        1637.6
       ]
     }
   ],
@@ -476,57 +476,57 @@
     },
     {
       "source": "Yahoo Finance",
-      "title": "Accelerant Holdings (ARX) Soars 57% as Buyer Bets Big on Firm",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/accelerant-holdings-arx-soars-57-113222023.html",
-      "published": "2026-08-16T11:32:22Z"
+      "title": "Greg Abel Starts Spending: Berkshire’s Cash Hoard Finally Gets Put to Work",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/greg-abel-starts-spending-berkshire-125459967.html",
+      "published": "2026-08-16T12:54:59Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Americans are now borrowing more to bet on stocks than they owe in credit card debt",
-      "link": "https://finance.yahoo.com/markets/options/articles/americans-now-borrowing-more-bet-113000989.html",
-      "published": "2026-08-16T11:30:00Z"
+      "title": "'A serious mistake': Moody's Analytics economist says the Fed is putting the economy at risk with its silence",
+      "link": "https://finance.yahoo.com/economy/policy/articles/serious-mistake-moodys-analytics-economist-125500943.html",
+      "published": "2026-08-16T12:55:00Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "The AI trade got crushed. The bull market barely noticed: Chart of the Day",
-      "link": "https://finance.yahoo.com/markets/article/the-ai-trade-got-crushed-the-bull-market-barely-noticed-chart-of-the-day-114320054.html",
-      "published": "2026-08-16T11:43:20Z"
+      "title": "Vivian Tu says investors carrying credit card debt need to stop and pay it off first. The math says she's right",
+      "link": "https://finance.yahoo.com/markets/articles/vivian-tu-says-investors-carrying-130000844.html",
+      "published": "2026-08-16T13:00:00Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "‘Running out of money’: Kraft, McDonald’s, Whirlpool CEOs all flag same concern over US consumers — protect your wealth",
-      "link": "https://finance.yahoo.com/economy/articles/running-money-kraft-mcdonald-whirlpool-114500035.html",
-      "published": "2026-08-16T11:45:00Z"
+      "title": "Heartflow (HTFL) Rockets 46%: What Analysts Say and Where Hedge Funds Stand",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/heartflow-htfl-rockets-46-analysts-123113891.html",
+      "published": "2026-08-16T12:31:13Z"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "미·이란 협상 교착에 국제유가 2%대↑…브렌트유 다시 90달러대",
-      "link": "https://www.yna.co.kr/view/AKR20260818005200072",
-      "published": "Tue, 18 Aug 2026 04:50:07 +0900"
+      "title": "대기업 신규채용 2년새 15% 감소…청년 줄고 장년 늘며 세대역전",
+      "link": "https://www.yna.co.kr/view/AKR20260817042600003",
+      "published": "Tue, 18 Aug 2026 06:01:02 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "4대 은행, 폭우 피해 금융지원…구호 텐트·급식 차량도(종합)",
-      "link": "https://www.yna.co.kr/view/AKR20260817058751002",
-      "published": "Mon, 17 Aug 2026 20:23:18 +0900"
+      "title": "\"물놀이 끝나면 해변으로 배달\"…양양 서피비치 주문 2.5배",
+      "link": "https://www.yna.co.kr/view/AKR20260817028700030",
+      "published": "Tue, 18 Aug 2026 06:01:01 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "수은, 구리 안정적 확보 위해 글로벌 자원업체에 10억달러 지원",
-      "link": "https://www.yna.co.kr/view/AKR20260817063500002",
-      "published": "Mon, 17 Aug 2026 19:25:02 +0900"
+      "title": "전국 도시재생 명소 52곳서 스탬프투어…4곳 방문하면 상품권",
+      "link": "https://www.yna.co.kr/view/AKR20260816019700003",
+      "published": "Tue, 18 Aug 2026 06:00:04 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "KB국민은행, 집중호우 피해 긴급 금융지원",
-      "link": "https://www.yna.co.kr/view/AKR20260817058700002",
-      "published": "Mon, 17 Aug 2026 18:26:13 +0900"
+      "title": "구직 청년 64% \"희망 직무 5년 내 AI로 대체·축소될 것\"",
+      "link": "https://www.yna.co.kr/view/AKR20260817033400003",
+      "published": "Tue, 18 Aug 2026 06:00:04 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "5대 은행 주담대 가산금리 고공행진…\"가계대출 억제 영향\"",
-      "link": "https://www.yna.co.kr/view/AKR20260817053700002",
-      "published": "Mon, 17 Aug 2026 17:08:57 +0900"
+      "title": "서울시, 무주택 청년 이사비·중개보수 최대 40만원 지원",
+      "link": "https://www.yna.co.kr/view/AKR20260817032600004",
+      "published": "Tue, 18 Aug 2026 06:00:03 +0900"
     }
   ]
 }
