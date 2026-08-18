@@ -1,6 +1,6 @@
 {
   "date": "2026-08-18",
-  "generated_at": "2026-08-18 21:37 IST",
+  "generated_at": "2026-08-18 22:36 IST",
   "markets": [
     {
       "label": "KOSPI",
@@ -9,7 +9,7 @@
       "prev": 6813.34,
       "change": 164.6,
       "pct": 2.42,
-      "mtd": 24.75,
+      "mtd": 5.8,
       "ytd": 65.58,
       "as_of": "2026-08-14",
       "intraday": false,
@@ -29,14 +29,14 @@
       "prev": 861.37,
       "change": 3.28,
       "pct": 0.38,
-      "mtd": 34.1,
+      "mtd": 20.13,
       "ytd": -6.57,
       "as_of": "2026-08-14",
       "intraday": false,
       "up": true,
       "spark": [
+        798.81,
         854.47,
-        857.84,
         858.91,
         861.37,
         864.65
@@ -49,7 +49,7 @@
       "prev": 7745.06,
       "change": -53.3,
       "pct": -0.69,
-      "mtd": 3.42,
+      "mtd": 2.7,
       "ytd": 12.36,
       "as_of": "2026-08-18",
       "intraday": false,
@@ -69,7 +69,7 @@
       "prev": 26644.91,
       "change": -355.2,
       "pct": -1.33,
-      "mtd": 4.65,
+      "mtd": 3.61,
       "ytd": 13.11,
       "as_of": "2026-08-18",
       "intraday": false,
@@ -89,7 +89,7 @@
       "prev": 53459.78,
       "change": -116.38,
       "pct": -0.22,
-      "mtd": 2.17,
+      "mtd": 1.64,
       "ytd": 10.99,
       "as_of": "2026-08-18",
       "intraday": false,
@@ -111,7 +111,7 @@
       "prev": 15.19,
       "change": 0.65,
       "pct": 4.28,
-      "mtd": -7.31,
+      "mtd": -0.94,
       "ytd": 5.95,
       "as_of": "2026-08-18",
       "intraday": false,
@@ -127,101 +127,101 @@
     {
       "label": "S&P futures (ES)",
       "ticker": "ES=F",
-      "last": 7713.75,
+      "last": 7713.25,
       "prev": 7768.75,
-      "change": -55.0,
+      "change": -55.5,
       "pct": -0.71,
-      "mtd": 2.59,
-      "ytd": 11.92,
+      "mtd": 2.58,
+      "ytd": 11.91,
       "as_of": "2026-08-18",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         7770.5,
         7822.5,
         7805.0,
         7768.75,
-        7713.75
+        7713.25
       ]
     },
     {
       "label": "Nasdaq futures (NQ)",
       "ticker": "NQ=F",
-      "last": 29572.75,
+      "last": 29559.5,
       "prev": 30096.0,
-      "change": -523.25,
-      "pct": -1.74,
-      "mtd": 4.11,
-      "ytd": 16.17,
+      "change": -536.5,
+      "pct": -1.78,
+      "mtd": 4.07,
+      "ytd": 16.12,
       "as_of": "2026-08-18",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         29853.25,
         30188.5,
         30141.75,
         30096.0,
-        29572.75
+        29559.5
       ]
     },
     {
       "label": "Dow futures (YM)",
       "ticker": "YM=F",
-      "last": 53408.0,
+      "last": 53406.0,
       "prev": 53544.0,
-      "change": -136.0,
-      "pct": -0.25,
-      "mtd": 1.47,
+      "change": -138.0,
+      "pct": -0.26,
+      "mtd": 1.46,
       "ytd": 10.49,
       "as_of": "2026-08-18",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         53871.0,
         53935.0,
         53807.0,
         53544.0,
-        53408.0
+        53406.0
       ]
     },
     {
       "label": "Gold (GC)",
       "ticker": "GC=F",
-      "last": 4391.9,
+      "last": 4389.5,
       "prev": 4417.8,
-      "change": -25.9,
-      "pct": -0.59,
-      "mtd": 8.47,
-      "ytd": 1.53,
+      "change": -28.3,
+      "pct": -0.64,
+      "mtd": 8.41,
+      "ytd": 1.48,
       "as_of": "2026-08-18",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         4408.8999,
         4363.6001,
         4380.3999,
         4417.7998,
-        4391.8999
+        4389.5
       ]
     },
     {
       "label": "Silver (SI)",
       "ticker": "SI=F",
-      "last": 63.55,
+      "last": 63.42,
       "prev": 66.12,
-      "change": -2.57,
-      "pct": -3.89,
-      "mtd": 10.35,
-      "ytd": -9.39,
+      "change": -2.7,
+      "pct": -4.08,
+      "mtd": 10.12,
+      "ytd": -9.57,
       "as_of": "2026-08-18",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         65.555,
         64.873,
         64.988,
         66.121,
-        63.55
+        63.42
       ]
     },
     {
@@ -251,8 +251,8 @@
       "prev": 4.72,
       "change": -0.02,
       "pct": -0.38,
-      "mtd": 0.92,
-      "ytd": null,
+      "mtd": -0.82,
+      "ytd": 13.04,
       "as_of": "2026-08-18",
       "intraday": false,
       "up": false,
@@ -267,41 +267,41 @@
     {
       "label": "USD/KRW",
       "ticker": "USDKRW=X",
-      "last": 1412.84,
+      "last": 1412.24,
       "prev": 1415.37,
-      "change": -2.53,
-      "pct": -0.18,
-      "mtd": -0.55,
-      "ytd": -1.74,
+      "change": -3.13,
+      "pct": -0.22,
+      "mtd": -0.59,
+      "ytd": -1.79,
       "as_of": "2026-08-18",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         1412.1801,
         1416.46,
         1416.85,
         1415.37,
-        1412.84
+        1412.24
       ]
     },
     {
       "label": "EUR/KRW",
       "ticker": "EURKRW=X",
-      "last": 1634.3,
+      "last": 1634.5,
       "prev": 1582.09,
-      "change": 52.21,
-      "pct": 3.3,
-      "mtd": -0.15,
-      "ytd": -3.24,
+      "change": 52.41,
+      "pct": 3.31,
+      "mtd": -0.13,
+      "ytd": -3.23,
       "as_of": "2026-08-18",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
-        1635.36,
         1628.62,
         1632.86,
+        1634.1899,
         1582.09,
-        1634.3
+        1634.5
       ]
     }
   ],
@@ -429,41 +429,41 @@
     {
       "label": "Samsung (005930)",
       "ticker": "005930.KS",
-      "last": 274500.0,
-      "prev": 268000.0,
-      "change": 6500.0,
-      "pct": 2.43,
-      "mtd": 4.57,
-      "ytd": 129.67,
-      "as_of": "2026-08-14",
+      "last": 268500.0,
+      "prev": 274500.0,
+      "change": -6000.0,
+      "pct": -2.19,
+      "mtd": 2.29,
+      "ytd": 124.65,
+      "as_of": "2026-08-18",
       "intraday": false,
-      "up": true,
+      "up": false,
       "spark": [
-        230000.0,
         239500.0,
         255500.0,
         268000.0,
-        274500.0
+        274500.0,
+        268500.0
       ]
     },
     {
       "label": "SK Hynix (000660)",
       "ticker": "000660.KS",
-      "last": 1645000.0,
-      "prev": 1593000.0,
-      "change": 52000.0,
-      "pct": 3.26,
-      "mtd": -4.25,
-      "ytd": 153.2,
-      "as_of": "2026-08-14",
+      "last": 1662000.0,
+      "prev": 1645000.0,
+      "change": 17000.0,
+      "pct": 1.03,
+      "mtd": -3.26,
+      "ytd": 155.81,
+      "as_of": "2026-08-18",
       "intraday": false,
       "up": true,
       "spark": [
-        1420000.0,
         1425000.0,
         1504000.0,
         1593000.0,
-        1645000.0
+        1645000.0,
+        1662000.0
       ]
     }
   ],
@@ -476,57 +476,57 @@
     },
     {
       "source": "Yahoo Finance",
-      "title": "Micron stock heats up again, crossing $1,000",
-      "link": "https://finance.yahoo.com/markets/stocks/article/micron-stock-heats-up-again-crossing-1000-115304344.html",
-      "published": "2026-08-17T11:53:04Z"
+      "title": "‘Never bet against America’: Scott Bessent endorses Warren Buffett’s forgotten rule for getting rich — use it now",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/never-bet-against-america-scott-130000391.html",
+      "published": "2026-08-17T13:00:00Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Local Bounti’s Network Yields at Record Levels, Retail Momentum Broadened  – Quarterly Update Report",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/local-bounti-network-yields-record-112953084.html",
-      "published": "2026-08-17T11:29:53Z"
+      "title": "Goldman Sachs warns of consumer spending slowdown as tax refund boost fades",
+      "link": "https://finance.yahoo.com/economy/article/goldman-sachs-warns-of-consumer-spending-slowdown-as-tax-refund-boost-fades-125557282.html",
+      "published": "2026-08-17T12:55:57Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Silver Price Predictions: Why Citi Analysts See Silver Prices Soaring to $90 Soon",
-      "link": "https://finance.yahoo.com/markets/commodities/articles/silver-price-predictions-why-citi-113002494.html",
-      "published": "2026-08-17T11:30:02Z"
+      "title": "Nvidia to provide up to $105 billion guarantee for OpenAI's Ohio data center",
+      "link": "https://finance.yahoo.com/technology/ai/articles/nvidia-invest-1-5-billion-124300582.html",
+      "published": "2026-08-17T12:43:00Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Midera Food’s Net Sales Up 13%, Raises 2026 Outlook",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/midera-food-net-sales-13-112700910.html",
-      "published": "2026-08-17T11:27:00Z"
+      "title": "Targa Resources Stock Outlook: Is Wall Street Bullish or Bearish?",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/targa-resources-stock-outlook-wall-124241524.html",
+      "published": "2026-08-17T12:42:41Z"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "국제유가, 중동 불안 지속에 사흘 연속 상승…WTI 0.5%↑",
-      "link": "https://www.yna.co.kr/view/AKR20260819005700072",
-      "published": "Wed, 19 Aug 2026 04:52:23 +0900"
+      "title": "신세계百, 5개 제휴 카드 페스타…사은행사·무이자 할부 제공",
+      "link": "https://www.yna.co.kr/view/AKR20260818143600030",
+      "published": "Wed, 19 Aug 2026 06:00:05 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "국세청 '극한호우' 거제·통영 중기 세금 납부기간 두 달 연장(종합)",
-      "link": "https://www.yna.co.kr/view/AKR20260818076951002",
-      "published": "Tue, 18 Aug 2026 22:00:29 +0900"
+      "title": "서울시, 정비사업 조합설립 소요 시간 1년→4개월로 '단축'",
+      "link": "https://www.yna.co.kr/view/AKR20260818148000004",
+      "published": "Wed, 19 Aug 2026 06:00:05 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "용산공원 주택공급 두고 '평행선'…개발 판도 변화 예고(종합2보)",
-      "link": "https://www.yna.co.kr/view/AKR20260818068952003",
-      "published": "Tue, 18 Aug 2026 19:19:47 +0900"
+      "title": "AI 특허 8년 새 7배로 증가…\"분야별 맞춤 전략 설계해야\"",
+      "link": "https://www.yna.co.kr/view/AKR20260818154300003",
+      "published": "Wed, 19 Aug 2026 06:00:01 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "에스에스알, 70억원 유상증자…지란지교에스앤씨 등에 3자 배정",
-      "link": "https://www.yna.co.kr/view/AKR20260818163800008",
-      "published": "Tue, 18 Aug 2026 19:06:06 +0900"
+      "title": "가상자산 시장 침체에 업비트·빗썸 보유 코인 가치 '뚝'",
+      "link": "https://www.yna.co.kr/view/AKR20260818162200002",
+      "published": "Wed, 19 Aug 2026 05:59:00 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "'자율주행 AI 솔루션' 라이드플럭스, 코스닥 상장예비심사 신청",
-      "link": "https://www.yna.co.kr/view/AKR20260818159300008",
-      "published": "Tue, 18 Aug 2026 18:32:05 +0900"
+      "title": "'돈만 잘 벌면 끝 아냐' 4대 금융 회장 성과급 잣대는",
+      "link": "https://www.yna.co.kr/view/AKR20260818155200002",
+      "published": "Wed, 19 Aug 2026 05:57:00 +0900"
     }
   ]
 }
