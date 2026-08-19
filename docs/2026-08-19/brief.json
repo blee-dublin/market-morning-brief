@@ -1,6 +1,6 @@
 {
   "date": "2026-08-19",
-  "generated_at": "2026-08-19 21:42 IST",
+  "generated_at": "2026-08-19 22:37 IST",
   "markets": [
     {
       "label": "KOSPI",
@@ -9,7 +9,7 @@
       "prev": 6977.94,
       "change": -108.11,
       "pct": -1.55,
-      "mtd": 22.82,
+      "mtd": 4.16,
       "ytd": 63.02,
       "as_of": "2026-08-18",
       "intraday": false,
@@ -29,13 +29,13 @@
       "prev": 864.65,
       "change": -30.45,
       "pct": -3.52,
-      "mtd": 29.38,
+      "mtd": 15.9,
       "ytd": -9.86,
       "as_of": "2026-08-18",
       "intraday": false,
       "up": false,
       "spark": [
-        857.84,
+        854.47,
         858.91,
         861.37,
         864.65,
@@ -49,7 +49,7 @@
       "prev": 7691.76,
       "change": 16.22,
       "pct": 0.21,
-      "mtd": 3.63,
+      "mtd": 2.91,
       "ytd": 12.6,
       "as_of": "2026-08-19",
       "intraday": false,
@@ -69,7 +69,7 @@
       "prev": 26289.71,
       "change": 41.38,
       "pct": 0.16,
-      "mtd": 4.81,
+      "mtd": 3.77,
       "ytd": 13.29,
       "as_of": "2026-08-19",
       "intraday": false,
@@ -89,7 +89,7 @@
       "prev": 53343.4,
       "change": 119.65,
       "pct": 0.22,
-      "mtd": 2.4,
+      "mtd": 1.86,
       "ytd": 11.23,
       "as_of": "2026-08-19",
       "intraday": false,
@@ -111,7 +111,7 @@
       "prev": 15.84,
       "change": -0.95,
       "pct": -6.0,
-      "mtd": -12.87,
+      "mtd": -6.88,
       "ytd": -0.4,
       "as_of": "2026-08-19",
       "intraday": false,
@@ -127,41 +127,41 @@
     {
       "label": "S&P futures (ES)",
       "ticker": "ES=F",
-      "last": 7728.0,
+      "last": 7730.5,
       "prev": 7714.0,
-      "change": 14.0,
-      "pct": 0.18,
-      "mtd": 2.78,
-      "ytd": 12.12,
+      "change": 16.5,
+      "pct": 0.21,
+      "mtd": 2.81,
+      "ytd": 12.16,
       "as_of": "2026-08-19",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         7822.5,
         7805.0,
         7768.75,
         7714.0,
-        7728.0
+        7730.5
       ]
     },
     {
       "label": "Nasdaq futures (NQ)",
       "ticker": "NQ=F",
-      "last": 29523.75,
+      "last": 29561.0,
       "prev": 29586.0,
-      "change": -62.25,
-      "pct": -0.21,
-      "mtd": 3.94,
-      "ytd": 15.98,
+      "change": -25.0,
+      "pct": -0.08,
+      "mtd": 4.07,
+      "ytd": 16.12,
       "as_of": "2026-08-19",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         30188.5,
         30141.75,
         30096.0,
         29586.0,
-        29523.75
+        29561.0
       ]
     },
     {
@@ -174,7 +174,7 @@
       "mtd": 1.69,
       "ytd": 10.74,
       "as_of": "2026-08-19",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         53935.0,
@@ -187,41 +187,41 @@
     {
       "label": "Gold (GC)",
       "ticker": "GC=F",
-      "last": 4579.8,
+      "last": 4580.7,
       "prev": 4366.0,
-      "change": 213.8,
-      "pct": 4.9,
-      "mtd": 13.11,
-      "ytd": 5.88,
+      "change": 214.7,
+      "pct": 4.92,
+      "mtd": 13.13,
+      "ytd": 5.9,
       "as_of": "2026-08-19",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         4363.6001,
         4380.3999,
         4417.7998,
         4366.0,
-        4579.7998
+        4580.7002
       ]
     },
     {
       "label": "Silver (SI)",
       "ticker": "SI=F",
-      "last": 66.75,
+      "last": 67.13,
       "prev": 63.94,
-      "change": 2.81,
-      "pct": 4.4,
-      "mtd": 15.91,
-      "ytd": -4.82,
+      "change": 3.19,
+      "pct": 4.99,
+      "mtd": 16.56,
+      "ytd": -4.28,
       "as_of": "2026-08-19",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         64.873,
         64.988,
         66.121,
         63.941,
-        66.755
+        67.13
       ]
     },
     {
@@ -251,8 +251,8 @@
       "prev": 4.71,
       "change": -0.05,
       "pct": -1.13,
-      "mtd": -0.21,
-      "ytd": null,
+      "mtd": -1.94,
+      "ytd": 11.77,
       "as_of": "2026-08-19",
       "intraday": false,
       "up": false,
@@ -267,41 +267,41 @@
     {
       "label": "USD/KRW",
       "ticker": "USDKRW=X",
-      "last": 1388.31,
+      "last": 1386.85,
       "prev": 1414.73,
-      "change": -26.42,
-      "pct": -1.87,
-      "mtd": -2.27,
-      "ytd": -3.45,
+      "change": -27.88,
+      "pct": -1.97,
+      "mtd": -2.38,
+      "ytd": -3.55,
       "as_of": "2026-08-19",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         1416.46,
         1416.85,
         1415.37,
         1414.73,
-        1388.3101
+        1386.85
       ]
     },
     {
       "label": "EUR/KRW",
       "ticker": "EURKRW=X",
-      "last": 1620.2,
+      "last": 1618.6,
       "prev": 1638.16,
-      "change": -17.96,
-      "pct": -1.1,
-      "mtd": -1.01,
-      "ytd": -4.07,
+      "change": -19.56,
+      "pct": -1.19,
+      "mtd": -1.1,
+      "ytd": -4.17,
       "as_of": "2026-08-19",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
-        1628.62,
         1632.86,
+        1634.1899,
         1582.09,
         1638.16,
-        1620.2
+        1618.6
       ]
     }
   ],
@@ -429,41 +429,41 @@
     {
       "label": "Samsung (005930)",
       "ticker": "005930.KS",
-      "last": 268500.0,
-      "prev": 274500.0,
-      "change": -6000.0,
-      "pct": -2.19,
-      "mtd": 2.29,
-      "ytd": 124.65,
-      "as_of": "2026-08-18",
+      "last": 247500.0,
+      "prev": 268500.0,
+      "change": -21000.0,
+      "pct": -7.82,
+      "mtd": -5.71,
+      "ytd": 107.08,
+      "as_of": "2026-08-19",
       "intraday": false,
       "up": false,
       "spark": [
-        239500.0,
         255500.0,
         268000.0,
         274500.0,
-        268500.0
+        268500.0,
+        247500.0
       ]
     },
     {
       "label": "SK Hynix (000660)",
       "ticker": "000660.KS",
-      "last": 1662000.0,
-      "prev": 1645000.0,
-      "change": 17000.0,
-      "pct": 1.03,
-      "mtd": -3.26,
-      "ytd": 155.81,
-      "as_of": "2026-08-18",
+      "last": 1500000.0,
+      "prev": 1662000.0,
+      "change": -162000.0,
+      "pct": -9.75,
+      "mtd": -12.69,
+      "ytd": 130.88,
+      "as_of": "2026-08-19",
       "intraday": false,
-      "up": true,
+      "up": false,
       "spark": [
-        1425000.0,
         1504000.0,
         1593000.0,
         1645000.0,
-        1662000.0
+        1662000.0,
+        1500000.0
       ]
     }
   ],
@@ -476,57 +476,57 @@
     },
     {
       "source": "Yahoo Finance",
-      "title": "Strong AI Infrastructure Orders Drive Confidence in Cisco Systems (CSCO)",
-      "link": "https://finance.yahoo.com/technology/ai/articles/strong-ai-infrastructure-orders-drive-121646291.html",
-      "published": "2026-08-18T12:16:46Z"
+      "title": "Renaissance Technologies Has Taken a New Position in CrowdStrike. What This Means for CRWD Stock.",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/renaissance-technologies-taken-position-crowdstrike-133002394.html",
+      "published": "2026-08-18T13:30:02Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Home Depot Beats Estimates in a “Frozen” Housing Market",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/home-depot-beats-estimates-frozen-122124759.html",
-      "published": "2026-08-18T12:21:24Z"
+      "title": "Comcast expands Xfinity security offerings to deepen broadband customer ties",
+      "link": "https://finance.yahoo.com/technology/articles/comcast-expands-xfinity-security-offerings-133318080.html",
+      "published": "2026-08-18T13:33:18Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Investors’ Focus on Higher Capital Spending Weighed on Northrop Grumman (NOC)",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/investors-focus-higher-capital-spending-122045999.html",
-      "published": "2026-08-18T12:20:45Z"
+      "title": "Cognex Corp’s (CGNX) Elevated Growth Supported by Cost Discipline and Sales Strength",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/cognex-corp-cgnx-elevated-growth-132913511.html",
+      "published": "2026-08-18T13:29:13Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Soybean Gains Extending to Tuesday Morning Following Lower Tour Pod Counts",
-      "link": "https://finance.yahoo.com/markets/commodities/articles/soybean-gains-extending-tuesday-morning-122219222.html",
-      "published": "2026-08-18T12:22:19Z"
+      "title": "Zcash Fights Off Bears as Arthur Hayes’ $1K ZEC Price Target Looms",
+      "link": "https://finance.yahoo.com/markets/crypto/articles/zcash-fights-off-bears-arthur-132033602.html",
+      "published": "2026-08-18T13:20:33Z"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "국제유가, UAE·이란 갈등 고조에 나흘 연속 상승…WTI 1%↑",
-      "link": "https://www.yna.co.kr/view/AKR20260820006400072",
-      "published": "Thu, 20 Aug 2026 05:26:57 +0900"
+      "title": "도시에 사는 인구 4천700만명…국토 17%에 국민 92% 거주",
+      "link": "https://www.yna.co.kr/view/AKR20260819127400003",
+      "published": "Thu, 20 Aug 2026 06:00:08 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "대규모 저택 '공사 쪼개기' 허가…양평군 직원들 징계 요구",
-      "link": "https://www.yna.co.kr/view/AKR20260819177600061",
-      "published": "Wed, 19 Aug 2026 22:39:53 +0900"
+      "title": "환경규제 강화되는데…기업 66% \"탄소데이터 나홀로 관리\"",
+      "link": "https://www.yna.co.kr/view/AKR20260819129600003",
+      "published": "Thu, 20 Aug 2026 06:00:08 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "미래운용, 상반기 순이익 '역대 최대' 1조 육박…중소형사 약진(종합)",
-      "link": "https://www.yna.co.kr/view/AKR20260819152451008",
-      "published": "Wed, 19 Aug 2026 20:30:56 +0900"
+      "title": "비청산 장외파생상품거래 증거금 가이드라인 1년 연장",
+      "link": "https://www.yna.co.kr/view/AKR20260819148800002",
+      "published": "Thu, 20 Aug 2026 06:00:05 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "금융당국, 은행별 목표치 배분협의 돌입…이달 내 마무리 목표",
-      "link": "https://www.yna.co.kr/view/AKR20260819168300002",
-      "published": "Wed, 19 Aug 2026 19:39:50 +0900"
+      "title": "코인원, 'OKX 지갑' 품고 웹3 생태계 보폭 넓히나",
+      "link": "https://www.yna.co.kr/view/AKR20260819163000002",
+      "published": "Thu, 20 Aug 2026 05:59:00 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "[부고] 김동재(삼성화재 홍보팀 부장)씨 부친상",
-      "link": "https://www.yna.co.kr/view/AKR20260819164900002",
-      "published": "Wed, 19 Aug 2026 18:38:39 +0900"
+      "title": "카드업계, 호우피해 금융지원…청구유예·카드론 이자 감면 등",
+      "link": "https://www.yna.co.kr/view/AKR20260819159800002",
+      "published": "Thu, 20 Aug 2026 05:55:00 +0900"
     }
   ]
 }
