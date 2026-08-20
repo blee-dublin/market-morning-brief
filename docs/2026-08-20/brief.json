@@ -1,6 +1,6 @@
 {
   "date": "2026-08-20",
-  "generated_at": "2026-08-20 21:42 IST",
+  "generated_at": "2026-08-20 22:40 IST",
   "markets": [
     {
       "label": "KOSPI",
@@ -9,7 +9,7 @@
       "prev": 6869.83,
       "change": -398.66,
       "pct": -5.8,
-      "mtd": -1.88,
+      "mtd": 15.69,
       "ytd": 53.56,
       "as_of": "2026-08-19",
       "intraday": false,
@@ -29,7 +29,7 @@
       "prev": 834.2,
       "change": -9.74,
       "pct": -1.17,
-      "mtd": 14.55,
+      "mtd": 27.87,
       "ytd": -10.91,
       "as_of": "2026-08-19",
       "intraday": false,
@@ -49,7 +49,7 @@
       "prev": 7707.98,
       "change": -66.82,
       "pct": -0.87,
-      "mtd": 2.02,
+      "mtd": 2.74,
       "ytd": 11.62,
       "as_of": "2026-08-20",
       "intraday": false,
@@ -69,7 +69,7 @@
       "prev": 26331.09,
       "change": -263.92,
       "pct": -1.0,
-      "mtd": 2.73,
+      "mtd": 3.76,
       "ytd": 12.16,
       "as_of": "2026-08-20",
       "intraday": false,
@@ -89,7 +89,7 @@
       "prev": 53463.05,
       "change": -703.84,
       "pct": -1.32,
-      "mtd": 0.52,
+      "mtd": 1.06,
       "ytd": 9.77,
       "as_of": "2026-08-20",
       "intraday": false,
@@ -111,7 +111,7 @@
       "prev": 14.89,
       "change": 1.12,
       "pct": 7.52,
-      "mtd": 0.13,
+      "mtd": -6.32,
       "ytd": 7.09,
       "as_of": "2026-08-20",
       "intraday": false,
@@ -127,101 +127,101 @@
     {
       "label": "S&P futures (ES)",
       "ticker": "ES=F",
-      "last": 7663.25,
+      "last": 7667.75,
       "prev": 7729.0,
-      "change": -65.75,
-      "pct": -0.85,
-      "mtd": 1.92,
-      "ytd": 11.18,
+      "change": -61.25,
+      "pct": -0.79,
+      "mtd": 1.97,
+      "ytd": 11.25,
       "as_of": "2026-08-20",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         7805.0,
         7768.75,
         7714.0,
         7729.0,
-        7663.25
+        7667.75
       ]
     },
     {
       "label": "Nasdaq futures (NQ)",
       "ticker": "NQ=F",
-      "last": 29289.25,
+      "last": 29317.25,
       "prev": 29512.75,
-      "change": -223.5,
-      "pct": -0.76,
-      "mtd": 3.12,
-      "ytd": 15.05,
+      "change": -195.5,
+      "pct": -0.66,
+      "mtd": 3.21,
+      "ytd": 15.16,
       "as_of": "2026-08-20",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         30141.75,
         30096.0,
         29586.0,
         29512.75,
-        29289.25
+        29317.25
       ]
     },
     {
       "label": "Dow futures (YM)",
       "ticker": "YM=F",
-      "last": 52837.0,
+      "last": 52854.0,
       "prev": 53530.0,
-      "change": -693.0,
-      "pct": -1.29,
-      "mtd": 0.38,
-      "ytd": 9.31,
+      "change": -676.0,
+      "pct": -1.26,
+      "mtd": 0.42,
+      "ytd": 9.35,
       "as_of": "2026-08-20",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         53807.0,
         53544.0,
         53403.0,
         53530.0,
-        52837.0
+        52854.0
       ]
     },
     {
       "label": "Gold (GC)",
       "ticker": "GC=F",
-      "last": 4575.5,
+      "last": 4575.1,
       "prev": 4489.4,
-      "change": 86.1,
-      "pct": 1.92,
-      "mtd": 13.0,
-      "ytd": 5.78,
+      "change": 85.7,
+      "pct": 1.91,
+      "mtd": 12.99,
+      "ytd": 5.77,
       "as_of": "2026-08-20",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         4380.3999,
         4417.7998,
         4366.0,
         4489.3999,
-        4575.5
+        4575.1001
       ]
     },
     {
       "label": "Silver (SI)",
       "ticker": "SI=F",
-      "last": 68.12,
+      "last": 68.13,
       "prev": 65.73,
-      "change": 2.39,
+      "change": 2.4,
       "pct": 3.64,
-      "mtd": 18.29,
+      "mtd": 18.3,
       "ytd": -2.86,
       "as_of": "2026-08-20",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         64.988,
         66.121,
         63.941,
         65.734,
-        68.125
+        68.13
       ]
     },
     {
@@ -267,41 +267,41 @@
     {
       "label": "USD/KRW",
       "ticker": "USDKRW=X",
-      "last": 1393.61,
+      "last": 1393.19,
       "prev": 1413.58,
-      "change": -19.97,
-      "pct": -1.41,
-      "mtd": -1.9,
-      "ytd": -3.08,
+      "change": -20.39,
+      "pct": -1.44,
+      "mtd": -1.93,
+      "ytd": -3.11,
       "as_of": "2026-08-20",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         1416.85,
         1415.37,
         1414.73,
         1413.58,
-        1393.61
+        1393.1899
       ]
     },
     {
       "label": "EUR/KRW",
       "ticker": "EURKRW=X",
-      "last": 1626.9,
+      "last": 1626.4,
       "prev": 1634.92,
-      "change": -8.02,
-      "pct": -0.49,
-      "mtd": -0.6,
-      "ytd": -3.68,
+      "change": -8.52,
+      "pct": -0.52,
+      "mtd": -0.63,
+      "ytd": -3.71,
       "as_of": "2026-08-20",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
-        1634.1899,
+        1632.86,
         1582.09,
         1638.16,
         1634.92,
-        1626.9
+        1626.4
       ]
     }
   ],
@@ -429,41 +429,41 @@
     {
       "label": "Samsung (005930)",
       "ticker": "005930.KS",
-      "last": 247500.0,
-      "prev": 268500.0,
-      "change": -21000.0,
-      "pct": -7.82,
-      "mtd": -5.71,
-      "ytd": 107.08,
-      "as_of": "2026-08-19",
+      "last": 271000.0,
+      "prev": 247500.0,
+      "change": 23500.0,
+      "pct": 9.49,
+      "mtd": 3.24,
+      "ytd": 126.74,
+      "as_of": "2026-08-20",
       "intraday": false,
-      "up": false,
+      "up": true,
       "spark": [
-        255500.0,
         268000.0,
         274500.0,
         268500.0,
-        247500.0
+        247500.0,
+        271000.0
       ]
     },
     {
       "label": "SK Hynix (000660)",
       "ticker": "000660.KS",
-      "last": 1500000.0,
-      "prev": 1662000.0,
-      "change": -162000.0,
-      "pct": -9.75,
-      "mtd": -12.69,
-      "ytd": 130.88,
-      "as_of": "2026-08-19",
+      "last": 1691000.0,
+      "prev": 1500000.0,
+      "change": 191000.0,
+      "pct": 12.73,
+      "mtd": -1.57,
+      "ytd": 160.28,
+      "as_of": "2026-08-20",
       "intraday": false,
-      "up": false,
+      "up": true,
       "spark": [
-        1504000.0,
         1593000.0,
         1645000.0,
         1662000.0,
-        1500000.0
+        1500000.0,
+        1691000.0
       ]
     }
   ],
@@ -476,57 +476,57 @@
     },
     {
       "source": "Yahoo Finance",
-      "title": "Nebius says its $5 billion convertible underscores data centre demand",
-      "link": "https://finance.yahoo.com/technology/ai/articles/nebius-plans-4-5-billion-121242905.html",
-      "published": "2026-08-19T12:12:42Z"
+      "title": "Taiwan Semiconductor Manufacturing Company (TSM) Looks Built for Long-Term Growth, but What Happens in the Next Downturn?",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/taiwan-semiconductor-manufacturing-company-tsm-133617895.html",
+      "published": "2026-08-19T13:36:17Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Wall Street's hot streak is running into a midterm-year curse: Chart of the Day",
-      "link": "https://finance.yahoo.com/markets/article/wall-streets-hot-streak-is-running-into-a-midterm-year-curse-chart-of-the-day-100000963.html",
-      "published": "2026-08-19T10:00:00Z"
+      "title": "Why ASML (ASML) Could Remain a Long-Term Winner in Advanced Semiconductors",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/why-asml-asml-could-remain-132748383.html",
+      "published": "2026-08-19T13:27:48Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Uber (UBER) Bets On Drones As Its Delivery Engine Accelerates",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/uber-uber-bets-drones-delivery-121042551.html",
-      "published": "2026-08-19T12:10:42Z"
+      "title": "Do Wall Street Analysts Like Dover Stock?",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/wall-street-analysts-dover-stock-133600053.html",
+      "published": "2026-08-19T13:36:00Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "How Howard Hughes Holdings’ (HHH) Vantage Acquisition Sets the Stage for Compound Growth?",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/howard-hughes-holdings-hhh-vantage-121720714.html",
-      "published": "2026-08-19T12:17:20Z"
+      "title": "Wall Street just borrowed $500 billion to build AI — here's what it could mean for your 401(k). Are you ready?",
+      "link": "https://finance.yahoo.com/technology/ai/articles/wall-street-just-borrowed-500-132500322.html",
+      "published": "2026-08-19T13:25:00Z"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "美 '이란 경제압박' 강화에 국제유가 2%대↑…브렌트유 93달러대",
-      "link": "https://www.yna.co.kr/view/AKR20260821006800072",
-      "published": "Fri, 21 Aug 2026 04:45:07 +0900"
+      "title": "6월 서울 아파트값 한달새 2.5%↑…5년 만에 최대폭 상승",
+      "link": "https://www.yna.co.kr/view/AKR20260821008500004",
+      "published": "Fri, 21 Aug 2026 06:02:47 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "성평등부, 은평구 공공주택 공급에 여성사박물관 부지 이전키로",
-      "link": "https://www.yna.co.kr/view/AKR20260820179300530",
-      "published": "Thu, 20 Aug 2026 20:11:49 +0900"
+      "title": "서울미래인재재단, 이금희 초청 청년 대상 '스피치 특강'",
+      "link": "https://www.yna.co.kr/view/AKR20260820144800004",
+      "published": "Fri, 21 Aug 2026 06:00:07 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "한은 부총재에 '국제통' 권민수 부총재보 임명",
-      "link": "https://www.yna.co.kr/view/AKR20260820178900002",
-      "published": "Thu, 20 Aug 2026 20:05:03 +0900"
+      "title": "유가 떨어지자 7월 생산자 물가 11개월 만에 하락",
+      "link": "https://www.yna.co.kr/view/AKR20260820151900002",
+      "published": "Fri, 21 Aug 2026 06:00:03 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "노후 공공건축물 '그린리모델링' 의무화…민간은 보조금 지원",
-      "link": "https://www.yna.co.kr/view/AKR20260820177900003",
-      "published": "Thu, 20 Aug 2026 19:59:45 +0900"
+      "title": "6월 국내은행 대출 연체율 0.56%…동월 기준 10년 만에 최고",
+      "link": "https://www.yna.co.kr/view/AKR20260820164700002",
+      "published": "Fri, 21 Aug 2026 06:00:01 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "국토장관도 동일 시도 내 토허구역 지정 가능해진다",
-      "link": "https://www.yna.co.kr/view/AKR20260820178600003",
-      "published": "Thu, 20 Aug 2026 19:58:25 +0900"
+      "title": "신한금융 \"반도체 수혜 편중…외형 성장·체감경기 괴리\"",
+      "link": "https://www.yna.co.kr/view/AKR20260820167300002",
+      "published": "Fri, 21 Aug 2026 05:51:00 +0900"
     }
   ]
 }
