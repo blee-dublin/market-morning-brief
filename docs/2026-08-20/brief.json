@@ -1,0 +1,532 @@
+{
+  "date": "2026-08-20",
+  "generated_at": "2026-08-20 10:07 IST",
+  "markets": [
+    {
+      "label": "KOSPI",
+      "ticker": "^KS11",
+      "last": 6852.58,
+      "prev": 6471.17,
+      "change": 381.41,
+      "pct": 5.89,
+      "mtd": 3.9,
+      "ytd": 62.61,
+      "as_of": "2026-08-20",
+      "intraday": false,
+      "up": true,
+      "spark": [
+        6813.3398,
+        6977.9399,
+        6869.8301,
+        6471.1699,
+        6852.5801
+      ]
+    },
+    {
+      "label": "KOSDAQ",
+      "ticker": "^KQ11",
+      "last": 840.89,
+      "prev": 824.46,
+      "change": 16.43,
+      "pct": 1.99,
+      "mtd": 16.83,
+      "ytd": -9.14,
+      "as_of": "2026-08-20",
+      "intraday": false,
+      "up": true,
+      "spark": [
+        861.37,
+        864.65,
+        834.2,
+        824.46,
+        840.89
+      ]
+    },
+    {
+      "label": "S&P 500",
+      "ticker": "^GSPC",
+      "last": 7707.98,
+      "prev": 7691.76,
+      "change": 16.22,
+      "pct": 0.21,
+      "mtd": 2.91,
+      "ytd": 12.6,
+      "as_of": "2026-08-19",
+      "intraday": false,
+      "up": true,
+      "spark": [
+        7798.9902,
+        7785.7598,
+        7745.0601,
+        7691.7598,
+        7707.98
+      ]
+    },
+    {
+      "label": "Nasdaq",
+      "ticker": "^IXIC",
+      "last": 26331.09,
+      "prev": 26289.71,
+      "change": 41.38,
+      "pct": 0.16,
+      "mtd": 3.77,
+      "ytd": 13.29,
+      "as_of": "2026-08-19",
+      "intraday": false,
+      "up": true,
+      "spark": [
+        26803.0293,
+        26729.1602,
+        26644.9102,
+        26289.7109,
+        26331.0898
+      ]
+    },
+    {
+      "label": "Dow Jones",
+      "ticker": "^DJI",
+      "last": 53463.05,
+      "prev": 53343.4,
+      "change": 119.65,
+      "pct": 0.22,
+      "mtd": 1.86,
+      "ytd": 11.23,
+      "as_of": "2026-08-19",
+      "intraday": false,
+      "up": true,
+      "spark": [
+        53839.9883,
+        53732.4102,
+        53459.7812,
+        53343.3984,
+        53463.0508
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "label": "VIX",
+      "ticker": "^VIX",
+      "last": 15.23,
+      "prev": 14.89,
+      "change": 0.34,
+      "pct": 2.28,
+      "mtd": -4.75,
+      "ytd": 1.87,
+      "as_of": "2026-08-20",
+      "intraday": true,
+      "up": true,
+      "spark": [
+        14.25,
+        15.19,
+        15.84,
+        14.89,
+        15.23
+      ]
+    },
+    {
+      "label": "S&P futures (ES)",
+      "ticker": "ES=F",
+      "last": 7719.25,
+      "prev": 7729.0,
+      "change": -9.75,
+      "pct": -0.13,
+      "mtd": 2.66,
+      "ytd": 11.99,
+      "as_of": "2026-08-20",
+      "intraday": true,
+      "up": false,
+      "spark": [
+        7805.0,
+        7768.75,
+        7714.0,
+        7729.0,
+        7719.25
+      ]
+    },
+    {
+      "label": "Nasdaq futures (NQ)",
+      "ticker": "NQ=F",
+      "last": 29478.5,
+      "prev": 29512.75,
+      "change": -34.25,
+      "pct": -0.12,
+      "mtd": 3.78,
+      "ytd": 15.8,
+      "as_of": "2026-08-20",
+      "intraday": true,
+      "up": false,
+      "spark": [
+        30141.75,
+        30096.0,
+        29586.0,
+        29512.75,
+        29478.5
+      ]
+    },
+    {
+      "label": "Dow futures (YM)",
+      "ticker": "YM=F",
+      "last": 53429.0,
+      "prev": 53530.0,
+      "change": -101.0,
+      "pct": -0.19,
+      "mtd": 1.51,
+      "ytd": 10.54,
+      "as_of": "2026-08-20",
+      "intraday": true,
+      "up": false,
+      "spark": [
+        53807.0,
+        53544.0,
+        53403.0,
+        53530.0,
+        53429.0
+      ]
+    },
+    {
+      "label": "Gold (GC)",
+      "ticker": "GC=F",
+      "last": 4545.4,
+      "prev": 4489.4,
+      "change": 56.0,
+      "pct": 1.25,
+      "mtd": 12.26,
+      "ytd": 5.08,
+      "as_of": "2026-08-20",
+      "intraday": true,
+      "up": true,
+      "spark": [
+        4380.3999,
+        4417.7998,
+        4366.0,
+        4489.3999,
+        4545.3999
+      ]
+    },
+    {
+      "label": "Silver (SI)",
+      "ticker": "SI=F",
+      "last": 66.76,
+      "prev": 65.73,
+      "change": 1.03,
+      "pct": 1.56,
+      "mtd": 15.92,
+      "ytd": -4.81,
+      "as_of": "2026-08-20",
+      "intraday": true,
+      "up": true,
+      "spark": [
+        64.988,
+        66.121,
+        63.941,
+        65.734,
+        66.76
+      ]
+    },
+    {
+      "label": "EEM",
+      "ticker": "EEM",
+      "last": 66.11,
+      "prev": 65.34,
+      "change": 0.77,
+      "pct": 1.18,
+      "mtd": 3.15,
+      "ytd": 21.47,
+      "as_of": "2026-08-19",
+      "intraday": false,
+      "up": true,
+      "spark": [
+        66.68,
+        66.61,
+        67.32,
+        65.34,
+        66.11
+      ]
+    },
+    {
+      "label": "US 10Y yield",
+      "ticker": "^TNX",
+      "last": 4.65,
+      "prev": 4.71,
+      "change": -0.05,
+      "pct": -1.13,
+      "mtd": -1.94,
+      "ytd": 11.77,
+      "as_of": "2026-08-19",
+      "intraday": false,
+      "up": false,
+      "spark": [
+        4.641,
+        4.696,
+        4.724,
+        4.706,
+        4.653
+      ]
+    },
+    {
+      "label": "USD/KRW",
+      "ticker": "USDKRW=X",
+      "last": 1394.87,
+      "prev": 1413.58,
+      "change": -18.71,
+      "pct": -1.32,
+      "mtd": -1.81,
+      "ytd": -2.99,
+      "as_of": "2026-08-20",
+      "intraday": true,
+      "up": false,
+      "spark": [
+        1416.85,
+        1415.37,
+        1414.73,
+        1413.58,
+        1394.87
+      ]
+    },
+    {
+      "label": "EUR/KRW",
+      "ticker": "EURKRW=X",
+      "last": 1631.0,
+      "prev": 1634.92,
+      "change": -3.92,
+      "pct": -0.24,
+      "mtd": -0.35,
+      "ytd": -3.43,
+      "as_of": "2026-08-20",
+      "intraday": true,
+      "up": false,
+      "spark": [
+        1634.1899,
+        1582.09,
+        1638.16,
+        1634.92,
+        1631.0
+      ]
+    }
+  ],
+  "stocks": [
+    {
+      "label": "WDAY",
+      "ticker": "WDAY",
+      "last": 198.42,
+      "prev": 190.64,
+      "change": 7.78,
+      "pct": 4.08,
+      "mtd": 23.75,
+      "ytd": -7.62,
+      "as_of": "2026-08-19",
+      "intraday": false,
+      "up": true,
+      "spark": [
+        206.45,
+        198.68,
+        191.18,
+        190.64,
+        198.42
+      ]
+    },
+    {
+      "label": "NVDA",
+      "ticker": "NVDA",
+      "last": 217.56,
+      "prev": 219.74,
+      "change": -2.18,
+      "pct": -0.99,
+      "mtd": 8.37,
+      "ytd": 16.8,
+      "as_of": "2026-08-19",
+      "intraday": false,
+      "up": false,
+      "spark": [
+        225.3,
+        225.16,
+        225.01,
+        219.74,
+        217.56
+      ]
+    },
+    {
+      "label": "PLTR",
+      "ticker": "PLTR",
+      "last": 175.19,
+      "prev": 171.54,
+      "change": 3.65,
+      "pct": 2.13,
+      "mtd": 42.36,
+      "ytd": -1.44,
+      "as_of": "2026-08-19",
+      "intraday": false,
+      "up": true,
+      "spark": [
+        179.01,
+        174.04,
+        172.55,
+        171.54,
+        175.19
+      ]
+    },
+    {
+      "label": "AAPL",
+      "ticker": "AAPL",
+      "last": 316.83,
+      "prev": 310.03,
+      "change": 6.8,
+      "pct": 2.19,
+      "mtd": 2.65,
+      "ytd": 16.86,
+      "as_of": "2026-08-19",
+      "intraday": false,
+      "up": true,
+      "spark": [
+        305.26,
+        305.93,
+        305.59,
+        310.03,
+        316.83
+      ]
+    },
+    {
+      "label": "NFLX",
+      "ticker": "NFLX",
+      "last": 80.22,
+      "prev": 77.77,
+      "change": 2.45,
+      "pct": 3.15,
+      "mtd": 11.87,
+      "ytd": -14.44,
+      "as_of": "2026-08-19",
+      "intraday": false,
+      "up": true,
+      "spark": [
+        78.24,
+        78.16,
+        76.02,
+        77.77,
+        80.22
+      ]
+    },
+    {
+      "label": "MSFT",
+      "ticker": "MSFT",
+      "last": 484.31,
+      "prev": 481.63,
+      "change": 2.68,
+      "pct": 0.56,
+      "mtd": 4.22,
+      "ytd": 0.59,
+      "as_of": "2026-08-19",
+      "intraday": false,
+      "up": true,
+      "spark": [
+        496.88,
+        495.4,
+        480.35,
+        481.63,
+        484.31
+      ]
+    },
+    {
+      "label": "Samsung (005930)",
+      "ticker": "005930.KS",
+      "last": 271000.0,
+      "prev": 247500.0,
+      "change": 23500.0,
+      "pct": 9.49,
+      "mtd": 3.24,
+      "ytd": 126.74,
+      "as_of": "2026-08-20",
+      "intraday": false,
+      "up": true,
+      "spark": [
+        268000.0,
+        274500.0,
+        268500.0,
+        247500.0,
+        271000.0
+      ]
+    },
+    {
+      "label": "SK Hynix (000660)",
+      "ticker": "000660.KS",
+      "last": 1691000.0,
+      "prev": 1500000.0,
+      "change": 191000.0,
+      "pct": 12.73,
+      "mtd": -1.57,
+      "ytd": 160.28,
+      "as_of": "2026-08-20",
+      "intraday": false,
+      "up": true,
+      "spark": [
+        1593000.0,
+        1645000.0,
+        1662000.0,
+        1500000.0,
+        1691000.0
+      ]
+    }
+  ],
+  "news": [
+    {
+      "source": "Yahoo Finance",
+      "title": "Jim Cramer drops stunning take on the economy",
+      "link": "https://finance.yahoo.com/economy/articles/jim-cramer-drops-stunning-economy-230000219.html",
+      "published": "2026-08-19T23:00:00Z"
+    },
+    {
+      "source": "Yahoo Finance",
+      "title": "Seller concession limits: How much can you ask for?",
+      "link": "https://finance.yahoo.com/personal-finance/mortgages/article/seller-concession-limits-151821985.html",
+      "published": "2026-08-18T15:18:21Z"
+    },
+    {
+      "source": "Yahoo Finance",
+      "title": "State Farm's $5 billion dividend payout is largest in company history: Who's eligible?",
+      "link": "https://finance.yahoo.com/personal-finance/banking/article/state-farms-5-billion-dividend-payout-is-largest-in-company-history-whos-eligible-170817212.html",
+      "published": "2026-08-18T17:08:17Z"
+    },
+    {
+      "source": "Yahoo Finance",
+      "title": "The Home Depot, Inc. Q2 2027 Earnings Call Summary",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/home-depot-inc-q2-2027-210151509.html",
+      "published": "2026-08-18T21:01:51Z"
+    },
+    {
+      "source": "Yahoo Finance",
+      "title": "ReNew Energy Global Plc Q1 2027 Earnings Call Summary",
+      "link": "https://finance.yahoo.com/energy/articles/renew-energy-global-plc-q1-210304485.html",
+      "published": "2026-08-18T21:03:04Z"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "하남 교산지구에 학교복합시설 조성…국비 등 481억 투입",
+      "link": "https://www.yna.co.kr/view/AKR20260820164100061",
+      "published": "Thu, 20 Aug 2026 17:55:40 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "서울·경기·인천 외국인 토지거래허가구역 1년 연장",
+      "link": "https://www.yna.co.kr/view/AKR20260820165000003",
+      "published": "Thu, 20 Aug 2026 17:51:07 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "시가 대신 공정가액으로 합병가액…'주가누르기' 유인 차단",
+      "link": "https://www.yna.co.kr/view/AKR20260820164600002",
+      "published": "Thu, 20 Aug 2026 17:45:59 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "불공정 손배소에 공정위 자료제출 의무화…공정거래법 통과",
+      "link": "https://www.yna.co.kr/view/AKR20260820162800002",
+      "published": "Thu, 20 Aug 2026 17:42:26 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "울릉도·우도 등 섬 353곳 외국인 토지거래허가구역 지정",
+      "link": "https://www.yna.co.kr/view/AKR20260820163100003",
+      "published": "Thu, 20 Aug 2026 17:37:33 +0900"
+    }
+  ]
+}
