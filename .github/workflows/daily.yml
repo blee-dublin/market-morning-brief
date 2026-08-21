@@ -8,7 +8,7 @@ on:
     - cron: "30 8 * * 1-5"
     - cron: "30 9 * * 1-5"
     # After US cash close (16:00 ET): 20:15 UTC = 16:15 EDT, 21:15 UTC = 16:15 EST.
-    # Evening runs force-overwrite so settled US closes replace the morning draft.
+    # The generator's edition marker lets only the first evening trigger update.
     - cron: "15 20 * * 1-5"
     - cron: "15 21 * * 1-5"
   workflow_dispatch:
@@ -32,6 +32,11 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      # Scheduled events can be queued from an older SHA. Pull the previous
+      # edition marker before deciding whether this run has work to do.
+      - name: Sync latest published brief
+        run: git pull --ff-only origin "${{ github.ref_name }}"
+
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
@@ -43,17 +48,17 @@ jobs:
       - name: Generate brief
         run: |
           FORCE_FLAG=""
+          EDITION="morning"
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force }}" = "true" ]; then
             FORCE_FLAG="--force"
+            EDITION="manual"
           elif [ "${{ github.event_name }}" = "schedule" ]; then
-            HOUR=$(date -u +%-H)
-            # 16:00 ET is 20:00 UTC (EDT) / 21:00 UTC (EST). Force from 20:00 UTC.
-            if [ "$HOUR" -ge 20 ]; then
-              FORCE_FLAG="--force"
-              echo "Evening / post-US-close run — forcing overwrite"
+            if [ "${{ github.event.schedule }}" = "15 20 * * 1-5" ] || [ "${{ github.event.schedule }}" = "15 21 * * 1-5" ]; then
+              EDITION="post-close"
+              echo "Evening / post-US-close run"
             fi
           fi
-          python generate_brief.py $FORCE_FLAG
+          python generate_brief.py --edition "$EDITION" $FORCE_FLAG
 
       - name: Commit and push if changed
         id: publish
