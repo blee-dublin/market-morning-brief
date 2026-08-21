@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate a daily US/KR market brief as static HTML for GitHub Pages."""
+"""Generate a daily US/KR/UK market brief as static HTML for GitHub Pages."""
 
 from __future__ import annotations
 
@@ -21,6 +21,7 @@ DOCS = Path(__file__).resolve().parent / "docs"
 INDICES = [
     ("KOSPI", "^KS11", "Asia/Seoul", time(15, 30)),
     ("KOSDAQ", "^KQ11", "Asia/Seoul", time(15, 30)),
+    ("FTSE 100", "^FTSE", "Europe/London", time(16, 30)),
     ("S&P 500", "^GSPC", "America/New_York", time(16, 0)),
     ("Nasdaq", "^IXIC", "America/New_York", time(16, 0)),
     ("Dow Jones", "^DJI", "America/New_York", time(16, 0)),
@@ -40,6 +41,8 @@ MARKET_SIGNALS = [
     ("US 10Y yield", "^TNX", "America/New_York", time(16, 0)),
     ("USD/KRW", "USDKRW=X", "America/New_York", time(17, 0)),
     ("EUR/KRW", "EURKRW=X", "America/New_York", time(17, 0)),
+    ("EUR/USD", "EURUSD=X", "America/New_York", time(17, 0)),
+    ("USD/EUR", "USDEUR=X", "America/New_York", time(17, 0)),
 ]
 
 # Watchlist: label shown, Yahoo ticker, exchange timezone, regular session close.
@@ -50,6 +53,7 @@ STOCKS = [
     ("AAPL", "AAPL", "America/New_York", time(16, 0)),
     ("NFLX", "NFLX", "America/New_York", time(16, 0)),
     ("MSFT", "MSFT", "America/New_York", time(16, 0)),
+    ("SCHD", "SCHD", "America/New_York", time(16, 0)),
     ("Samsung (005930)", "005930.KS", "Asia/Seoul", time(15, 30)),
     ("SK Hynix (000660)", "000660.KS", "Asia/Seoul", time(15, 30)),
 ]
@@ -192,6 +196,7 @@ def fetch_news(limit_per_feed: int = 5, total_limit: int = 12) -> list[dict]:
 def render_html(
     report_date: str,
     generated_at: str,
+    edition: str,
     markets: list[dict],
     signals: list[dict],
     stocks: list[dict],
@@ -216,6 +221,7 @@ def render_html(
       --border: #2a3548;
     }
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
     body {
       margin: 0;
       font-family: "IBM Plex Sans", "Noto Sans KR", system-ui, sans-serif;
@@ -230,6 +236,27 @@ def render_html(
     .eyebrow { color: var(--muted); font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; }
     .eyebrow a { color: inherit; }
     .eyebrow a:hover { color: var(--accent); }
+    .quick-nav {
+      position: fixed;
+      top: 2.5rem;
+      left: max(1rem, calc(50% - 590px));
+      width: 140px;
+      display: grid;
+      gap: 0.35rem;
+      padding: 0.85rem;
+      background: rgba(26, 35, 50, 0.9);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      backdrop-filter: blur(8px);
+    }
+    .quick-nav strong {
+      color: var(--muted);
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .quick-nav a { font-size: 0.82rem; }
     h1 { font-size: 1.75rem; font-weight: 600; margin: 0.35rem 0 0.5rem; }
     .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 2rem; }
     h2 { font-size: 1.05rem; margin: 2rem 0 0.85rem; color: var(--muted); font-weight: 500; }
@@ -283,6 +310,24 @@ def render_html(
     }
     .source { display: block; font-size: 0.75rem; color: var(--muted); margin-bottom: 0.25rem; }
     footer { margin-top: 2.5rem; color: var(--muted); font-size: 0.8rem; }
+    @media (max-width: 1180px) {
+      html { scroll-padding-top: 4.5rem; }
+      .quick-nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        width: auto;
+        display: flex;
+        gap: 1rem;
+        overflow-x: auto;
+        margin: -2.5rem -1.25rem 1.5rem;
+        padding: 0.75rem 1.25rem;
+        border-width: 0 0 1px;
+        border-radius: 0;
+      }
+      .quick-nav strong { display: none; }
+      .quick-nav a { white-space: nowrap; }
+    }
     @media (max-width: 640px) {
       .row {
         grid-template-columns: 1fr auto;
@@ -312,11 +357,20 @@ def render_html(
     }
   </style>
 </head>
-<body>
+<body id="top">
   <main>
+    <nav class="quick-nav" aria-label="Page shortcuts">
+      <strong>Jump to</strong>
+      <a href="../index.html">Home</a>
+      <a href="#top">Top</a>
+      <a href="#indices">Indices</a>
+      <a href="#signals">Signals</a>
+      <a href="#watchlist">Watchlist</a>
+      <a href="#headlines">Headlines</a>
+    </nav>
     <p class="eyebrow"><a href="../index.html">&larr; Market Morning Brief</a></p>
     <h1>{{ report_date }}</h1>
-    <p class="meta">Generated {{ generated_at }} · Day / MTD / YTD vs prior close · sparkline = last 5 sessions</p>
+    <p class="meta">Generated {{ generated_at }} · {{ edition }} · Day / MTD / YTD vs prior close · sparkline = last 5 sessions</p>
 
     {% macro fmt_pct(value) -%}
       {%- if value is none -%}<span class="pct na">—</span>
@@ -351,16 +405,16 @@ def render_html(
     </div>
     {%- endmacro %}
 
-    <h2>Indices</h2>
+    <h2 id="indices">Indices</h2>
     {{ quote_rows(markets) }}
 
-    <h2>Market Signals</h2>
+    <h2 id="signals">Market Signals</h2>
     {{ quote_rows(signals) }}
 
-    <h2>Watchlist</h2>
+    <h2 id="watchlist">Watchlist</h2>
     {{ quote_rows(stocks) }}
 
-    <h2>Headlines</h2>
+    <h2 id="headlines">Headlines</h2>
     {% if news %}
       <ul class="news">
         {% for n in news %}
@@ -387,6 +441,11 @@ def render_html(
     return template.render(
         report_date=report_date,
         generated_at=generated_at,
+        edition={
+            "morning": "Morning edition",
+            "post-close": "Post-US-close edition",
+            "manual": "Manual refresh",
+        }[edition],
         markets=markets,
         signals=signals,
         stocks=stocks,
@@ -427,7 +486,7 @@ def rebuild_index(archive: list[dict]) -> None:
 <body>
   <main>
     <h1>Market Morning Brief</h1>
-    <p>Daily US &amp; Korea market snapshot · published ~09:30 Europe/Dublin</p>
+    <p>Daily US, Korea &amp; UK market snapshot · morning and post-US-close editions</p>
     <ul>
 {rows}
     </ul>
@@ -443,14 +502,23 @@ def rebuild_index(archive: list[dict]) -> None:
 EARLIEST_PUBLISH_HOUR = 8
 
 
-def should_run(force: bool) -> tuple[bool, str]:
-    """Gate unforced runs so the morning cron publishes once.
+def _existing_edition(report_date: str) -> str | None:
+    """Read the edition marker from an existing machine-readable brief."""
+    brief_file = DOCS / report_date / "brief.json"
+    try:
+        return json.loads(brief_file.read_text(encoding="utf-8")).get("edition")
+    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        return None
+
+
+def should_run(force: bool, edition: str) -> tuple[bool, str]:
+    """Publish at most one morning and one post-close edition per day.
 
     Morning crons may arrive hours late, so there is no upper hour bound —
     whichever morning trigger arrives first publishes, and later ones no-op
-    when today's report already exists. The workflow passes --force for
-    post–US-close runs (and manual dispatch) so the evening brief can replace
-    the morning draft with settled closes.
+    when today's report already exists. The first post–US-close trigger replaces
+    the morning page; the duplicate DST-covering trigger sees the edition marker
+    and becomes a no-op. Manual forced runs always overwrite.
     """
     if force:
         return True, ""
@@ -462,8 +530,14 @@ def should_run(force: bool) -> tuple[bool, str]:
             f"publishing starts at {EARLIEST_PUBLISH_HOUR:02d}:00."
         )
 
-    if (DOCS / now.date().isoformat() / "index.html").exists():
-        return False, f"Report for {now.date().isoformat()} already published."
+    report_date = now.date().isoformat()
+    if edition == "post-close":
+        if _existing_edition(report_date) == "post-close":
+            return False, f"Post-close report for {report_date} already published."
+        return True, ""
+
+    if (DOCS / report_date / "index.html").exists():
+        return False, f"Report for {report_date} already published."
 
     return True, ""
 
@@ -475,9 +549,15 @@ def main() -> None:
         action="store_true",
         help="Ignore the time window and overwrite today's report",
     )
+    parser.add_argument(
+        "--edition",
+        choices=("morning", "post-close", "manual"),
+        default="morning",
+        help="Mark the report lifecycle stage and suppress duplicate editions",
+    )
     args = parser.parse_args()
 
-    ok, reason = should_run(args.force)
+    ok, reason = should_run(args.force, args.edition)
     if not ok:
         print(f"Skip: {reason} Use --force to override.")
         return
@@ -496,7 +576,15 @@ def main() -> None:
     day_dir.mkdir(parents=True, exist_ok=True)
     out_file = day_dir / "index.html"
     out_file.write_text(
-        render_html(report_date, generated_at, markets, signals, stocks, news),
+        render_html(
+            report_date,
+            generated_at,
+            args.edition,
+            markets,
+            signals,
+            stocks,
+            news,
+        ),
         encoding="utf-8",
     )
 
@@ -506,6 +594,7 @@ def main() -> None:
             {
                 "date": report_date,
                 "generated_at": generated_at,
+                "edition": args.edition,
                 "markets": _for_json(markets),
                 "signals": _for_json(signals),
                 "stocks": _for_json(stocks),
@@ -526,6 +615,7 @@ def main() -> None:
     rebuild_index(archive)
     print(
         f"Wrote {out_file} "
+        f"[{args.edition}] "
         f"({len(markets)} indices, {len(signals)} signals, "
         f"{len(stocks)} stocks, {len(news)} headlines)"
     )
