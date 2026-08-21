@@ -1,6 +1,6 @@
 {
   "date": "2026-08-21",
-  "generated_at": "2026-08-21 10:09 IST",
+  "generated_at": "2026-08-21 12:06 IST",
   "markets": [
     {
       "label": "KOSPI",
@@ -107,12 +107,12 @@
     {
       "label": "VIX",
       "ticker": "^VIX",
-      "last": 15.72,
+      "last": 15.7,
       "prev": 16.01,
-      "change": -0.29,
-      "pct": -1.81,
-      "mtd": -1.69,
-      "ytd": 5.15,
+      "change": -0.31,
+      "pct": -1.94,
+      "mtd": -1.81,
+      "ytd": 5.02,
       "as_of": "2026-08-21",
       "intraday": true,
       "up": false,
@@ -121,18 +121,18 @@
         15.84,
         14.89,
         16.01,
-        15.72
+        15.7
       ]
     },
     {
       "label": "S&P futures (ES)",
       "ticker": "ES=F",
-      "last": 7687.75,
+      "last": 7688.25,
       "prev": 7662.5,
-      "change": 25.25,
-      "pct": 0.33,
-      "mtd": 2.24,
-      "ytd": 11.54,
+      "change": 25.75,
+      "pct": 0.34,
+      "mtd": 2.25,
+      "ytd": 11.55,
       "as_of": "2026-08-21",
       "intraday": true,
       "up": true,
@@ -141,18 +141,18 @@
         7714.0,
         7729.0,
         7662.5,
-        7687.75
+        7688.25
       ]
     },
     {
       "label": "Nasdaq futures (NQ)",
       "ticker": "NQ=F",
-      "last": 29455.25,
+      "last": 29481.25,
       "prev": 29300.5,
-      "change": 154.75,
-      "pct": 0.53,
-      "mtd": 3.7,
-      "ytd": 15.71,
+      "change": 180.75,
+      "pct": 0.62,
+      "mtd": 3.79,
+      "ytd": 15.81,
       "as_of": "2026-08-21",
       "intraday": true,
       "up": true,
@@ -161,15 +161,15 @@
         29586.0,
         29512.75,
         29300.5,
-        29455.25
+        29481.25
       ]
     },
     {
       "label": "Dow futures (YM)",
       "ticker": "YM=F",
-      "last": 53036.0,
+      "last": 53033.0,
       "prev": 52849.0,
-      "change": 187.0,
+      "change": 184.0,
       "pct": 0.35,
       "mtd": 0.76,
       "ytd": 9.72,
@@ -181,18 +181,18 @@
         53403.0,
         53530.0,
         52849.0,
-        53036.0
+        53033.0
       ]
     },
     {
       "label": "Gold (GC)",
       "ticker": "GC=F",
-      "last": 4640.9,
+      "last": 4646.5,
       "prev": 4516.3,
-      "change": 124.6,
-      "pct": 2.76,
-      "mtd": 14.62,
-      "ytd": 7.29,
+      "change": 130.2,
+      "pct": 2.88,
+      "mtd": 14.75,
+      "ytd": 7.42,
       "as_of": "2026-08-21",
       "intraday": true,
       "up": true,
@@ -201,18 +201,18 @@
         4366.0,
         4489.3999,
         4516.2998,
-        4640.8999
+        4646.5
       ]
     },
     {
       "label": "Silver (SI)",
       "ticker": "SI=F",
-      "last": 69.83,
+      "last": 69.6,
       "prev": 68.03,
-      "change": 1.81,
-      "pct": 2.66,
-      "mtd": 21.26,
-      "ytd": -0.43,
+      "change": 1.57,
+      "pct": 2.31,
+      "mtd": 20.84,
+      "ytd": -0.77,
       "as_of": "2026-08-21",
       "intraday": true,
       "up": true,
@@ -221,7 +221,7 @@
         63.941,
         65.734,
         68.026,
-        69.835
+        69.595
       ]
     },
     {
@@ -267,12 +267,12 @@
     {
       "label": "USD/KRW",
       "ticker": "USDKRW=X",
-      "last": 1381.28,
+      "last": 1384.5,
       "prev": 1389.4,
-      "change": -8.12,
-      "pct": -0.58,
-      "mtd": -2.77,
-      "ytd": -3.94,
+      "change": -4.9,
+      "pct": -0.35,
+      "mtd": -2.54,
+      "ytd": -3.71,
       "as_of": "2026-08-21",
       "intraday": true,
       "up": false,
@@ -281,18 +281,18 @@
         1414.73,
         1413.58,
         1389.4,
-        1381.28
+        1384.5
       ]
     },
     {
       "label": "EUR/KRW",
       "ticker": "EURKRW=X",
-      "last": 1616.8,
+      "last": 1619.5,
       "prev": 1620.23,
-      "change": -3.43,
-      "pct": -0.21,
-      "mtd": -1.21,
-      "ytd": -4.27,
+      "change": -0.73,
+      "pct": -0.05,
+      "mtd": -1.05,
+      "ytd": -4.11,
       "as_of": "2026-08-21",
       "intraday": true,
       "up": false,
@@ -301,7 +301,7 @@
         1638.16,
         1634.92,
         1620.23,
-        1616.8
+        1619.5
       ]
     }
   ],
@@ -476,27 +476,45 @@
     },
     {
       "source": "Yahoo Finance",
-      "title": "Indexed universal life insurance (IUL): Risks, costs, and how it works",
-      "link": "https://finance.yahoo.com/personal-finance/insurance/article/indexed-universal-life-155053064.html",
-      "published": "2026-08-19T15:50:53Z"
+      "title": "Best dining credit cards (August 2026)",
+      "link": "https://finance.yahoo.com/personal-finance/credit-cards/article/dining-credit-cards-193453435.html",
+      "published": "2026-08-19T19:34:53Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Gold prices today, Wednesday, August 19, 2026: Gold strengthens ahead of FOMC minutes release",
-      "link": "https://finance.yahoo.com/personal-finance/investing/article/gold-prices-today-wednesday-august-19-2026-gold-strengthens-ahead-of-fomc-minutes-release-161123813.html",
-      "published": "2026-08-19T16:11:23Z"
+      "title": "What is a good savings account interest rate in 2026?",
+      "link": "https://finance.yahoo.com/personal-finance/banking/article/what-is-a-good-savings-account-interest-rate-173915779.html",
+      "published": "2024-03-21T17:39:15Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Silver prices today, Wednesday, August 19, 2026:  Silver rises in early trading on lower rate-hike expectations",
-      "link": "https://finance.yahoo.com/personal-finance/investing/article/silver-prices-today-wednesday-august-19-2026-silver-rises-in-early-trading-on-lower-rate-hike-expectations-161336926.html",
-      "published": "2026-08-19T16:13:36Z"
+      "title": "Does renters insurance cover pets, dog bites, and pet damage?",
+      "link": "https://finance.yahoo.com/personal-finance/insurance/article/does-renters-insurance-cover-pets-180714978.html",
+      "published": "2026-08-19T18:07:14Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Bitcoin and ethereum prices today, Wednesday, August 19, 2026:  Crypto prices rise after SEC announces proposed regulation",
-      "link": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-wednesday-august-19-2026-crypto-prices-rise-after-sec-announces-proposed-regulation-161733939.html",
-      "published": "2026-08-19T16:17:33Z"
+      "title": "U.S. debt tops $40 trillion. How soaring federal debt affects you personally.",
+      "link": "https://finance.yahoo.com/personal-finance/investing/article/us-debt-tops-40-trillion-how-soaring-federal-debt-affects-you-personally-155000383.html",
+      "published": "2026-08-19T15:50:00Z"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "석유 최고가격제 다시 동결…휘발유 1천784원·경유 1천773원",
+      "link": "https://www.yna.co.kr/view/AKR20260821143900003",
+      "published": "Fri, 21 Aug 2026 19:00:00 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "100조 넘보는 '미래기금' 신설…교육교부금 연동 55년만에 폐지(종합2보)",
+      "link": "https://www.yna.co.kr/view/AKR20260821070752002",
+      "published": "Fri, 21 Aug 2026 18:14:55 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "인지디스플레 \"NEXVINA에 168억원 출자\"",
+      "link": "https://www.yna.co.kr/view/AKR20260821162800008",
+      "published": "Fri, 21 Aug 2026 18:12:06 +0900"
     },
     {
       "source": "연합뉴스 경제",
@@ -509,24 +527,6 @@
       "title": "[연합뉴스 이 시각 헤드라인] - 18:00",
       "link": "https://www.yna.co.kr/view/AKR20260821150800011",
       "published": "Fri, 21 Aug 2026 18:00:01 +0900"
-    },
-    {
-      "source": "연합뉴스 경제",
-      "title": "임단협·원하청갈등 겹친 하투…차·철강·조선 파업 확산",
-      "link": "https://www.yna.co.kr/view/AKR20260821126400530",
-      "published": "Fri, 21 Aug 2026 17:48:59 +0900"
-    },
-    {
-      "source": "연합뉴스 경제",
-      "title": "HL만도 '근로자 끼임사' 한 달 추모제…\"위험의 외주화 멈춰라\"",
-      "link": "https://www.yna.co.kr/view/AKR20260821160100004",
-      "published": "Fri, 21 Aug 2026 17:45:57 +0900"
-    },
-    {
-      "source": "연합뉴스 경제",
-      "title": "\"용도전환 막혀 공급못해\"…주택공급 설명회서 업계건의 쏟아져",
-      "link": "https://www.yna.co.kr/view/AKR20260821153100003",
-      "published": "Fri, 21 Aug 2026 17:25:24 +0900"
     }
   ]
 }
