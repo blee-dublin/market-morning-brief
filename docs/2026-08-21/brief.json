@@ -1,6 +1,7 @@
 {
   "date": "2026-08-21",
-  "generated_at": "2026-08-21 12:06 IST",
+  "generated_at": "2026-08-21 12:12 IST",
+  "edition": "manual",
   "markets": [
     {
       "label": "KOSPI",
@@ -40,6 +41,26 @@
         824.46,
         840.89,
         801.94
+      ]
+    },
+    {
+      "label": "FTSE 100",
+      "ticker": "^FTSE",
+      "last": 10759.96,
+      "prev": 10748.2,
+      "change": 11.76,
+      "pct": 0.11,
+      "mtd": -1.0,
+      "ytd": 8.34,
+      "as_of": "2026-08-21",
+      "intraday": true,
+      "up": true,
+      "spark": [
+        10720.2998,
+        10728.0,
+        10743.4004,
+        10748.2002,
+        10759.96
       ]
     },
     {
@@ -107,12 +128,12 @@
     {
       "label": "VIX",
       "ticker": "^VIX",
-      "last": 15.7,
+      "last": 15.67,
       "prev": 16.01,
-      "change": -0.31,
-      "pct": -1.94,
-      "mtd": -1.81,
-      "ytd": 5.02,
+      "change": -0.34,
+      "pct": -2.12,
+      "mtd": -2.0,
+      "ytd": 4.82,
       "as_of": "2026-08-21",
       "intraday": true,
       "up": false,
@@ -121,18 +142,18 @@
         15.84,
         14.89,
         16.01,
-        15.7
+        15.67
       ]
     },
     {
       "label": "S&P futures (ES)",
       "ticker": "ES=F",
-      "last": 7688.25,
+      "last": 7685.75,
       "prev": 7662.5,
-      "change": 25.75,
-      "pct": 0.34,
-      "mtd": 2.25,
-      "ytd": 11.55,
+      "change": 23.25,
+      "pct": 0.3,
+      "mtd": 2.21,
+      "ytd": 11.51,
       "as_of": "2026-08-21",
       "intraday": true,
       "up": true,
@@ -141,18 +162,18 @@
         7714.0,
         7729.0,
         7662.5,
-        7688.25
+        7685.75
       ]
     },
     {
       "label": "Nasdaq futures (NQ)",
       "ticker": "NQ=F",
-      "last": 29481.25,
+      "last": 29460.0,
       "prev": 29300.5,
-      "change": 180.75,
-      "pct": 0.62,
-      "mtd": 3.79,
-      "ytd": 15.81,
+      "change": 159.5,
+      "pct": 0.54,
+      "mtd": 3.72,
+      "ytd": 15.73,
       "as_of": "2026-08-21",
       "intraday": true,
       "up": true,
@@ -161,7 +182,7 @@
         29586.0,
         29512.75,
         29300.5,
-        29481.25
+        29460.0
       ]
     },
     {
@@ -187,12 +208,12 @@
     {
       "label": "Gold (GC)",
       "ticker": "GC=F",
-      "last": 4646.5,
+      "last": 4646.9,
       "prev": 4516.3,
-      "change": 130.2,
-      "pct": 2.88,
-      "mtd": 14.75,
-      "ytd": 7.42,
+      "change": 130.6,
+      "pct": 2.89,
+      "mtd": 14.76,
+      "ytd": 7.43,
       "as_of": "2026-08-21",
       "intraday": true,
       "up": true,
@@ -201,18 +222,18 @@
         4366.0,
         4489.3999,
         4516.2998,
-        4646.5
+        4646.8999
       ]
     },
     {
       "label": "Silver (SI)",
       "ticker": "SI=F",
-      "last": 69.6,
+      "last": 69.61,
       "prev": 68.03,
-      "change": 1.57,
-      "pct": 2.31,
-      "mtd": 20.84,
-      "ytd": -0.77,
+      "change": 1.58,
+      "pct": 2.33,
+      "mtd": 20.87,
+      "ytd": -0.75,
       "as_of": "2026-08-21",
       "intraday": true,
       "up": true,
@@ -221,7 +242,7 @@
         63.941,
         65.734,
         68.026,
-        69.595
+        69.61
       ]
     },
     {
@@ -267,12 +288,12 @@
     {
       "label": "USD/KRW",
       "ticker": "USDKRW=X",
-      "last": 1384.5,
+      "last": 1383.68,
       "prev": 1389.4,
-      "change": -4.9,
-      "pct": -0.35,
-      "mtd": -2.54,
-      "ytd": -3.71,
+      "change": -5.72,
+      "pct": -0.41,
+      "mtd": -2.6,
+      "ytd": -3.77,
       "as_of": "2026-08-21",
       "intraday": true,
       "up": false,
@@ -281,18 +302,18 @@
         1414.73,
         1413.58,
         1389.4,
-        1384.5
+        1383.6801
       ]
     },
     {
       "label": "EUR/KRW",
       "ticker": "EURKRW=X",
-      "last": 1619.5,
+      "last": 1619.2,
       "prev": 1620.23,
-      "change": -0.73,
-      "pct": -0.05,
-      "mtd": -1.05,
-      "ytd": -4.11,
+      "change": -1.03,
+      "pct": -0.06,
+      "mtd": -1.07,
+      "ytd": -4.13,
       "as_of": "2026-08-21",
       "intraday": true,
       "up": false,
@@ -301,7 +322,47 @@
         1638.16,
         1634.92,
         1620.23,
-        1619.5
+        1619.2
+      ]
+    },
+    {
+      "label": "EUR/USD",
+      "ticker": "EURUSD=X",
+      "last": 1.17,
+      "prev": 1.17,
+      "change": 0.0,
+      "pct": 0.28,
+      "mtd": 1.59,
+      "ytd": -0.34,
+      "as_of": "2026-08-21",
+      "intraday": true,
+      "up": true,
+      "spark": [
+        1.1574,
+        1.1583,
+        1.1579,
+        1.1674,
+        1.1707
+      ]
+    },
+    {
+      "label": "USD/EUR",
+      "ticker": "USDEUR=X",
+      "last": 0.85,
+      "prev": 0.86,
+      "change": -0.0,
+      "pct": -0.28,
+      "mtd": -1.57,
+      "ytd": 0.35,
+      "as_of": "2026-08-21",
+      "intraday": true,
+      "up": false,
+      "spark": [
+        0.864,
+        0.8633,
+        0.8636,
+        0.8566,
+        0.8542
       ]
     }
   ],
@@ -427,6 +488,26 @@
       ]
     },
     {
+      "label": "SCHD",
+      "ticker": "SCHD",
+      "last": 34.83,
+      "prev": 35.09,
+      "change": -0.26,
+      "pct": -0.74,
+      "mtd": 4.06,
+      "ytd": 29.07,
+      "as_of": "2026-08-20",
+      "intraday": false,
+      "up": false,
+      "spark": [
+        34.52,
+        34.29,
+        34.51,
+        35.09,
+        34.83
+      ]
+    },
+    {
       "label": "Samsung (005930)",
       "ticker": "005930.KS",
       "last": 281500.0,
@@ -482,21 +563,21 @@
     },
     {
       "source": "Yahoo Finance",
-      "title": "What is a good savings account interest rate in 2026?",
-      "link": "https://finance.yahoo.com/personal-finance/banking/article/what-is-a-good-savings-account-interest-rate-173915779.html",
-      "published": "2024-03-21T17:39:15Z"
-    },
-    {
-      "source": "Yahoo Finance",
-      "title": "Does renters insurance cover pets, dog bites, and pet damage?",
-      "link": "https://finance.yahoo.com/personal-finance/insurance/article/does-renters-insurance-cover-pets-180714978.html",
-      "published": "2026-08-19T18:07:14Z"
+      "title": "This High-Yield Exchange Stock Just Raised Its Dividend by Nearly 20%",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/high-yield-exchange-stock-just-233002776.html",
+      "published": "2026-08-19T23:30:02Z"
     },
     {
       "source": "Yahoo Finance",
       "title": "U.S. debt tops $40 trillion. How soaring federal debt affects you personally.",
       "link": "https://finance.yahoo.com/personal-finance/investing/article/us-debt-tops-40-trillion-how-soaring-federal-debt-affects-you-personally-155000383.html",
       "published": "2026-08-19T15:50:00Z"
+    },
+    {
+      "source": "Yahoo Finance",
+      "title": "Mortgage rate predictions through 2030: What the market looks like",
+      "link": "https://finance.yahoo.com/personal-finance/mortgages/article/mortgage-rate-predictions-through-2030-what-the-market-looks-like-195826935.html",
+      "published": "2025-08-18T19:58:26Z"
     },
     {
       "source": "연합뉴스 경제",
