@@ -1,66 +1,66 @@
 {
   "date": "2026-09-07",
-  "generated_at": "2026-09-07 15:23 IST",
-  "edition": "morning",
+  "generated_at": "2026-09-07 23:47 IST",
+  "edition": "post-close",
   "markets": [
     {
       "label": "KOSPI",
       "ticker": "^KS11",
-      "last": 6995.39,
-      "prev": 6687.21,
-      "change": 308.18,
-      "pct": 4.61,
-      "mtd": 2.57,
-      "ytd": 66.0,
-      "as_of": "2026-09-07",
+      "last": 6687.21,
+      "prev": 6579.48,
+      "change": 107.73,
+      "pct": 1.64,
+      "mtd": -1.95,
+      "ytd": 58.68,
+      "as_of": "2026-09-04",
       "intraday": false,
       "up": true,
       "spark": [
+        6820.02,
         6835.7998,
         6562.7202,
         6579.48,
-        6687.21,
-        6995.3901
+        6687.21
       ]
     },
     {
       "label": "KOSDAQ",
       "ticker": "^KQ11",
-      "last": 822.19,
-      "prev": 813.5,
-      "change": 8.69,
-      "pct": 1.07,
-      "mtd": -1.45,
-      "ytd": -11.16,
-      "as_of": "2026-09-07",
+      "last": 813.5,
+      "prev": 790.21,
+      "change": 23.29,
+      "pct": 2.95,
+      "mtd": -2.49,
+      "ytd": -12.1,
+      "as_of": "2026-09-04",
       "intraday": false,
       "up": true,
       "spark": [
+        834.29,
         821.25,
         803.98,
         790.21,
-        813.5,
-        822.19
+        813.5
       ]
     },
     {
       "label": "FTSE 100",
       "ticker": "^FTSE",
-      "last": 10837.5,
+      "last": 10822.13,
       "prev": 10831.1,
-      "change": 6.4,
-      "pct": 0.06,
-      "mtd": 0.12,
-      "ytd": 9.12,
+      "change": -8.97,
+      "pct": -0.08,
+      "mtd": -0.02,
+      "ytd": 8.97,
       "as_of": "2026-09-07",
-      "intraday": true,
-      "up": true,
+      "intraday": false,
+      "up": false,
       "spark": [
         10789.2998,
         10756.5,
         10831.5,
         10831.0996,
-        10837.5
+        10822.1299
       ]
     },
     {
@@ -128,121 +128,121 @@
     {
       "label": "VIX",
       "ticker": "^VIX",
-      "last": 15.16,
+      "last": 15.3,
       "prev": 14.53,
-      "change": 0.63,
-      "pct": 4.34,
-      "mtd": 1.61,
-      "ytd": 1.4,
+      "change": 0.77,
+      "pct": 5.3,
+      "mtd": 2.55,
+      "ytd": 2.34,
       "as_of": "2026-09-07",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         16.34,
         15.2,
         14.32,
         14.53,
-        15.16
+        15.3
       ]
     },
     {
       "label": "S&P futures (ES)",
       "ticker": "ES=F",
-      "last": 7722.0,
+      "last": 7703.25,
       "prev": 7722.0,
-      "change": 0.0,
-      "pct": 0.0,
-      "mtd": 0.3,
-      "ytd": 12.03,
+      "change": -18.75,
+      "pct": -0.24,
+      "mtd": 0.06,
+      "ytd": 11.76,
       "as_of": "2026-09-07",
-      "intraday": true,
-      "up": true,
+      "intraday": false,
+      "up": false,
       "spark": [
         7642.75,
         7676.5,
         7754.75,
         7722.0,
-        7722.0
+        7703.25
       ]
     },
     {
       "label": "Nasdaq futures (NQ)",
       "ticker": "NQ=F",
-      "last": 29565.25,
+      "last": 29550.0,
       "prev": 29565.25,
-      "change": 0.0,
-      "pct": 0.0,
-      "mtd": 0.18,
-      "ytd": 16.14,
+      "change": -15.25,
+      "pct": -0.05,
+      "mtd": 0.13,
+      "ytd": 16.08,
       "as_of": "2026-09-07",
-      "intraday": true,
-      "up": true,
+      "intraday": false,
+      "up": false,
       "spark": [
         29125.5,
         29186.25,
         29524.75,
         29565.25,
-        29565.25
+        29550.0
       ]
     },
     {
       "label": "Dow futures (YM)",
       "ticker": "YM=F",
-      "last": 53440.0,
+      "last": 53108.0,
       "prev": 53440.0,
-      "change": 0.0,
-      "pct": 0.0,
-      "mtd": 0.38,
-      "ytd": 10.56,
+      "change": -332.0,
+      "pct": -0.62,
+      "mtd": -0.25,
+      "ytd": 9.87,
       "as_of": "2026-09-07",
-      "intraday": true,
-      "up": true,
+      "intraday": false,
+      "up": false,
       "spark": [
         52828.0,
         53121.0,
         53745.0,
         53440.0,
-        53440.0
+        53108.0
       ]
     },
     {
       "label": "Gold (GC)",
       "ticker": "GC=F",
-      "last": 4476.6,
+      "last": 4454.7,
       "prev": 4429.8,
-      "change": 46.8,
-      "pct": 1.06,
-      "mtd": 1.03,
-      "ytd": 3.49,
+      "change": 24.9,
+      "pct": 0.56,
+      "mtd": 0.53,
+      "ytd": 2.98,
       "as_of": "2026-09-07",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         4348.0,
         4366.2998,
         4491.7002,
         4429.7998,
-        4476.6001
+        4454.7002
       ]
     },
     {
       "label": "Silver (SI)",
       "ticker": "SI=F",
-      "last": 66.75,
+      "last": 66.89,
       "prev": 66.05,
-      "change": 0.7,
-      "pct": 1.06,
-      "mtd": 0.8,
-      "ytd": -4.83,
+      "change": 0.85,
+      "pct": 1.28,
+      "mtd": 1.02,
+      "ytd": -4.62,
       "as_of": "2026-09-07",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         64.618,
         64.723,
         66.973,
         66.047,
-        66.748
+        66.895
       ]
     },
     {
@@ -288,41 +288,41 @@
     {
       "label": "USD/KRW",
       "ticker": "USDKRW=X",
-      "last": 1346.35,
+      "last": 1344.84,
       "prev": 1355.41,
-      "change": -9.06,
-      "pct": -0.67,
-      "mtd": -2.23,
-      "ytd": -6.37,
+      "change": -10.57,
+      "pct": -0.78,
+      "mtd": -2.34,
+      "ytd": -6.47,
       "as_of": "2026-09-07",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         1366.62,
         1372.86,
         1358.39,
         1355.41,
-        1346.35
+        1344.84
       ]
     },
     {
       "label": "EUR/KRW",
       "ticker": "EURKRW=X",
-      "last": 1565.4,
+      "last": 1562.5,
       "prev": 1575.39,
-      "change": -9.99,
-      "pct": -0.63,
-      "mtd": -0.92,
-      "ytd": -7.32,
+      "change": -12.89,
+      "pct": -0.82,
+      "mtd": -1.11,
+      "ytd": -7.49,
       "as_of": "2026-09-07",
-      "intraday": true,
+      "intraday": false,
       "up": false,
       "spark": [
         1587.47,
         1592.22,
         1573.29,
         1575.39,
-        1565.4
+        1562.5
       ]
     },
     {
@@ -330,19 +330,19 @@
       "ticker": "EURUSD=X",
       "last": 1.16,
       "prev": 1.16,
-      "change": 0.0,
-      "pct": 0.05,
-      "mtd": 0.39,
-      "ytd": -0.96,
+      "change": -0.0,
+      "pct": -0.0,
+      "mtd": 0.34,
+      "ytd": -1.02,
       "as_of": "2026-09-07",
-      "intraday": true,
+      "intraday": false,
       "up": true,
       "spark": [
         1.1618,
         1.1596,
         1.1585,
         1.1628,
-        1.1635
+        1.1628
       ]
     },
     {
@@ -350,19 +350,19 @@
       "ticker": "USDEUR=X",
       "last": 0.86,
       "prev": 0.86,
-      "change": -0.0,
-      "pct": -0.05,
-      "mtd": -0.39,
-      "ytd": 0.97,
+      "change": 0.0,
+      "pct": 0.0,
+      "mtd": -0.33,
+      "ytd": 1.03,
       "as_of": "2026-09-07",
-      "intraday": true,
-      "up": false,
+      "intraday": false,
+      "up": true,
       "spark": [
         0.8608,
         0.8624,
         0.8632,
         0.86,
-        0.8595
+        0.86
       ]
     }
   ],
@@ -557,57 +557,57 @@
     },
     {
       "source": "Yahoo Finance",
-      "title": "Bitcoin and ethereum prices today, Monday, September 7, 2026: Crypto investors on rate watch",
-      "link": "https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-monday-september-7-2026-crypto-investors-on-rate-watch-140242204.html",
-      "published": "2026-09-07T14:02:42Z"
+      "title": "Google Unveils Gemini 3.8 Flash and Fairwind Program: How to Play GOOGL Stock Here",
+      "link": "https://finance.yahoo.com/technology/ai/articles/google-unveils-gemini-3-8-140002406.html",
+      "published": "2026-09-06T14:00:02Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Here’s Why SGA U.S. LCG Liquidated Its Position in Aon plc (AON)",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/why-sga-u-lcg-liquidated-135528166.html",
-      "published": "2026-09-07T13:55:28Z"
+      "title": "Alexandria’s (ARE) Profit Rebound Comes With A Cash Flow Catch",
+      "link": "https://finance.yahoo.com/real-estate/articles/alexandria-profit-rebound-comes-cash-135541164.html",
+      "published": "2026-09-06T13:55:41Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Do You Believe West Pharmaceutical Services (WST) Represents a Tremendous Opportunity?",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/believe-west-pharmaceutical-services-wst-134251739.html",
-      "published": "2026-09-07T13:42:51Z"
+      "title": "The Next Year Will Define Vaxcyte’s (PCVX) Vaccine Gamble",
+      "link": "https://finance.yahoo.com/healthcare/articles/next-define-vaxcyte-pcvx-vaccine-140957301.html",
+      "published": "2026-09-06T14:09:57Z"
     },
     {
       "source": "Yahoo Finance",
-      "title": "Do You Think Micron Technology’s (MU) Return Drivers May Falter Ahead",
-      "link": "https://finance.yahoo.com/markets/stocks/articles/think-micron-technology-mu-return-133459987.html",
-      "published": "2026-09-07T13:34:59Z"
+      "title": "Murphy USA (MUSA) Delivers Robust Second-Quarter Earnings on Surging Fuel Margins",
+      "link": "https://finance.yahoo.com/markets/stocks/articles/murphy-usa-musa-delivers-robust-133715978.html",
+      "published": "2026-09-06T13:37:15Z"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "美 '엔저 시정 압박' 통했나…6개월만에 달러당 154엔대로 하락(종합)",
-      "link": "https://www.yna.co.kr/view/AKR20260907072651073",
-      "published": "Mon, 7 Sep 2026 21:17:45 +0900"
+      "title": "[연합뉴스 이 시각 헤드라인] - 07:30",
+      "link": "https://www.yna.co.kr/view/AKR20260908010500011",
+      "published": "Tue, 8 Sep 2026 07:30:00 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "대미투자 1호 텍사스 가스발전소 유력…대형 원전 8기도 검토",
-      "link": "https://www.yna.co.kr/view/AKR20260907152200003",
-      "published": "Mon, 7 Sep 2026 18:53:08 +0900"
+      "title": "인천시 올해 7∼9급 1천439명 채용…\"행정체제 개편따른 수요↑\"",
+      "link": "https://www.yna.co.kr/view/AKR20260907107300065",
+      "published": "Tue, 8 Sep 2026 07:17:00 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "한국거래소 \"무신사, 유가증권시장 상장예심 신청\"(종합)",
-      "link": "https://www.yna.co.kr/view/AKR20260907147251008",
-      "published": "Mon, 7 Sep 2026 18:27:49 +0900"
+      "title": "[우분투칼럼] '스무 살' 코아펙, 아프리카의 다음 도약을 함께 쓴다",
+      "link": "https://www.yna.co.kr/view/AKR20260901136600898",
+      "published": "Tue, 8 Sep 2026 07:00:06 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "오세훈, '친선결연 30주년' 하노이 인민위원장 면담…협력 논의",
-      "link": "https://www.yna.co.kr/view/AKR20260907148900004",
-      "published": "Mon, 7 Sep 2026 18:13:10 +0900"
+      "title": "고령자 계속고용장려금, 50인미만 사업장 지원 3년새 33% 급감",
+      "link": "https://www.yna.co.kr/view/AKR20260907132400530",
+      "published": "Tue, 8 Sep 2026 06:03:00 +0900"
     },
     {
       "source": "연합뉴스 경제",
-      "title": "[연합뉴스 이 시각 헤드라인] - 18:00",
-      "link": "https://www.yna.co.kr/view/AKR20260907141500011",
-      "published": "Mon, 7 Sep 2026 18:00:00 +0900"
+      "title": "[게시판] 하반기 'FSS 시니어 금융 아카데미' 신청…18일 마감",
+      "link": "https://www.yna.co.kr/view/AKR20260907120300002",
+      "published": "Tue, 8 Sep 2026 06:00:10 +0900"
     }
   ]
 }
