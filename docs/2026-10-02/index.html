@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Market Brief — 2026-10-02</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --card: #1a2332;
+      --text: #e7ecf3;
+      --muted: #8b9bb4;
+      --up: #3dd68c;
+      --down: #f07178;
+      --accent: #5b9fd4;
+      --border: #2a3548;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+    body {
+      margin: 0;
+      font-family: "IBM Plex Sans", "Noto Sans KR", system-ui, sans-serif;
+      background: radial-gradient(ellipse at top, #1a2740 0%, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+    main { max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .eyebrow { color: var(--muted); font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .eyebrow a { color: inherit; }
+    .eyebrow a:hover { color: var(--accent); }
+    .quick-nav {
+      position: fixed;
+      top: 2.5rem;
+      left: max(1rem, calc(50% - 590px));
+      width: 140px;
+      display: grid;
+      gap: 0.35rem;
+      padding: 0.85rem;
+      background: rgba(26, 35, 50, 0.9);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      backdrop-filter: blur(8px);
+    }
+    .quick-nav strong {
+      color: var(--muted);
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+    .quick-nav a { font-size: 0.82rem; }
+    h1 { font-size: 1.75rem; font-weight: 600; margin: 0.35rem 0 0.5rem; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 2rem; }
+    h2 { font-size: 1.05rem; margin: 2rem 0 0.85rem; color: var(--muted); font-weight: 500; }
+    .grid { display: grid; gap: 0.65rem; }
+    .row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) auto repeat(3, minmax(3.6rem, auto)) 72px;
+      gap: 0.55rem;
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+    }
+    .row.header {
+      background: transparent;
+      border: none;
+      padding: 0 1rem 0.15rem;
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .label { font-weight: 500; }
+    .asof { display: block; font-size: 0.75rem; color: var(--muted); font-weight: 400; margin-top: 0.15rem; }
+    .badge {
+      display: inline-block;
+      margin-left: 0.4rem;
+      padding: 0.05rem 0.4rem;
+      border-radius: 4px;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.7rem;
+      letter-spacing: 0.02em;
+    }
+    .price { font-variant-numeric: tabular-nums; color: var(--muted); text-align: right; }
+    .pct { font-variant-numeric: tabular-nums; font-weight: 600; text-align: right; }
+    .rets { display: contents; }
+    .spark-wrap { display: flex; justify-content: flex-end; align-items: center; }
+    .spark { display: block; }
+    .up { color: var(--up); }
+    .down { color: var(--down); }
+    .na { color: var(--muted); font-weight: 500; }
+    .err { color: var(--down); font-size: 0.9rem; }
+    ul.news { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.65rem; }
+    ul.news li {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+    }
+    .source { display: block; font-size: 0.75rem; color: var(--muted); margin-bottom: 0.25rem; }
+    footer { margin-top: 2.5rem; color: var(--muted); font-size: 0.8rem; }
+    @media (max-width: 1180px) {
+      html { scroll-padding-top: 4.5rem; }
+      .quick-nav {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        width: auto;
+        display: flex;
+        gap: 1rem;
+        overflow-x: auto;
+        margin: -2.5rem -1.25rem 1.5rem;
+        padding: 0.75rem 1.25rem;
+        border-width: 0 0 1px;
+        border-radius: 0;
+      }
+      .quick-nav strong { display: none; }
+      .quick-nav a { white-space: nowrap; }
+    }
+    @media (max-width: 640px) {
+      .row {
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+          "name price"
+          "rets spark";
+      }
+      .row.header { display: none; }
+      .label { grid-area: name; }
+      .price { grid-area: price; align-self: start; }
+      .rets {
+        grid-area: rets;
+        display: flex;
+        justify-content: space-between;
+        gap: 0.75rem;
+        margin-top: 0.35rem;
+        font-size: 0.85rem;
+      }
+      .spark-wrap { grid-area: spark; justify-content: flex-end; }
+      .rets .pct::before {
+        content: attr(data-label) " ";
+        color: var(--muted);
+        font-weight: 500;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+      }
+    }
+  </style>
+</head>
+<body id="top">
+  <main>
+    <nav class="quick-nav" aria-label="Page shortcuts">
+      <strong>Jump to</strong>
+      <a href="../index.html">Home</a>
+      <a href="#top">Top</a>
+      <a href="#indices">Indices</a>
+      <a href="#signals">Signals</a>
+      <a href="#watchlist">Watchlist</a>
+      <a href="#headlines">Headlines</a>
+    </nav>
+    <p class="eyebrow"><a href="../index.html">&larr; Market Morning Brief</a></p>
+    <h1>2026-10-02</h1>
+    <p class="meta">Generated 2026-10-02 15:55 IST · Morning edition · Day / MTD / YTD vs prior close · sparkline = last 5 sessions</p>
+
+    
+
+    
+
+    <h2 id="indices">Indices</h2>
+    <div class="grid">
+      <div class="row header">
+        <span></span><span></span><span class="pct">Day</span><span class="pct">MTD</span><span class="pct">YTD</span><span class="pct">5D</span>
+      </div>
+      
+        
+          <div class="row">
+            <span class="label">
+              KOSPI
+              <span class="asof">2026-10-02 close</span>
+            </span>
+            <span class="price">7,003.74</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.46%</span></span>
+              <span data-label="MTD"><span class="pct up">+2.42%</span></span>
+              <span data-label="YTD"><span class="pct up">+66.20%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,18.1 19.5,20.6 36.0,25.0 52.5,7.3 69.0,3.0"/><circle cx="3.0" cy="18.1" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="20.6" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="7.3" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              KOSDAQ
+              <span class="asof">2026-10-02 close</span>
+            </span>
+            <span class="price">893.29</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-0.11%</span></span>
+              <span data-label="MTD"><span class="pct up">+4.37%</span></span>
+              <span data-label="YTD"><span class="pct down">-3.48%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,25.0 19.5,23.5 36.0,20.7 52.5,3.0 69.0,3.5"/><circle cx="3.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="23.5" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="20.7" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="3.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.5" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              FTSE 100<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">10,480.50</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.50%</span></span>
+              <span data-label="MTD"><span class="pct down">-1.18%</span></span>
+              <span data-label="YTD"><span class="pct up">+5.53%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#f07178" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,3.0 19.5,7.1 36.0,9.8 52.5,25.0 69.0,20.5"/><circle cx="3.0" cy="3.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="19.5" cy="7.1" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="36.0" cy="9.8" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="52.5" cy="25.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="69.0" cy="20.5" r="2.0" fill="#f07178" stroke="#f07178" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              S&P 500<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">7,740.52</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.97%</span></span>
+              <span data-label="MTD"><span class="pct up">+1.16%</span></span>
+              <span data-label="YTD"><span class="pct up">+13.07%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,17.1 19.5,20.2 36.0,25.0 52.5,21.3 69.0,3.0"/><circle cx="3.0" cy="17.1" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="20.2" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="21.3" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              Nasdaq<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">27,281.11</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+1.52%</span></span>
+              <span data-label="MTD"><span class="pct up">+1.56%</span></span>
+              <span data-label="YTD"><span class="pct up">+17.38%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,24.0 19.5,25.0 36.0,22.1 52.5,21.6 69.0,3.0"/><circle cx="3.0" cy="24.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="22.1" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="21.6" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              Dow Jones<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">51,217.78</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.57%</span></span>
+              <span data-label="MTD"><span class="pct up">+0.61%</span></span>
+              <span data-label="YTD"><span class="pct up">+6.56%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#f07178" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,3.0 19.5,8.0 36.0,25.0 52.5,24.2 69.0,13.1"/><circle cx="3.0" cy="3.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="19.5" cy="8.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="36.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="52.5" cy="24.2" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="69.0" cy="13.1" r="2.0" fill="#f07178" stroke="#f07178" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+    </div>
+
+    <h2 id="signals">Market Signals</h2>
+    <div class="grid">
+      <div class="row header">
+        <span></span><span></span><span class="pct">Day</span><span class="pct">MTD</span><span class="pct">YTD</span><span class="pct">5D</span>
+      </div>
+      
+        
+          <div class="row">
+            <span class="label">
+              VIX<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">15.44</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-5.80%</span></span>
+              <span data-label="MTD"><span class="pct down">-5.51%</span></span>
+              <span data-label="YTD"><span class="pct up">+3.28%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#f07178" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,10.4 19.5,11.1 36.0,4.2 52.5,3.0 69.0,25.0"/><circle cx="3.0" cy="10.4" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="19.5" cy="11.1" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="36.0" cy="4.2" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="52.5" cy="3.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="69.0" cy="25.0" r="2.0" fill="#f07178" stroke="#f07178" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              S&P futures (ES)<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">7,803.75</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+1.03%</span></span>
+              <span data-label="MTD"><span class="pct up">+1.14%</span></span>
+              <span data-label="YTD"><span class="pct up">+13.22%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,17.2 19.5,20.9 36.0,25.0 52.5,22.9 69.0,3.0"/><circle cx="3.0" cy="17.2" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="20.9" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="22.9" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              Nasdaq futures (NQ)<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">31,237.50</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+1.55%</span></span>
+              <span data-label="MTD"><span class="pct up">+1.75%</span></span>
+              <span data-label="YTD"><span class="pct up">+22.71%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,25.0 19.5,23.5 36.0,20.7 52.5,18.6 69.0,3.0"/><circle cx="3.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="23.5" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="20.7" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="18.6" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              Dow futures (YM)<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">51,534.00</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.57%</span></span>
+              <span data-label="MTD"><span class="pct up">+0.50%</span></span>
+              <span data-label="YTD"><span class="pct up">+6.62%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#f07178" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,3.0 19.5,8.0 36.0,23.6 52.5,25.0 69.0,14.2"/><circle cx="3.0" cy="3.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="19.5" cy="8.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="36.0" cy="23.6" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="52.5" cy="25.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="69.0" cy="14.2" r="2.0" fill="#f07178" stroke="#f07178" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              Gold (GC)<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">4,203.90</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.04%</span></span>
+              <span data-label="MTD"><span class="pct up">+0.41%</span></span>
+              <span data-label="YTD"><span class="pct down">-3.16%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,25.0 19.5,18.0 36.0,13.7 52.5,4.0 69.0,3.0"/><circle cx="3.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="18.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="13.7" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="4.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              Silver (SI)<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">61.62</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+1.47%</span></span>
+              <span data-label="MTD"><span class="pct up">+2.52%</span></span>
+              <span data-label="YTD"><span class="pct down">-12.15%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,8.7 19.5,16.7 36.0,25.0 52.5,15.9 69.0,3.0"/><circle cx="3.0" cy="8.7" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="16.7" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="15.9" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              EEM<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">67.64</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+1.24%</span></span>
+              <span data-label="MTD"><span class="pct up">+1.27%</span></span>
+              <span data-label="YTD"><span class="pct up">+24.28%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,14.4 19.5,9.2 36.0,25.0 52.5,24.5 69.0,3.0"/><circle cx="3.0" cy="14.4" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="9.2" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="24.5" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              US 10Y yield<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">5.21</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-0.44%</span></span>
+              <span data-label="MTD"><span class="pct down">-1.49%</span></span>
+              <span data-label="YTD"><span class="pct up">+25.25%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#f07178" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,17.8 19.5,13.6 36.0,3.0 52.5,18.6 69.0,25.0"/><circle cx="3.0" cy="17.8" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="19.5" cy="13.6" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="36.0" cy="3.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="52.5" cy="18.6" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="69.0" cy="25.0" r="2.0" fill="#f07178" stroke="#f07178" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              USD/KRW<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">1,344.09</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-0.94%</span></span>
+              <span data-label="MTD"><span class="pct down">-0.47%</span></span>
+              <span data-label="YTD"><span class="pct down">-6.52%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#f07178" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,10.2 19.5,3.0 36.0,15.9 52.5,6.9 69.0,25.0"/><circle cx="3.0" cy="10.2" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="19.5" cy="3.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="36.0" cy="15.9" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="52.5" cy="6.9" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="69.0" cy="25.0" r="2.0" fill="#f07178" stroke="#f07178" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              EUR/KRW<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">1,514.90</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-1.38%</span></span>
+              <span data-label="MTD"><span class="pct down">-1.08%</span></span>
+              <span data-label="YTD"><span class="pct down">-10.31%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#f07178" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,3.0 19.5,3.6 36.0,13.2 52.5,9.9 69.0,25.0"/><circle cx="3.0" cy="3.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="19.5" cy="3.6" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="36.0" cy="13.2" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="52.5" cy="9.9" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="69.0" cy="25.0" r="2.0" fill="#f07178" stroke="#f07178" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              EUR/USD<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">1.13</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-0.46%</span></span>
+              <span data-label="MTD"><span class="pct down">-0.58%</span></span>
+              <span data-label="YTD"><span class="pct down">-4.02%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#f07178" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,3.0 19.5,4.1 36.0,10.9 52.5,13.9 69.0,25.0"/><circle cx="3.0" cy="3.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="19.5" cy="4.1" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="36.0" cy="10.9" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="52.5" cy="13.9" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="69.0" cy="25.0" r="2.0" fill="#f07178" stroke="#f07178" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              USD/EUR<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">0.89</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.46%</span></span>
+              <span data-label="MTD"><span class="pct up">+0.58%</span></span>
+              <span data-label="YTD"><span class="pct up">+4.19%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,25.0 19.5,23.9 36.0,17.0 52.5,14.3 69.0,3.0"/><circle cx="3.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="23.9" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="17.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="14.3" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+    </div>
+
+    <h2 id="watchlist">Watchlist</h2>
+    <div class="grid">
+      <div class="row header">
+        <span></span><span></span><span class="pct">Day</span><span class="pct">MTD</span><span class="pct">YTD</span><span class="pct">5D</span>
+      </div>
+      
+        
+          <div class="row">
+            <span class="label">
+              WDAY<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">188.01</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.67%</span></span>
+              <span data-label="MTD"><span class="pct down">-1.29%</span></span>
+              <span data-label="YTD"><span class="pct down">-12.46%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#f07178" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,14.0 19.5,10.6 36.0,3.0 52.5,25.0 69.0,17.5"/><circle cx="3.0" cy="14.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="19.5" cy="10.6" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="36.0" cy="3.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="52.5" cy="25.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="69.0" cy="17.5" r="2.0" fill="#f07178" stroke="#f07178" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              NVDA<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">236.83</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+2.59%</span></span>
+              <span data-label="MTD"><span class="pct up">+3.70%</span></span>
+              <span data-label="YTD"><span class="pct up">+27.28%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,21.2 19.5,25.0 36.0,22.3 52.5,16.7 69.0,3.0"/><circle cx="3.0" cy="21.2" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="22.3" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="16.7" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              PLTR<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">193.68</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+1.92%</span></span>
+              <span data-label="MTD"><span class="pct up">+3.55%</span></span>
+              <span data-label="YTD"><span class="pct up">+8.96%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,23.3 19.5,25.0 36.0,24.7 52.5,14.9 69.0,3.0"/><circle cx="3.0" cy="23.3" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="24.7" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="14.9" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              AAPL<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">333.63</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+1.00%</span></span>
+              <span data-label="MTD"><span class="pct up">+0.18%</span></span>
+              <span data-label="YTD"><span class="pct up">+23.05%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#f07178" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,3.0 19.5,25.0 36.0,16.2 52.5,22.8 69.0,14.7"/><circle cx="3.0" cy="3.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="19.5" cy="25.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="36.0" cy="16.2" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="52.5" cy="22.8" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="69.0" cy="14.7" r="2.0" fill="#f07178" stroke="#f07178" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              NFLX<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">67.60</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct down">-0.38%</span></span>
+              <span data-label="MTD"><span class="pct down">-2.85%</span></span>
+              <span data-label="YTD"><span class="pct down">-27.91%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#f07178" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,11.7 19.5,3.0 36.0,8.9 52.5,22.9 69.0,25.0"/><circle cx="3.0" cy="11.7" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="19.5" cy="3.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="36.0" cy="8.9" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="52.5" cy="22.9" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="69.0" cy="25.0" r="2.0" fill="#f07178" stroke="#f07178" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              MSFT<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">516.10</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.64%</span></span>
+              <span data-label="MTD"><span class="pct up">+0.62%</span></span>
+              <span data-label="YTD"><span class="pct up">+7.39%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,24.2 19.5,25.0 36.0,12.9 52.5,13.2 69.0,3.0"/><circle cx="3.0" cy="24.2" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="12.9" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="13.2" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              SCHD<span class="badge">intraday</span>
+              <span class="asof">2026-10-02</span>
+            </span>
+            <span class="price">32.75</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.28%</span></span>
+              <span data-label="MTD"><span class="pct up">+0.68%</span></span>
+              <span data-label="YTD"><span class="pct up">+22.33%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#f07178" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,3.0 19.5,10.3 36.0,25.0 52.5,19.0 69.0,14.9"/><circle cx="3.0" cy="3.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="19.5" cy="10.3" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="36.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="52.5" cy="19.0" r="2.0" fill="#1a2332" stroke="#f07178" stroke-width="1.3"/><circle cx="69.0" cy="14.9" r="2.0" fill="#f07178" stroke="#f07178" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              Samsung (005930)
+              <span class="asof">2026-10-02 close</span>
+            </span>
+            <span class="price">276,000.00</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.00%</span></span>
+              <span data-label="MTD"><span class="pct up">+2.79%</span></span>
+              <span data-label="YTD"><span class="pct up">+130.92%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,20.6 19.5,13.3 36.0,25.0 52.5,3.0 69.0,3.0"/><circle cx="3.0" cy="20.6" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="13.3" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="3.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+        
+          <div class="row">
+            <span class="label">
+              SK Hynix (000660)
+              <span class="asof">2026-10-02 close</span>
+            </span>
+            <span class="price">1,841,000.00</span>
+            <span class="rets">
+              <span data-label="Day"><span class="pct up">+0.44%</span></span>
+              <span data-label="MTD"><span class="pct up">+3.66%</span></span>
+              <span data-label="YTD"><span class="pct up">+183.43%</span></span>
+            </span>
+            <span class="spark-wrap"><svg class="spark" viewBox="0 0 72 28" width="72" height="28" aria-hidden="true"><polyline fill="none" stroke="#3dd68c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="3.0,24.1 19.5,25.0 36.0,21.8 52.5,5.3 69.0,3.0"/><circle cx="3.0" cy="24.1" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="19.5" cy="25.0" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="36.0" cy="21.8" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="52.5" cy="5.3" r="2.0" fill="#1a2332" stroke="#3dd68c" stroke-width="1.3"/><circle cx="69.0" cy="3.0" r="2.0" fill="#3dd68c" stroke="#3dd68c" stroke-width="1.3"/></svg></span>
+          </div>
+        
+      
+    </div>
+
+    <h2 id="headlines">Headlines</h2>
+    
+      <ul class="news">
+        
+          <li>
+            <span class="source">Yahoo Finance · 2026-09-23T01:52:26Z</span>
+            <a href="https://finance.yahoo.com/markets/stocks/articles/ennis-ebf-grows-sales-earns-015226342.html" rel="noopener noreferrer">Ennis (EBF) Grows Sales but Earns Less. Are Legal Items Hiding a Better Business?</a>
+          </li>
+        
+          <li>
+            <span class="source">Yahoo Finance · 2026-09-23T01:51:00Z</span>
+            <a href="https://finance.yahoo.com/markets/crypto/articles/strive-ceo-bitcoin-could-infinity-015100441.html" rel="noopener noreferrer">Strive CEO: Bitcoin Could ‘Go to Infinity' as Dollar Debt Crisis Breaks</a>
+          </li>
+        
+          <li>
+            <span class="source">Yahoo Finance · 2026-09-23T01:43:50Z</span>
+            <a href="https://finance.yahoo.com/markets/stocks/articles/westinghouse-air-brake-wab-signs-014350177.html" rel="noopener noreferrer">Westinghouse Air Brake (WAB) Signs $700 Million-Plus Rail Services Deal. Can Profits Grow?</a>
+          </li>
+        
+          <li>
+            <span class="source">Yahoo Finance · 2026-09-23T01:42:06Z</span>
+            <a href="https://finance.yahoo.com/markets/commodities/articles/vista-gold-vgz-agrees-sale-014206537.html" rel="noopener noreferrer">Vista Gold (VGZ) Agrees to Sale. Can its Buyer Fund the Mt Todd Gold Mine?</a>
+          </li>
+        
+          <li>
+            <span class="source">Yahoo Finance · 2026-09-23T04:29:16Z</span>
+            <a href="https://finance.yahoo.com/technology/ai/articles/little-known-ai-chip-stock-042916921.html" rel="noopener noreferrer">This Little-Known AI Chip Stock Doubled. Its New Chips Now Double Optical Speed</a>
+          </li>
+        
+          <li>
+            <span class="source">연합뉴스 경제 · Fri, 2 Oct 2026 23:38:02 +0900</span>
+            <a href="https://www.yna.co.kr/view/AKR20261002185600003" rel="noopener noreferrer">산업부 "트럼프 언급 84억불 석유프로젝트는 합의에 없는 내용"</a>
+          </li>
+        
+          <li>
+            <span class="source">연합뉴스 경제 · Fri, 2 Oct 2026 21:38:00 +0900</span>
+            <a href="https://www.yna.co.kr/view/AKR20261002178500002" rel="noopener noreferrer">국민참여성장펀드 판매 3일차 목표액 절반 남아…온라인 비중↑</a>
+          </li>
+        
+          <li>
+            <span class="source">연합뉴스 경제 · Fri, 2 Oct 2026 21:25:58 +0900</span>
+            <a href="https://www.yna.co.kr/view/AKR20261002179600530" rel="noopener noreferrer">메가특구 사회적 대화 2차 실무협의…정부, 노사에 특별법 설명</a>
+          </li>
+        
+          <li>
+            <span class="source">연합뉴스 경제 · Fri, 2 Oct 2026 20:20:24 +0900</span>
+            <a href="https://www.yna.co.kr/view/AKR20261002176800002" rel="noopener noreferrer">"은행 믿고 정보 맡겼는데"…잇단 사고에 금융소비자들 '불안'</a>
+          </li>
+        
+          <li>
+            <span class="source">연합뉴스 경제 · Fri, 2 Oct 2026 19:37:27 +0900</span>
+            <a href="https://www.yna.co.kr/view/AKR20261002154551002" rel="noopener noreferrer">금융위 "국민 불안하지 않게 신속 파악"…은행·카드에 점검지시(종합)</a>
+          </li>
+        
+      </ul>
+    
+
+    <footer>
+      Data: Yahoo Finance (yfinance) · News: public RSS ·
+      MTD / YTD vs last close of prior month / year ·
+      <a href="../index.html">Archive</a>
+    </footer>
+  </main>
+</body>
+</html>
