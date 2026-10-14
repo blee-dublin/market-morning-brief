@@ -1,0 +1,583 @@
+{
+  "date": "2026-10-14",
+  "generated_at": "2026-10-14 14:58 IST",
+  "edition": "morning",
+  "markets": [
+    {
+      "label": "KOSPI",
+      "ticker": "^KS11",
+      "last": 6008.81,
+      "prev": 6035.35,
+      "change": -26.54,
+      "pct": -0.44,
+      "mtd": -12.13,
+      "ytd": 42.59,
+      "as_of": "2026-10-14",
+      "intraday": false,
+      "up": false,
+      "spark": [
+        6803.8999,
+        6625.9302,
+        6384.2402,
+        6035.3501,
+        6008.8101
+      ]
+    },
+    {
+      "label": "KOSDAQ",
+      "ticker": "^KQ11",
+      "last": 823.88,
+      "prev": 837.03,
+      "change": -13.15,
+      "pct": -1.57,
+      "mtd": -3.74,
+      "ytd": -10.98,
+      "as_of": "2026-10-14",
+      "intraday": false,
+      "up": false,
+      "spark": [
+        898.43,
+        892.27,
+        849.19,
+        837.03,
+        823.88
+      ]
+    },
+    {
+      "label": "FTSE 100",
+      "ticker": "^FTSE",
+      "last": 10685.89,
+      "prev": 10650.3,
+      "change": 35.59,
+      "pct": 0.33,
+      "mtd": 0.75,
+      "ytd": 7.6,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": true,
+      "spark": [
+        10441.5996,
+        10552.0996,
+        10656.2998,
+        10650.2998,
+        10685.8896
+      ]
+    },
+    {
+      "label": "S&P 500",
+      "ticker": "^GSPC",
+      "last": 7760.12,
+      "prev": 7805.45,
+      "change": -45.33,
+      "pct": -0.58,
+      "mtd": 1.42,
+      "ytd": 13.36,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": false,
+      "spark": [
+        7765.3599,
+        7811.54,
+        7807.2402,
+        7805.4502,
+        7760.1201
+      ]
+    },
+    {
+      "label": "Nasdaq",
+      "ticker": "^IXIC",
+      "last": 26987.38,
+      "prev": 27204.38,
+      "change": -217.0,
+      "pct": -0.8,
+      "mtd": 0.47,
+      "ytd": 16.11,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": false,
+      "spark": [
+        27193.3398,
+        27366.1699,
+        27245.9004,
+        27204.3809,
+        26987.3848
+      ]
+    },
+    {
+      "label": "Dow Jones",
+      "ticker": "^DJI",
+      "last": 51717.09,
+      "prev": 51670.1,
+      "change": 46.99,
+      "pct": 0.09,
+      "mtd": 1.59,
+      "ytd": 7.6,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": true,
+      "spark": [
+        51231.6406,
+        51654.9492,
+        51850.5508,
+        51670.1016,
+        51717.0898
+      ]
+    }
+  ],
+  "signals": [
+    {
+      "label": "VIX",
+      "ticker": "^VIX",
+      "last": 15.51,
+      "prev": 15.27,
+      "change": 0.24,
+      "pct": 1.57,
+      "mtd": -5.08,
+      "ytd": 3.75,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": true,
+      "spark": [
+        15.41,
+        14.84,
+        15.21,
+        15.27,
+        15.51
+      ]
+    },
+    {
+      "label": "S&P futures (ES)",
+      "ticker": "ES=F",
+      "last": 7835.25,
+      "prev": 7855.75,
+      "change": -20.5,
+      "pct": -0.26,
+      "mtd": 1.55,
+      "ytd": 13.68,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": false,
+      "spark": [
+        7816.25,
+        7859.75,
+        7858.0,
+        7855.75,
+        7835.25
+      ]
+    },
+    {
+      "label": "Nasdaq futures (NQ)",
+      "ticker": "NQ=F",
+      "last": 30646.5,
+      "prev": 30791.5,
+      "change": -145.0,
+      "pct": -0.47,
+      "mtd": -0.17,
+      "ytd": 20.39,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": false,
+      "spark": [
+        30969.5,
+        31108.75,
+        30898.25,
+        30791.5,
+        30646.5
+      ]
+    },
+    {
+      "label": "Dow futures (YM)",
+      "ticker": "YM=F",
+      "last": 52103.0,
+      "prev": 51935.0,
+      "change": 168.0,
+      "pct": 0.32,
+      "mtd": 1.61,
+      "ytd": 7.79,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": true,
+      "spark": [
+        51493.0,
+        51926.0,
+        52110.0,
+        51935.0,
+        52103.0
+      ]
+    },
+    {
+      "label": "Gold (GC)",
+      "ticker": "GC=F",
+      "last": 4127.0,
+      "prev": 4177.3,
+      "change": -50.3,
+      "pct": -1.2,
+      "mtd": -1.43,
+      "ytd": -4.93,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": false,
+      "spark": [
+        4157.0,
+        4216.2998,
+        4190.6001,
+        4177.2998,
+        4127.0
+      ]
+    },
+    {
+      "label": "Silver (SI)",
+      "ticker": "SI=F",
+      "last": 57.1,
+      "prev": 59.16,
+      "change": -2.07,
+      "pct": -3.49,
+      "mtd": -5.0,
+      "ytd": -18.59,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": false,
+      "spark": [
+        59.064,
+        60.67,
+        60.141,
+        59.161,
+        57.095
+      ]
+    },
+    {
+      "label": "EEM",
+      "ticker": "EEM",
+      "last": 64.7,
+      "prev": 65.74,
+      "change": -1.04,
+      "pct": -1.59,
+      "mtd": -3.13,
+      "ytd": 18.87,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": false,
+      "spark": [
+        66.1,
+        66.8,
+        66.15,
+        65.74,
+        64.6975
+      ]
+    },
+    {
+      "label": "US 10Y yield",
+      "ticker": "^TNX",
+      "last": 5.29,
+      "prev": 5.22,
+      "change": 0.07,
+      "pct": 1.42,
+      "mtd": -0.04,
+      "ytd": 27.1,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": true,
+      "spark": [
+        5.231,
+        5.244,
+        5.24,
+        5.217,
+        5.291
+      ]
+    },
+    {
+      "label": "USD/KRW",
+      "ticker": "USDKRW=X",
+      "last": 1341.02,
+      "prev": 1334.13,
+      "change": 6.89,
+      "pct": 0.52,
+      "mtd": -0.7,
+      "ytd": -6.74,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": true,
+      "spark": [
+        1339.08,
+        1342.99,
+        1340.84,
+        1334.13,
+        1341.02
+      ]
+    },
+    {
+      "label": "EUR/KRW",
+      "ticker": "EURKRW=X",
+      "last": 1490.1,
+      "prev": 1488.11,
+      "change": 1.99,
+      "pct": 0.13,
+      "mtd": -2.7,
+      "ytd": -11.78,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": true,
+      "spark": [
+        1499.4,
+        1503.66,
+        1502.28,
+        1488.11,
+        1490.1
+      ]
+    },
+    {
+      "label": "EUR/USD",
+      "ticker": "EURUSD=X",
+      "last": 1.11,
+      "prev": 1.12,
+      "change": -0.0,
+      "pct": -0.34,
+      "mtd": -1.93,
+      "ytd": -5.32,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": false,
+      "spark": [
+        1.1201,
+        1.1213,
+        1.1205,
+        1.116,
+        1.1122
+      ]
+    },
+    {
+      "label": "USD/EUR",
+      "ticker": "USDEUR=X",
+      "last": 0.9,
+      "prev": 0.9,
+      "change": 0.0,
+      "pct": 0.34,
+      "mtd": 1.97,
+      "ytd": 5.62,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": true,
+      "spark": [
+        0.8928,
+        0.8918,
+        0.8925,
+        0.896,
+        0.8991
+      ]
+    }
+  ],
+  "stocks": [
+    {
+      "label": "WDAY",
+      "ticker": "WDAY",
+      "last": 188.79,
+      "prev": 186.02,
+      "change": 2.77,
+      "pct": 1.49,
+      "mtd": -0.88,
+      "ytd": -12.1,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": true,
+      "spark": [
+        187.81,
+        186.59,
+        188.25,
+        186.02,
+        188.79
+      ]
+    },
+    {
+      "label": "NVDA",
+      "ticker": "NVDA",
+      "last": 224.37,
+      "prev": 228.52,
+      "change": -4.15,
+      "pct": -1.82,
+      "mtd": -1.76,
+      "ytd": 20.59,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": false,
+      "spark": [
+        230.48,
+        229.28,
+        226.32,
+        228.52,
+        224.37
+      ]
+    },
+    {
+      "label": "PLTR",
+      "ticker": "PLTR",
+      "last": 207.4,
+      "prev": 208.67,
+      "change": -1.27,
+      "pct": -0.61,
+      "mtd": 10.88,
+      "ytd": 16.68,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": false,
+      "spark": [
+        198.78,
+        209.05,
+        209.0,
+        208.67,
+        207.401
+      ]
+    },
+    {
+      "label": "AAPL",
+      "ticker": "AAPL",
+      "last": 345.74,
+      "prev": 341.27,
+      "change": 4.47,
+      "pct": 1.31,
+      "mtd": 3.82,
+      "ytd": 27.52,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": true,
+      "spark": [
+        340.42,
+        336.64,
+        340.97,
+        341.27,
+        345.74
+      ]
+    },
+    {
+      "label": "NFLX",
+      "ticker": "NFLX",
+      "last": 70.44,
+      "prev": 70.46,
+      "change": -0.02,
+      "pct": -0.03,
+      "mtd": 1.24,
+      "ytd": -24.87,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": false,
+      "spark": [
+        71.57,
+        70.3,
+        70.61,
+        70.46,
+        70.44
+      ]
+    },
+    {
+      "label": "MSFT",
+      "ticker": "MSFT",
+      "last": 541.63,
+      "prev": 543.45,
+      "change": -1.82,
+      "pct": -0.33,
+      "mtd": 5.6,
+      "ytd": 12.71,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": false,
+      "spark": [
+        522.61,
+        535.07,
+        541.15,
+        543.45,
+        541.6332
+      ]
+    },
+    {
+      "label": "SCHD",
+      "ticker": "SCHD",
+      "last": 33.44,
+      "prev": 33.37,
+      "change": 0.08,
+      "pct": 0.22,
+      "mtd": 2.81,
+      "ytd": 24.93,
+      "as_of": "2026-10-14",
+      "intraday": true,
+      "up": true,
+      "spark": [
+        33.15,
+        33.04,
+        33.26,
+        33.37,
+        33.445
+      ]
+    },
+    {
+      "label": "Samsung (005930)",
+      "ticker": "005930.KS",
+      "last": 232000.0,
+      "prev": 232000.0,
+      "change": 0.0,
+      "pct": 0.0,
+      "mtd": -13.59,
+      "ytd": 94.11,
+      "as_of": "2026-10-14",
+      "intraday": false,
+      "up": true,
+      "spark": [
+        268500.0,
+        262000.0,
+        250500.0,
+        232000.0,
+        232000.0
+      ]
+    },
+    {
+      "label": "SK Hynix (000660)",
+      "ticker": "000660.KS",
+      "last": 1419000.0,
+      "prev": 1443000.0,
+      "change": -24000.0,
+      "pct": -1.66,
+      "mtd": -20.1,
+      "ytd": 118.46,
+      "as_of": "2026-10-14",
+      "intraday": false,
+      "up": false,
+      "spark": [
+        1723000.0,
+        1681000.0,
+        1605000.0,
+        1443000.0,
+        1419000.0
+      ]
+    }
+  ],
+  "news": [
+    {
+      "source": "연합뉴스 경제",
+      "title": "취임 6주년 정의선 \"인도서 자동차 넘어 인프라·에너지 투자\"(종합)",
+      "link": "https://www.yna.co.kr/view/AKR20261014179651003",
+      "published": "Wed, 14 Oct 2026 22:14:53 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "신현송 한은 총재, 중·일 중앙은행 총재와 경제동향 논의",
+      "link": "https://www.yna.co.kr/view/AKR20261014176200002",
+      "published": "Wed, 14 Oct 2026 20:00:01 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "취임 6주년에 인도 찾은 정의선 \"상당히 중요한 이정표\"",
+      "link": "https://www.yna.co.kr/view/AKR20261014179600003",
+      "published": "Wed, 14 Oct 2026 19:45:40 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "당국 \"금융사 침해사고 발생 총 16곳…약 10만건 유출\"(종합2보)",
+      "link": "https://www.yna.co.kr/view/AKR20261014134852002",
+      "published": "Wed, 14 Oct 2026 19:23:59 +0900"
+    },
+    {
+      "source": "연합뉴스 경제",
+      "title": "인도서 '제2의 도약' 나선 현대차, 연 150만대 생산한다(종합)",
+      "link": "https://www.yna.co.kr/view/AKR20261014005751003",
+      "published": "Wed, 14 Oct 2026 19:13:40 +0900"
+    }
+  ]
+}
